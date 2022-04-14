@@ -1104,7 +1104,7 @@
   padding: 11px 22px;
   cursor: pointer;
   background-color: #888;
-  color: #FFFFFF; }
+  color: #000; }
   .btn:hover, .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover,
   .show > .btn.dropdown-toggle,
   .show > .btn.dropdown-toggle:focus,
@@ -1254,13 +1254,13 @@
     top: 1px; }
 
 .btn-primary {
-  background-color: #378C3F;
+  background-color: #d64118;
   color: #FFFFFF; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.active:focus, .btn-primary.active:hover,
   .show > .btn-primary.dropdown-toggle,
   .show > .btn-primary.dropdown-toggle:focus,
   .show > .btn-primary.dropdown-toggle:hover {
-    background-color: #40a249;
+    background-color: #bf3a15;
     color: #FFFFFF;
     box-shadow: none; }
   .btn-primary:hover {
@@ -1272,21 +1272,21 @@
   fieldset[disabled] .btn-primary.focus,
   fieldset[disabled] .btn-primary:active,
   fieldset[disabled] .btn-primary.active {
-    background-color: #378C3F;
-    border-color: #378C3F; }
+    background-color: #d64118;
+    border-color: #d64118; }
   .btn-primary.btn-simple {
-    color: #378C3F;
-    border-color: #378C3F; }
+    color: #d64118;
+    border-color: #d64118; }
     .btn-primary.btn-simple:hover, .btn-primary.btn-simple:focus, .btn-primary.btn-simple:active {
       background-color: transparent;
-      color: #40a249;
-      border-color: #40a249;
+      color: #bf3a15;
+      border-color: #bf3a15;
       box-shadow: none; }
   .btn-primary.btn-link {
-    color: #378C3F; }
+    color: #d64118; }
     .btn-primary.btn-link:hover, .btn-primary.btn-link:focus, .btn-primary.btn-link:active {
       background-color: transparent;
-      color: #40a249;
+      color: #bf3a15;
       text-decoration: none;
       box-shadow: none; }
 
@@ -2598,7 +2598,7 @@ body {
   background-color: #888 !important; }
 
 .bg-primary {
-  background-color: #378C3F !important; }
+  background-color: #d64118 !important; }
 
 .bg-info {
   background-color: #2CA8FF !important; }
@@ -5153,14 +5153,14 @@ Created using IcoMoon - icomoon.io
 
 .cc-profile-image a:before {
   content: "";
-  border: 15px solid rgba(55, 140, 63, 0.6);
+  border: 15px solid #d64118;
   border-radius: 50%;
   height: 180px;
   width: 180px;
   position: absolute;
   left: 0;
-  -webkit-animation: pulsate 1.6s ease-out;
-          animation: pulsate 1.6s ease-out;
+  -webkit-animation: pulsate 2.0s ease-out;
+          animation: pulsate 2.0s ease-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   opacity: 0.0;
