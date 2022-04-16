@@ -24,6 +24,34 @@
  * Copyright 2012-2013 Mattia Larentis
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+
+  /* Placeholder text */
+*::-webkit-input-placeholder {
+    color: #d64118 !Important;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #d64118 !Important;
+    opacity: 1;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #d64118 !Important;
+    opacity: 1;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #d64118 !Important;
+}
+*::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #d64118 !Important;
+}
+*::placeholder {
+    /* modern browser */
+    color: #d64118 !Important;
+} 
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -5278,3 +5306,4 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0; }
+
