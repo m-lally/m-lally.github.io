@@ -1,3 +1,5 @@
+This is my profile page that I serve on github.
+
 Directory Structure
 -------------------
 css\              - Stylesheets CSS files for the template.
