@@ -28,6 +28,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -632,20 +633,18 @@
           <div class="info-box">
             <i class="bx bx-map"></i>
             <h3>My Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
+            <p>London E1</p>
           </div>
         </div>
 
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
+            <h3>Social </h3>
             <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <a href="https://github.com/m-lally" class="github"><i class="bi bi-github"></i></a>
+              <a href="https://www.instagram.com/lallymarc/?hl=en" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/marclally/" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -654,19 +653,20 @@
           <div class="info-box">
             <i class="bx bx-envelope"></i>
             <h3>Email Me</h3>
-            <p>contact@example.com</p>
+            <p>marc.lally@gmail.com</p>
+            <p>m.lally@pm.me</p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-phone-call"></i>
             <h3>Call Me</h3>
-            <p>+1 5589 55488 55</p>
+            <p>...</p>
           </div>
         </div>
       </div>
 
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+      <form id="my-form" action="https://formspree.io/f/xyyqpplw" method="POST" class="mt-4">
         <div class="row">
           <div class="col-md-6 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -707,7 +707,38 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    var form = document.getElementById("my-form");
 
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
 </body>
 
 </html>
