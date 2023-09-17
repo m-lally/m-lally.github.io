@@ -259,19 +259,19 @@
       }
     }).then(response => {
       if (response.ok) {
-        notie.alert({ type: 1, text: 'Success! Your message has been sent, thankyou. I will be in touch shortly and remember you can schedule a meeting with me from the home page.', position: 'bottom', time: 5 })
+        notie.alert({ type: 1, text: 'Success! Your message has been sent, thankyou.', position: 'bottom', time: 6 })
         form.reset()
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
-            notie.alert({ type: 1, text: 'Failure! Please accept my apologies. Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.', position: 'bottom', time: 5 })
+            notie.alert({ type: 1, text: 'Failure! Please accept my apologies. Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.', position: 'bottom', time: 10 })
           } else {
-            notie.alert({ type: 1, text: 'Failure! Please accept my apologies. Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.', position: 'bottom', time: 5 })
+            notie.alert({ type: 1, text: 'Failure! Please accept my apologies. Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.', position: 'bottom', time: 10 })
           }
         })
       }
     }).catch(error => {
-      notie.alert({ type: 1, text: 'Failure! Please accept my apologies. Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.', position: 'bottom', time: 5 })
+      notie.alert({ type: 1, text: 'Failure! Please accept my apologies. Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.', position: 'bottom', time: 10 })
     });
   }
   form.addEventListener("submit", handleSubmit)
