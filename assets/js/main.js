@@ -259,18 +259,22 @@
       }
     }).then(response => {
       if (response.ok) {
+        notie.alert({ type: 1, text: 'Success!', stay: true }) // Never hides unless clicked, or escape or enter is pressed
         // status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
         form.reset()
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
+            notie.alert({ type: 1, text: 'Failure!!', stay: true }) // Never hides unless clicked, or escape or enter is pressed
             // status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
           } else {
             // status.innerHTML = "Oops! There was a problem submitting your form"
+            notie.alert({ type: 1, text: 'Failure!!', stay: true }) // Never hides unless clicked, or escape or enter is pressed
           }
         })
       }
     }).catch(error => {
+      notie.alert({ type: 1, text: 'Failure!!', stay: true }) // Never hides unless clicked, or escape or enter is pressed
       // // status.innerHTML = "Oops! There was a problem submitting your form"
       // status.innerHTML = "Oops! There was a problem submitting your form"
     });
