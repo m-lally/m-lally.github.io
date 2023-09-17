@@ -1,10 +1,3 @@
-/**
-* Template Name: Personal - v4.10.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -512,9 +505,67 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Interests
+# education
 --------------------------------------------------------------*/
-.interests .icon-box {
+
+education .education-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.education .education-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.education .education-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Questrial", sans-serif;
+  color: #EF6024;
+  margin-bottom: 10px;
+}
+
+.education .education-item h5 {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.education .education-item ul {
+  padding-left: 20px;
+}
+
+.education .education-item ul li {
+  padding-bottom: 10px;
+}
+
+.education .education-item:last-child {
+  padding-bottom: 0;
+}
+
+.education .education-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #EF6024;
+  border: 2px solid #EF6024;
+}
+.education .icon-box {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -522,13 +573,13 @@ section .container {
   transition: ease-in-out 0.3s;
 }
 
-.interests .icon-box i {
+.education .icon-box i {
   font-size: 32px;
   padding-right: 10px;
   line-height: 1;
 }
 
-.interests .icon-box h3 {
+.education .icon-box h3 {
   font-weight: 700;
   margin: 0;
   padding: 0;
@@ -537,7 +588,7 @@ section .container {
   color: #fff;
 }
 
-.interests .icon-box:hover {
+.education .icon-box:hover {
   background: rgba(255, 255, 255, 0.12);
 }
 
