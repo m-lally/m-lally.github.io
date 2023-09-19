@@ -136,21 +136,26 @@
   });
 
   /**
-   * Skills animation
-   */
-  let skilsContent = select(".skills-content");
+  * Skills animation
+  */
+  let skilsContent = select('.skills-content');
   if (skilsContent) {
     new Waypoint({
       element: skilsContent,
-      offset: "80%",
+      offset: '80%',
       handler: function (direction) {
-        let progress = select(".progress .progress-bar", true);
+        let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
-          el.style.width = el.getAttribute("aria-valuenow") + "%";
+          el.style.width = el.getAttribute('aria-valuenow') + '%'
         });
-      },
-    });
+      }
+    })
   }
+
+  /**
+   * Initiate Pure Counter 
+   */
+  new PureCounter();
 
   // Handle the formn
   var form = document.getElementById("my-form");
@@ -170,7 +175,7 @@
         if (response.ok) {
           notie.alert({
             type: 1,
-            text: "Success! Your message has been sent, thankyou.",
+            text: "Thankyou! Your message has been sent.",
             position: "bottom",
             time: 6,
           });
@@ -180,14 +185,14 @@
             if (Object.hasOwn(data, "errors")) {
               notie.alert({
                 type: 1,
-                text: "Sorry,Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.",
+                text: "Sorry, something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.",
                 position: "bottom",
                 time: 10,
               });
             } else {
               notie.alert({
                 type: 1,
-                text: "Sorry,Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.",
+                text: "Sorry, something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.",
                 position: "bottom",
                 time: 10,
               });
@@ -198,7 +203,7 @@
       .catch((error) => {
         notie.alert({
           type: 1,
-          text: "Sorry,Something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.",
+          text: "Sorry, something has gone wrong, please try again. Alternatively, schedule a meeting with me from the home page or send me an email.",
           position: "bottom",
           time: 10,
         });
