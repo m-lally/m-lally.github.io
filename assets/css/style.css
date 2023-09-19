@@ -21,6 +21,10 @@ body::before {
   z-index: -1;
 }
 
+.container {
+  max-width: 1680px;
+}
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
