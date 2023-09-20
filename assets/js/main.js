@@ -157,7 +157,7 @@
    */
   new PureCounter();
 
-  // Handle the formn
+  // Handle the form
   var form = document.getElementById("my-form");
 
   async function handleSubmit(event) {
