@@ -34,12 +34,12 @@ svg {
 }
 
 .buttons-con .action-link-wrap a {
-    background: #68c950;
-    padding: 8px 25px;
+    background: #ef6024;
+    padding: 10px 25px;
     border-radius: 4px;
     color: #FFF;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.3s linear;
     cursor: pointer;
     text-decoration: none;
