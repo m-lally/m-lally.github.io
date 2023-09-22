@@ -790,6 +790,9 @@ education .education-title {
 /*--------------------------------------------------------------
 # Word Cloud
 --------------------------------------------------------------*/
+#tagi {
+  margin-left: 300px;
+}
 
 svg text.blink {
   animation: blink 2s ease-out;
@@ -801,19 +804,19 @@ svg text.blink {
   }
 
   20% {
-    fill: rgba(226, 25, 45, 1);
-    text-shadow: -5px -5px 20px rgba(226, 25, 45, 0.8),
-      5px -5px 20px rgba(226, 25, 45, 0.8),
-      5px 5px 20px rgba(226, 25, 45, 0.8),
-      -5px 5px 20px rgba(226, 25, 45, 0.8);
+    fill: rgba(239, 96, 36, 1);
+    text-shadow: -5px -5px 20px rgba(239, 96, 36, 0.8),
+      5px -5px 20px rgba(239, 96, 36, 0.8),
+      5px 5px 20px rgba(239, 96, 36, 0.8),
+      -5px 5px 20px rgba(239, 96, 36, 0.8);
   }
 
   30% {
-    fill: rgba(226, 25, 45, 1),
-      -5px -5px 20px rgba(226, 25, 45, 0.8),
-      5px -5px 20px rgba(226, 25, 45, 0.8),
-      5px 5px 20px rgba(226, 25, 45, 0.8),
-      -5px 5px 20px rgba(226, 25, 45, 0.8);
+    fill: rgba(239, 96, 36, 1),
+      -5px -5px 20px rgba(239, 96, 36, 0.8),
+      5px -5px 20px rgba(239, 96, 36, 0.8),
+      5px 5px 20px rgba(239, 96, 36, 0.8),
+      -5px 5px 20px rgba(239, 96, 36, 0.8);
   }
 
   100% {
