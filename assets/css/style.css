@@ -223,6 +223,10 @@ h6 {
 .navbar {
   padding: 0;
   margin-top: 35px;
+
+  pic {
+    display: none;
+  }
 }
 
 .navbar ul {
