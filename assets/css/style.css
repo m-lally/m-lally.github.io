@@ -159,6 +159,10 @@ h6 {
     align-items: center;
     font-family: "Questrial", sans-serif;
   }
+
+  .pic {
+    display: none;
+  }
 }
 
 /* Header Top */
@@ -204,6 +208,10 @@ h6 {
     font-size: 26px;
     font-family: "Questrial", sans-serif;
   }
+
+  pic {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -230,7 +238,7 @@ h6 {
   position: relative;
 }
 
-.navbar li+li {
+.navbar li + li {
   margin-left: 30px;
 }
 
@@ -270,7 +278,7 @@ h6 {
 }
 
 .navbar a:hover:before,
-.navbar li:hover>a:before,
+.navbar li:hover > a:before,
 .navbar .active:before {
   visibility: visible;
   width: 25px;
@@ -279,7 +287,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #fff;
 }
 
@@ -308,6 +316,10 @@ h6 {
   }
 
   .navbar ul {
+    display: none;
+  }
+
+  pic {
     display: none;
   }
 }
@@ -348,7 +360,7 @@ h6 {
   padding: 12px 20px;
 }
 
-.navbar-mobile li+li {
+.navbar-mobile li + li {
   margin: 0;
 }
 
@@ -391,6 +403,10 @@ section .container {
 
   section.section-show {
     top: 80px;
+  }
+
+  pic {
+    display: none;
   }
 }
 
@@ -711,7 +727,7 @@ education .education-title {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -832,16 +848,13 @@ svg text.blink {
   20% {
     fill: rgba(239, 96, 36, 1);
     text-shadow: -5px -5px 20px rgba(239, 96, 36, 0.8),
-      5px -5px 20px rgba(239, 96, 36, 0.8),
-      5px 5px 20px rgba(239, 96, 36, 0.8),
+      5px -5px 20px rgba(239, 96, 36, 0.8), 5px 5px 20px rgba(239, 96, 36, 0.8),
       -5px 5px 20px rgba(239, 96, 36, 0.8);
   }
 
   30% {
-    fill: rgba(239, 96, 36, 1),
-      -5px -5px 20px rgba(239, 96, 36, 0.8),
-      5px -5px 20px rgba(239, 96, 36, 0.8),
-      5px 5px 20px rgba(239, 96, 36, 0.8),
+    fill: rgba(239, 96, 36, 1), -5px -5px 20px rgba(239, 96, 36, 0.8),
+      5px -5px 20px rgba(239, 96, 36, 0.8), 5px 5px 20px rgba(239, 96, 36, 0.8),
       -5px 5px 20px rgba(239, 96, 36, 0.8);
   }
 
@@ -919,7 +932,7 @@ svg text.blink {
 }
 
 .st17 {
-  font-family: 'Questrial';
+  font-family: "Questrial";
   font-weight: 600;
   fill: #a0a0a0;
 }
@@ -965,7 +978,7 @@ svg text.blink {
 }
 
 .st28 {
-  font-family: 'Questrial';
+  font-family: "Questrial";
 }
 
 .st29 {
