@@ -46,8 +46,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Questrial", sans-serif;
+h6,
+.section-title p 
+  {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*--------------------------------------------------------------
@@ -74,7 +79,6 @@ h6 {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: "Questrial", sans-serif;
 }
 
 #header h1 a,
@@ -82,21 +86,18 @@ h6 {
   color: #fff;
   line-height: 1;
   display: inline-block;
-  font-family: "Questrial", sans-serif;
 }
 
 #header h2 {
   font-size: 20px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Questrial", sans-serif;
 }
 
 #header h2 span {
   color: #fff;
   border-bottom: 2px solid #ef6024;
   padding-bottom: 6px;
-  font-family: "Questrial", sans-serif;
 }
 
 #header img {
@@ -404,7 +405,6 @@ section .container {
   margin: -15px 0 15px 0;
   font-size: 36px;
   font-weight: 700;
-  font-family: "Questrial", sans-serif;
   color: #fff;
 }
 
@@ -503,7 +503,6 @@ education .education-title {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Questrial", sans-serif;
   color: #ef6024;
   margin-bottom: 10px;
 }
@@ -591,7 +590,6 @@ education .education-title {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Questrial", sans-serif;
   color: #ef6024;
   margin-bottom: 10px;
 }
