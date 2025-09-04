@@ -1,0 +1,27 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "Github Pages Profile Site",
+  "main": "index.htmnl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobiasdeville/tobiasdeville.github.io.git"
+  },
+  "keywords": [
+    "profile",
+    "cv"
+  ],
+  "author": "Tobias DeVille",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tobiasdeville/tobiasdeville.github.io/issues"
+  },
+  "homepage": "https://github.com/tobiasdeville/tobiasdeville.github.io#readme",
+  "dependencies": {
+    "fontawesome": "^5.6.3",
+    "jquery-highlight": "^3.5.0"
+  }
+}
