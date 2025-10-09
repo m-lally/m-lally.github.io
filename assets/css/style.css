@@ -76,7 +76,7 @@ h6,
 }
 
 #header h1 {
-  font-size: 42px;
+  font-size: 46px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -91,7 +91,7 @@ h6,
 }
 
 #header h2 {
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 17px;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -228,7 +228,7 @@ h6,
   justify-content: space-between;
   padding: 0;
   /* font-family: "Actor", sans-serif; */
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
