@@ -1,685 +1,1044 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Marc Lally</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Actor:wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Marc Lally</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Actor:wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/notie/dist/notie.min.css" rel="stylesheet" />
+    <style>
+      /* override notie styles here */
+      .notie-container {
+        box-shadow: none;
+        height: 50px;
+        font-size: 14px;
+        font-family: "Actor", sans-serif;
+      }
+    </style>
+    <!-- Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/notie/dist/notie.min.css" rel="stylesheet">
-  <style>
-    /* override notie styles here */
-    .notie-container {
-      box-shadow: none;
-      height: 50px;
-      font-size: 14px;
-      font-family: 'Actor', sans-serif;
-    }
-  </style>
-  <!-- Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
-      <h1><a href="https://m-lally.github.io">Marc Lally</a></h1>
-      <br />
-      <h2>Senior Software Engineer</h2>
-      <h2>Node | React | Serverless | AWS</h2>
-      <br />
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#education">Experience</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="social-links">
-        <a href="https://github.com/m-lally" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/marclally/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="container">
+        <h1><a href="https://m-lally.github.io">Marc Lally</a></h1>
         <br />
-      </div>
-      <div id="block" class="block" data-aos="fade-up">
-        <div class="row">
-        </div>
-      </div>
-    </div>
-  </header><!-- End Header -->
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
-      <div class="section-title">
-        <h2>About</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img id="avatar" src="assets/img/avatar.png" />
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h4>Senior Software Engineer | Tech Lead</h4>
+        <h2>Senior Software Engineer</h2>
+        <h2>
+          Tech Lead | Javascriipt | Node | React | Code that ships and survives.
+        </h2>
+        <br />
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link active" href="#header">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#education">Experience</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+        <!-- .navbar -->
+        <div class="social-links">
+          <a href="https://github.com/m-lally" class="github"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/marclally/" class="linkedin"
+            ><i class="bi bi-linkedin"></i
+          ></a>
           <br />
-          <div class="row">
-            <div class="col-sm-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>07516 029946</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>marc.lally@gmail.com</span></li>
-              </ul>
+        </div>
+        <div id="block" class="block" data-aos="fade-up">
+          <div class="row"></div>
+        </div>
+      </div>
+    </header>
+    <br />
+    <!-- End Header -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <!-- ======= About Me ======= -->
+      <div class="about-me container">
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img id="avatar" src="assets/img/avatar.png" />
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h4>Senior Software Engineer | Tech Lead</h4>
+            <br />
+            <div class="row">
+              <div class="col-sm-6">
+                <ul>
+                  <li>
+                    <i class="bi bi-chevron-right"></i> <strong>Phone:</strong>
+                    <span>07516 029946</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                    <span>marc.lally@gmail.com</span>
+                  </li>
+                </ul>
+              </div>
+              <p style="font-size: 14px">
+                Full-stack JavaScript Engineer specializing in Node | React |
+                Serverless
+              </p>
+              <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">
+                Engineer building scalable systems and performant frontends
+                using JavaScript/TypeScript, Node.js, React, and Next.js. I
+                specialize in designing microservices, API architectures
+                (REST/GraphQL), and efficient data models (SQL/NoSQL).
+                Proficient in CI/CD, Docker, and cloud infrastructure (AWS,
+                Terraform). I transform complex requirements into clean,
+                resilient code that drives product innovation and accelerates
+                delivery, while maintaining system integrity and scalability.
+              </p>
+              <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">
+                Architect of modern serverless infrastructures that transform
+                business challenges into competitive advantages. Cross-language
+                scripts (Python, Perl, Rust, Laravel, JavaScript et al) to
+                navigate diverse tech environments. AWS cloud specialist
+                weaponizing Lambda, DynamoDB, S3, and API Gateway to build
+                battle-tested, infinitely scalable systems. Agile practitioner
+                engineering enterprise-grade applications.
+              </p>
             </div>
-            <p style="font-size: 14px"> Full-stack JavaScript Engineer specializing in Node | React | Serverless
-            </p>
-            <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">
-              Engineer building scalable systems and performant frontends using JavaScript/TypeScript, Node.js, React,
-              and Next.js. I specialize in designing microservices, API architectures (REST/GraphQL), and efficient data
-              models (SQL/NoSQL). Proficient in CI/CD, Docker, and cloud infrastructure (AWS, Terraform). I transform
-              complex requirements into clean, resilient code that drives product innovation and accelerates delivery,
-              while maintaining system integrity and scalability.
-            </p>
-            <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">
-              Architect of modern serverless infrastructures that transform business challenges into competitive
-              advantages. Cross-language scripts (Python, Perl, Rust, Laravel, JavaScript et al) to navigate diverse
-              tech environments. AWS cloud specialist weaponizing Lambda, DynamoDB, S3, and API Gateway to build
-              battle-tested, infinitely scalable systems. Agile practitioner engineering enterprise-grade applications.
-            </p>
+          </div>
+        </div>
+        <!-- End About Me -->
+        <!-- ======= Education Section ======= -->
+        <div class="education container">
+          <div class="row justify-content-left">
+            <div class="section-title">
+              <h2>Education</h2>
+            </div>
+            <div class="row">
+              <div class="col-lg-10">
+                <h4>Bsc Computer Science</h4>
+                <h5>1990 - 1993</h5>
+                <p>
+                  <img
+                    src="assets/img/ucl.webp"
+                    height="50"
+                    width="50"
+                    alt="ucl logo"
+                  /><em> University College, London</em>
+                </p>
+                <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">
+                  With its strong focus on solving real-world problems through
+                  problem-based learning, this BSc delivers world- class,
+                  industry-relevant teaching. The programme provides the
+                  essential material employers expect from a top- quality
+                  computer science graduate, and prepares you for employment in
+                  a wide variety of industries.
+                </p>
+              </div>
+              <div class="skills container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="section-title">
+                      <h2>Code</h2>
+                    </div>
+                    <div class="progress fst-normal">
+                      <span class="skill"
+                        >Typescript <i class="val">87%</i></span
+                      >
+                      <div class="progress-bar-wrap">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="87"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="progress fst-normal">
+                      <span class="skill"
+                        >Javascript<i class="val">89%</i></span
+                      >
+                      <div class="progress-bar-wrap">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="89"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="progress fst-normal">
+                      <span class="skill">Python<i class="val">60%</i></span>
+                      <div class="progress-bar-wrap">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="60"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="progress fst-normal">
+                      <span class="skill"
+                        >Serverless <i class="val">88%</i></span
+                      >
+                      <div class="progress-bar-wrap">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="88"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <span class="skill">Rust <i class="val">40%</i></span>
+                      <div class="progress-bar-wrap">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-valuenow="40"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-10">
+                <h4>AWS</h4>
+                <h5>2020 - 2021</h5>
+                <p>
+                  <img
+                    src="assets/img/aws.webp"
+                    height="50"
+                    width="50"
+                    alt="aws logo"
+                  /><em></em>
+                </p>
+                <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">
+                  Expert AWS Solutions Architect with comprehensive knowledge
+                  spanning core services, infrastructure-as-code, and enterprise
+                  architecture patterns. Proficient in designing secure,
+                  scalable, and cost-effective cloud solutions following
+                  Well-Architected Framework principles. Experienced in
+                  multi-region deployments, hybrid connectivity, microservices,
+                  and serverless architectures. Skilled in implementing robust
+                  security controls, optimizing performance, and establishing
+                  CI/CD pipelines. Capable of architecting specialized solutions
+                  for data analytics, disaster recovery, and compliance
+                  requirements across diverse industries.
+                </p>
+                <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">
+                  AWS Certified Developer Associate with comprehensive expertise
+                  in cloud-native application development using AWS services.
+                  Proficient in serverless architectures with Lambda, API
+                  Gateway, and DynamoDB, as well as containerization with ECS.
+                  Experienced in implementing CI/CD pipelines using AWS
+                  developer tools, infrastructure as code with
+                  CloudFormation/SAM, and event-driven architectures. Skilled in
+                  performance optimization through caching strategies,
+                  implementing security best practices with IAM, and building
+                  resilient applications leveraging AWS managed services across
+                  multiple programming languages.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Education -->
+          <!-- ======= Skills  ======= -->
+          <div class="skills container">
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <div class="section-title">
+                  <h2>Skills</h2>
+                </div>
+                <div class="progress fst-normal">
+                  <span class="skill"
+                    >AWS Ecosystem <i class="val">87%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="87"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress fst-normal">
+                  <span class="skill">Git<i class="val">89%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="89"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress fst-normal">
+                  <span class="skill">CI/CD <i class="val">96%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="96"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress fst-normal">
+                  <span class="skill">Databases <i class="val">88%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="88"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress fst-normal">
+                  <span class="skill">TDD <i class="val">85%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- End About Me -->
-      <!-- ======= Education Section ======= -->
+    </section>
+    <!-- End Skills -->
+    <section id="education" class="education">
+      <!-- ======= Resume Section ======= -->
       <div class="education container">
-        <div class="row justify-content-left">
-          <div class="section-title">
-            <h2>Education</h2>
-          </div>
-          <div class="row">
-            <div class="col-lg-10">
-              <h4>Bsc Computer Science</h4>
-              <h5>1990 - 1993</h5>
-              <p><img src="assets/img/ucl.webp" height="50" width="50" alt="ucl logo" /><em> University College,
-                  London</em></p>
-              <p class='col-lg-8 pt-4 pt-lg-0 content fst-normal'>With its strong focus on solving real-world problems
-                through
-                problem-based learning, this BSc delivers world- class, industry-relevant teaching. The programme
-                provides the essential material employers expect from a top- quality computer science graduate, and
-                prepares you for employment in a wide variety of industries.</p>
-            </div>
-            <div class="skills container">
-              <div class="row justify-content-center">
-                <div class="col-lg-6">
-                  <div class="section-title">
-                    <h2>Code</h2>
-                  </div>
-                  <div class="progress fst-normal">
-                    <span class="skill">Typescript <i class="val">87%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0"
-                        aria-valuemax="100">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="progress fst-normal">
-                    <span class="skill">Javascript<i class="val">89%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="89" aria-valuemin="0"
-                        aria-valuemax="100">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="progress fst-normal">
-                    <span class="skill">Python<i class="val">60%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                        aria-valuemax="100">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="progress fst-normal">
-                    <span class="skill">Serverless <i class="val">88%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0"
-                        aria-valuemax="100">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="progress">
-                    <span class="skill">Rust <i class="val">40%</i></span>
-                    <div class="progress-bar-wrap">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                        aria-valuemax="100">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-10">
-              <h4>AWS</h4>
-              <h5>2020 - 2021</h5>
-              <p><img src="assets/img/aws.webp" height="50" width="50" alt="aws logo" /><em></em></p>
-              <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">Expert AWS Solutions Architect with comprehensive
-                knowledge spanning core services, infrastructure-as-code, and enterprise architecture patterns. Proficient in designing secure,
-                scalable, and cost-effective cloud solutions following Well-Architected Framework principles.
-                Experienced in multi-region deployments, hybrid connectivity, microservices, and serverless
-                architectures. Skilled in implementing robust security controls, optimizing performance, and establishing CI/CD pipelines.
-                Capable of architecting specialized solutions for data analytics, disaster recovery, and compliance requirements
-                across diverse industries.</p>
-              <p class="col-lg-8 pt-4 pt-lg-0 content fst-normal">AWS Certified Developer Associate with comprehensive
-                expertise in cloud-native application development using AWS services. Proficient in serverless architectures with
-                Lambda, API Gateway, and DynamoDB, as well as containerization with ECS. Experienced in implementing CI/CD pipelines
-                using AWS developer tools, infrastructure as code with CloudFormation/SAM, and event-driven
-                architectures. Skilled in performance optimization through caching strategies, implementing security
-                best practices with IAM, and building resilient applications leveraging AWS managed services across multiple
-                programming languages.</p>
-            </div>
-          </div>
+        <div class="section-title">
+          <h2>Experience</h2>
         </div>
-        <!-- End Education -->
-        <!-- ======= Skills  ======= -->
-        <div class="skills container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <div class="section-title">
-                <h2>Skills</h2>
-              </div>
-              <div class="progress fst-normal">
-                <span class="skill">AWS Ecosystem <i class="val">87%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-              <div class="progress fst-normal">
-                <span class="skill">Git<i class="val">89%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-              <div class="progress fst-normal">
-                <span class="skill">CI/CD <i class="val">96%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-              <div class="progress fst-normal">
-                <span class="skill">Databases <i class="val">88%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-              <div class="progress fst-normal">
-                <span class="skill">TDD <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Skills -->
-  <section id="education" class="education">
-    <!-- ======= Resume Section ======= -->
-    <div class="education container">
-      <div class="section-title">
-        <h2>Experience</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="education-item">
-            <h4>Senior Full Stack Developer | Tech Lead</h4>
-            <p>January 2023 - December 2023 </p>
-            <p><img src="assets/img/codeium.webp" height="50" width="50" alt="codeium logo" /><em> Codeium
-              </em></p>
-            <p class="fst-normal">
-              Played a key role in designing, developing, and maintaining core services that power scalable,
-              high-performance, and secure applications. Leveraged modern technologies such as Node.js, TypeScript,
-              Serverless frameworks, and secure API design to deliver low-latency, high-availability systems. Integrated
-              OAuth/JWT authentication and data storage solutions while ensuring robust security and data protection.
-              Committed to writing clean, reusable, and testable code through Test-Driven Development, streamlining
-              development workflows and fostering effective team collaboration.
-            </p>
-            <p class="fst-normal">
-              Designed and implemented user-friendly, responsive, and feature-rich interfaces using React. Applied best
-              practices and kept abreast of the latest front-end trends to build efficient, visually appealing
-              components that enhance user experience. Extended functionality by integrating libraries and tools
-              tailored to project needs.
-            </p>
-            <h5>Contract</h5>
-            <h5>Fullstack</h5>
-            <h5>Typescript</h5>
-            <h5>Node JS</h5>
-            <h5>Serverless</h5>
-            <h5>React</h5>
-            <h5>Jest</h5>
-            <h5>Postgres</h5>
-          </div>
-          <div class="education-item">
-            <h4>Senior Back End Developer</h4>
-            <p>March 2022 - December 2022 </p>
-            <p><img src="assets/img/made.webp" height="50" width="50" alt="made.com logo" /><em> made.com</em></p>
-            <p class="fst-normal">
-              I refactored and optimised legacy codebases to align company coding standards, and
-              branding requirements. I engineered modular, reusable, and highly testable components, leveraging Test
-              Driven Development (TDD) to ensure code reliability and maintainability. My responsibilities included
-              architecting and deploying Node.js and serverless solutions, implementing secure RESTful APIs, and
-              integrating third-party libraries to extend system functionality. I translated detailed technical
-              specifications into robust front-end components, ensuring pixel-perfect UI fidelity and seamless user
-              experiences.
-            </p>
-            <p class="fst-normal">
-              I designed and implemented distributed, low-latency, and highly available applications with a
-              strong focus on security, including data encryption and access control. I integrated scalable data storage
-              solutions, normalised and optimised database schemas, and managed OAuth 2.0 and JWT-based authentication
-              flows to enforce secure access. Throughout the SDLC, I championed CI/CD pipelines, automated testing, and
-              code reviews to uphold best practices in software engineering, code quality, and system security.
-            </p>
-            <h5>Contract</h5>
-            <h5>Backend</h5>
-            <h5>Node JS</h5>
-            <h5>API</h5>
-            <h5>Security Policy</h5>
-            <h5>Docker</h5>
-            <h5>CI/CD</h5>
-            <h5>Jest</h5>
-            <h5>Postgres</h5>
-          </div>
-          <div class="education-item">
-            <h4>Senior Full Stack Developer</h4>
-            <p>March 2021 - February 2022 </p>
-            <p><img src="assets/img/shell.webp" height="50" width="50" alt="shell logo" /><em> Shell Energy </em>
-            </p>
-            <p class="fst-normal">
-              I designed and developed efficient, testable, and reusable software modules and classes, ensuring high
-              code quality and maintainability. I actively contributed to the planning, conceptualization, and
-              architectural design of complex systems, including darkrmation architecture, collaborating closely with
-              cross-functional teams to align technical solutions with business goals. My responsibilities included
-              building robust Node.js and Serverless APIs, integrating essential libraries, and continuously enhancing
-              functionality to meet evolving requirements. I meticulously ensured that all components were developed
-              according to detailed specifications, maintaining consistency and reliability across the codebase.
-            </p>
-            <p class="fst-normal">
-              Additionally, I managed the configuration and integration of payment services, including setting up
-              webhooks and payment gateways to facilitate secure and seamless transactions. I designed and implemented
-              database schemas using GraphQL to optimize data retrieval and manipulation. My expertise extended to
-              integrating authentication mechanisms such as OAuth and JWT tokens to enforce secure access control.
-              Throughout all stages of software development, I advocated for and implemented best practices, promoting
-              code quality, security, and scalability to deliver high-performance applications aligned with industry
-              standards.
-            </p>
-            <h5>Contract</h5>
-            <h5>Fullstack</h5>
-            <h5>Node JS</h5>
-            <h5>React</h5>
-            <h5>GraphQL</h5>
-            <h5>Mongo</h5>
-            <h5>API</h5>
-            <h5>OAuth</h5>
-            <h5>AWS Lambda</h5>
-          </div>
-          <div class="education-item">
-            <h4>Senior Full Stack Developer | Technical Lead</h4>
-            <p>September 2020 - March 2021 </p>
-            <p><img src="assets/img/rotate.webp" height="50" width="50" alt="rotate logo" /><em> Studio Rotate </em>
-            </p>
-            <p class="fst-normal">
-              Inspire and lead cross-functional teams to deliver high-quality digital products, consistently promoting
-              best practices across all areas of software development. I thrive on solving complex technical and
-              architectural challenges, collaborating effectively with technology stakeholders beyond my immediate team
-              to ensure seamless integration and delivery. My experience includes contributing to the planning, concept,
-              and design of robust information architectures, as well as integrating advanced data storage solutions.
-            </p>
-            <p class="fst-normal">
-              My technical expertise spans building efficient, testable, and reusable modules and classes using modern
-              frameworks such as Nuxt js and developing scalable APIs with Node.js and Serverless on AWS. I
-              have a proven track record of configuring payment services, webhooks, and payment gateways, building
-              secure database schemas, and implementing OAuth and JWT token integrations. I ensure all components are
-              built to detailed specifications while continuously adding libraries and new functionality to enhance
-              product capabilities.
-            </p>
-            <h5>Backend</h5>
-            <h5>Serverless</h5>
-            <h5>AWS Lambda</h5>
-            <h5>API</h5>
-            <h5>Node JS</h5>
-            <h5>Koa JS/Express JS</h5>
-            <h5>Commerce Layer API</h5>
-          </div>
-          <div class="education-item">
-            <h4>Senior Back End Developer </h4>
-            <p>March 2020 - September 2020 </p>
-            <p><img src="assets/img/sainsburys.webp" height="50" width="50" alt="sainsburys logo" /><em> Sainsburys
-                Digital Tech & Data</em></p>
-            <p class="fst-normal">
-              Lead the systematic refactoring and optimization of existing codebases by rigorously applying
-              industry-recognized best practices, design patterns, and coding standards to enhance code quality,
-              maintainability, and scalability across projects. Architect and develop sophisticated middleware solutions
-              utilizing GraphQL and Next.js frameworks to support and integrate with the Google DV360 advertising
-              platform, ensuring efficient data querying, real-time communication, and seamless interoperability between
-              services. Consistently produce reusable, modular, and highly testable code by adhering to a disciplined
-              Test-Driven Development (TDD) methodology, which drives early bug detection and improves overall software
-              reliability.
-            </p>
-            <p class="fst-normal">
-              Design, develop, and deploy low-latency, highly available, and performance-optimized
-              applications that can handle large-scale traffic and demanding business requirements without compromising
-              responsiveness or stability. Implement comprehensive security strategies, including data encryption,
-              authentication, and authorization mechanisms, to protect sensitive information and ensure compliance with
-              data protection regulations. Engineer and integrate a variety of data storage solutions, including
-              relational and NoSQL databases, to support flexible, durable, and scalable data management tailored to the
-              needs of complex, data-driven applications.
-            </p>
-            <h5>Contract</h5>
-            <h5>Backend</h5>
-            <h5>Graph QL</h5>
-            <h5>AWS Lambda</h5>
-            <h5>API</h5>
-            <h5>Node JS</h5>
-            <h5>Next JS</h5>
-            <h5>Google DV360</h5>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="education-item">
-            <h4>Senior Full Stack Developer | Team Lead</h4>
-            <p>February 2019 - November 2019 </p>
-            <p><img src="assets/img/kfc.webp" height="50" width="50" alt="kfc logo" /><em> KFC | Permanent</em></p>
-            <p class="fst-normal">
-              Work collaboratively across multiple cross-functional teams, including Mobile, Back End, Front End, and
-              DevOps, to ensure all projects meet and exceed defined business requirements and objectives. Lead the
-              design and development of complex integrations between our digital ordering platforms, point of sale (POS)
-              systems, payment processing solutions, and other interconnected tools, providing seamless and efficient
-              interaction across these systems.
-            </p>
-            <p class="fst-normal">
-              Spearhead the development of robust, scalable, and secure APIs using Node.js and Serverless frameworks,
-              ensuring high performance and reliability. Implement OAuth and JWT token-based authentication mechanisms
-              to safeguard access to sensitive data and services. Design and optimize database schemas for both SQL and
-              NoSQL databases, ensuring efficient data storage and retrieval. Continuously enhance system functionality
-              by integrating new libraries and features, while adhering to best practices in software development to
-              maintain code quality, security, and scalability.
-            </p>
-            <h5>Permanent</h5>
-            <h5>Backend</h5>
-            <h5>Frontend</h5>
-            <h5>Serverless</h5>
-            <h5>AWS Lambda</h5>
-            <h5>API</h5>
-            <h5>Node JS</h5>
-            <h5>Koa JS/Express JS</h5>
-            <h5>Postgres</h5>
-          </div>
-          <div class="education-item">
-            <h4>Senior Front End Developer</h4>
-            <p>February 2019 - November 2019 </p>
-            <p><img src="assets/img/preqin.webp" height="50" width="50" alt="preqin logo" /><em> Preqin |
-                Contract</em></p>
-            <p class="fst-normal">
-              Take ownership of the development and continuous enhancement of the primary front-end platform, which
-              includes the company website, ensuring a seamless and engaging user experience. Lead the design and
-              implementation of innovative, user-facing features that improve functionality and drive user engagement.
-              Create detailed technical specifications and architectural designs for new complex applications, as well
-              as for the modification and maintenance of existing intricate systems, ensuring alignment with business
-              goals and technical requirements.
-            </p>
-            <p class="fst-normal">
-              Conduct thorough code analysis and requirements gathering to identify
-              key code quality metrics, assess system risks, and evaluate software reliability to deliver robust and
-              maintainable solutions. Perform comprehensive performance tuning, optimization, load balancing, and
-              usability improvements to maximize application responsiveness and stability under diverse operating
-              conditions. Execute rigorous testing procedures to ensure the highest quality standards and user
-              satisfaction. Proficient in modern JavaScript technologies including React, Vanilla JS, and Elasticsearch
-              for implementing efficient, scalable, and feature-rich front-end solutions.
-            </p>
-            <h5>Contract</h5>
-            <h5>Backend</h5>
-            <h5>Frontend</h5>
-            <h5>ElasticSearch</h5>
-            <h5>React JS</h5>
-            <h5>API</h5>
-            <h5>Node JS</h5>
-            <h5>Koa JS/Express JS</h5>
-            <h5>Jest</h5>
-          </div>
-          <div class="education-item">
-            <h4>Senior Front End Developer</h4>
-            <p>February 2019 - November 2019 </p>
-            <p><img src="assets/img/melodyvr.webp" height="50" width="50" alt="melodyvr logo" /><em> MelodyVR |
-                Contract</em></p>
-            <p class="fst-normal">
-              Lead the full-stack development, design, and construction of an integration solution for a Content
-              Management System (CMS) leveraging Node.js and React within an AWS Serverless environment. Architect and
-              implement seamless integration with various data storage solutions to ensure efficient data management and
-              accessibility. Develop modular, reusable, and highly testable code components and classes to promote
-              maintainability and scalability across the platform. Oversee rigorous testing processes and ensure timely
-              deployment of the application into production environments. Actively contribute to the planning,
-              conceptualization, and design of the overall information architecture, aligning technical solutions with
-              business objectives.
-            </p>
-            <p class="fst-normal">
-              Design and develop a sophisticated React.js front-end application for the CMS,
-              providing an intuitive and responsive user experience. Offer ongoing technical guidance and support to the
-              development team throughout the application lifecycle to foster collaboration and successful delivery.
-              Analyze business requirements meticulously and translate them into a coherent component-based architecture
-              within constrained timeframes. Define and establish the front-end application architecture, ensuring
-              scalability, performance, and consistency across the CMS platform.
-            </p>
-            <h5>Contract</h5>
-            <h5>Frontend</h5>
-            <h5>React JS</h5>
-            <h5>API</h5>
-            <h5>Node JS</h5>
-          </div>
-          <div class="education-item">
-            <h4>Senior Back End Developer </h4>
-            <p>April 2017 - November 2017 </p>
-            <p><img src="assets/img/bigcleverlearning.webp" height="50" width="50"
-                alt="bigcleverlearning logo" /><em> Big Clever Learning | Contract</em></p>
-            <p class="fst-normal">
-              Architect, develop, and maintain a suite of microservice applications focused on counselling services,
-              utilizing Koa, React, Swagger, and Node.js technologies. Address and resolve complex performance
-              bottlenecks and architectural challenges to ensure scalable and efficient system operation. Integrate a
-              variety of data storage solutions, including MySQL, PostgreSQL, and MongoDB, to support diverse data
-              requirements and optimize data flow. Build efficient, reusable, and testable modules and classes that
-              adhere to best practices and coding standards. Lead comprehensive testing efforts, including unit testing
-              with Jest and Mocha (using mock and dontMock techniques), and manage smooth deployments into production
-              environments. Update, repair, and enhance legacy codebases and generic applications to improve reliability
-              and extend functionality. 
+        <div class="row">
+          <div class="col-lg-6">
+             <div class="education-item">
+              <h4>Senior Full Stack |Developer  </h4>
+              <p>January 2023 - Decmber 2023</p>
+              <p>
+                <img
+                  src="assets/img/mod.png"
+                  height="50"
+                  width="50"
+                  alt="ministry of defence logo"
+                /><em> Ministry of Defence </em>
               </p>
               <p class="fst-normal">
-              Actively contribute to the planning, conceptualization, and design of
-              information architecture to align technical strategies with business goals. Extend and enhance Node.js
-              microservices APIs by adding libraries and developing new features, ensuring robust backend functionality.
-              Manage and run development environments through Docker containers and local services to streamline
-              workflows and ensure consistency. Develop React components for counselling service applications using
-              Material-UI, delivering user-friendly and visually consistent interfaces built to detailed specifications.
-              Design and implement database schemas tailored to application needs and configure payment services
-              integration with Stripe, including webhook setup for secure transaction processing. Utilize Redux and
-              Redux Saga middleware to manage complex application state and side effects, ensuring smooth frontend
-              performance and responsiveness.
-            </p>
+                Played a key role in designing, developing, and maintaining core
+                services that power scalable, high-performance, and secure
+                applications. Leveraged modern technologies such as Node.js,
+                TypeScript, Serverless frameworks, and secure API design to
+                deliver low-latency, high-availability systems. Integrated
+                OAuth/JWT authentication and data storage solutions while
+                ensuring robust security and data protection. Committed to
+                writing clean, reusable, and testable code through Test-Driven
+                Development, streamlining development workflows and fostering
+                effective team collaboration.
+              </p>
+              <p class="fst-normal">
+                Designed and implemented user-friendly, responsive, and
+                feature-rich interfaces using React. Applied best practices and
+                kept abreast of the latest front-end trends to build efficient,
+                visually appealing components that enhance user experience.
+                Extended functionality by integrating libraries and tools
+                tailored to project needs.
+              </p>
               <h5>Contract</h5>
-            <h5>Frontend</h5>
-            <h5>Backend</h5>
-            <h5>React JS</h5>
-            <h5>API</h5>
-            <h5>Node JS</h5>
-            <h5>MySQL</h5>
-            <h5>Postegres</h5>
-            <h5>Mongo DB</h5>
-            <h5>Jest</h5>
-            <h5>Redux</h5>
+              <h5>Fullstack</h5>
+              <h5>Typescript</h5>
+              <h5>Node JS</h5>
+              <h5>Serverless</h5>
+              <h5>React</h5>
+              <h5>Jest</h5>
+              <h5>Postgres</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Full Stack Developer | Tech Lead</h4>
+              <p>January 2023 - December 2023</p>
+              <p>
+                <img
+                  src="assets/img/codeium.webp"
+                  height="50"
+                  width="50"
+                  alt="codeium logo"
+                /><em> Codeium </em>
+              </p>
+              <p class="fst-normal">
+                Played a key role in designing, developing, and maintaining core
+                services that power scalable, high-performance, and secure
+                applications. Leveraged modern technologies such as Node.js,
+                TypeScript, Serverless frameworks, and secure API design to
+                deliver low-latency, high-availability systems. Integrated
+                OAuth/JWT authentication and data storage solutions while
+                ensuring robust security and data protection. Committed to
+                writing clean, reusable, and testable code through Test-Driven
+                Development, streamlining development workflows and fostering
+                effective team collaboration.
+              </p>
+              <p class="fst-normal">
+                Designed and implemented user-friendly, responsive, and
+                feature-rich interfaces using React. Applied best practices and
+                kept abreast of the latest front-end trends to build efficient,
+                visually appealing components that enhance user experience.
+                Extended functionality by integrating libraries and tools
+                tailored to project needs.
+              </p>
+              <h5>Contract</h5>
+              <h5>Fullstack</h5>
+              <h5>Typescript</h5>
+              <h5>Node JS</h5>
+              <h5>Serverless</h5>
+              <h5>React</h5>
+              <h5>Jest</h5>
+              <h5>Postgres</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Back End Developer</h4>
+              <p>March 2022 - December 2022</p>
+              <p>
+                <img
+                  src="assets/img/made.webp"
+                  height="50"
+                  width="50"
+                  alt="made.com logo"
+                /><em> made.com</em>
+              </p>
+              <p class="fst-normal">
+                I refactored and optimised legacy codebases to align company
+                coding standards, and branding requirements. I engineered
+                modular, reusable, and highly testable components, leveraging
+                Test Driven Development (TDD) to ensure code reliability and
+                maintainability. My responsibilities included architecting and
+                deploying Node.js and serverless solutions, implementing secure
+                RESTful APIs, and integrating third-party libraries to extend
+                system functionality. I translated detailed technical
+                specifications into robust front-end components, ensuring
+                pixel-perfect UI fidelity and seamless user experiences.
+              </p>
+              <p class="fst-normal">
+                I designed and implemented distributed, low-latency, and highly
+                available applications with a strong focus on security,
+                including data encryption and access control. I integrated
+                scalable data storage solutions, normalised and optimised
+                database schemas, and managed OAuth 2.0 and JWT-based
+                authentication flows to enforce secure access. Throughout the
+                SDLC, I championed CI/CD pipelines, automated testing, and code
+                reviews to uphold best practices in software engineering, code
+                quality, and system security.
+              </p>
+              <h5>Contract</h5>
+              <h5>Backend</h5>
+              <h5>Node JS</h5>
+              <h5>API</h5>
+              <h5>Security Policy</h5>
+              <h5>Docker</h5>
+              <h5>CI/CD</h5>
+              <h5>Jest</h5>
+              <h5>Postgres</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Full Stack Developer</h4>
+              <p>March 2021 - February 2022</p>
+              <p>
+                <img
+                  src="assets/img/shell.webp"
+                  height="50"
+                  width="50"
+                  alt="shell logo"
+                /><em> Shell Energy </em>
+              </p>
+              <p class="fst-normal">
+                I designed and developed efficient, testable, and reusable
+                software modules and classes, ensuring high code quality and
+                maintainability. I actively contributed to the planning,
+                conceptualization, and architectural design of complex systems,
+                including darkrmation architecture, collaborating closely with
+                cross-functional teams to align technical solutions with
+                business goals. My responsibilities included building robust
+                Node.js and Serverless APIs, integrating essential libraries,
+                and continuously enhancing functionality to meet evolving
+                requirements. I meticulously ensured that all components were
+                developed according to detailed specifications, maintaining
+                consistency and reliability across the codebase.
+              </p>
+              <p class="fst-normal">
+                Additionally, I managed the configuration and integration of
+                payment services, including setting up webhooks and payment
+                gateways to facilitate secure and seamless transactions. I
+                designed and implemented database schemas using GraphQL to
+                optimize data retrieval and manipulation. My expertise extended
+                to integrating authentication mechanisms such as OAuth and JWT
+                tokens to enforce secure access control. Throughout all stages
+                of software development, I advocated for and implemented best
+                practices, promoting code quality, security, and scalability to
+                deliver high-performance applications aligned with industry
+                standards.
+              </p>
+              <h5>Contract</h5>
+              <h5>Fullstack</h5>
+              <h5>Node JS</h5>
+              <h5>React</h5>
+              <h5>GraphQL</h5>
+              <h5>Mongo</h5>
+              <h5>API</h5>
+              <h5>OAuth</h5>
+              <h5>AWS Lambda</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Full Stack Developer | Technical Lead</h4>
+              <p>September 2020 - March 2021</p>
+              <p>
+                <img
+                  src="assets/img/rotate.webp"
+                  height="50"
+                  width="50"
+                  alt="rotate logo"
+                /><em> Studio Rotate </em>
+              </p>
+              <p class="fst-normal">
+                Inspire and lead cross-functional teams to deliver high-quality
+                digital products, consistently promoting best practices across
+                all areas of software development. I thrive on solving complex
+                technical and architectural challenges, collaborating
+                effectively with technology stakeholders beyond my immediate
+                team to ensure seamless integration and delivery. My experience
+                includes contributing to the planning, concept, and design of
+                robust information architectures, as well as integrating
+                advanced data storage solutions.
+              </p>
+              <p class="fst-normal">
+                My technical expertise spans building efficient, testable, and
+                reusable modules and classes using modern frameworks such as
+                Nuxt js and developing scalable APIs with Node.js and Serverless
+                on AWS. I have a proven track record of configuring payment
+                services, webhooks, and payment gateways, building secure
+                database schemas, and implementing OAuth and JWT token
+                integrations. I ensure all components are built to detailed
+                specifications while continuously adding libraries and new
+                functionality to enhance product capabilities.
+              </p>
+              <h5>Backend</h5>
+              <h5>Serverless</h5>
+              <h5>AWS Lambda</h5>
+              <h5>API</h5>
+              <h5>Node JS</h5>
+              <h5>Koa JS/Express JS</h5>
+              <h5>Commerce Layer API</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Back End Developer</h4>
+              <p>March 2020 - September 2020</p>
+              <p>
+                <img
+                  src="assets/img/sainsburys.webp"
+                  height="50"
+                  width="50"
+                  alt="sainsburys logo"
+                /><em> Sainsburys Digital Tech & Data</em>
+              </p>
+              <p class="fst-normal">
+                Lead the systematic refactoring and optimization of existing
+                codebases by rigorously applying industry-recognized best
+                practices, design patterns, and coding standards to enhance code
+                quality, maintainability, and scalability across projects.
+                Architect and develop sophisticated middleware solutions
+                utilizing GraphQL and Next.js frameworks to support and
+                integrate with the Google DV360 advertising platform, ensuring
+                efficient data querying, real-time communication, and seamless
+                interoperability between services. Consistently produce
+                reusable, modular, and highly testable code by adhering to a
+                disciplined Test-Driven Development (TDD) methodology, which
+                drives early bug detection and improves overall software
+                reliability.
+              </p>
+              <p class="fst-normal">
+                Design, develop, and deploy low-latency, highly available, and
+                performance-optimized applications that can handle large-scale
+                traffic and demanding business requirements without compromising
+                responsiveness or stability. Implement comprehensive security
+                strategies, including data encryption, authentication, and
+                authorization mechanisms, to protect sensitive information and
+                ensure compliance with data protection regulations. Engineer and
+                integrate a variety of data storage solutions, including
+                relational and NoSQL databases, to support flexible, durable,
+                and scalable data management tailored to the needs of complex,
+                data-driven applications.
+              </p>
+              <h5>Contract</h5>
+              <h5>Backend</h5>
+              <h5>Graph QL</h5>
+              <h5>AWS Lambda</h5>
+              <h5>API</h5>
+              <h5>Node JS</h5>
+              <h5>Next JS</h5>
+              <h5>Google DV360</h5>
+            </div>
           </div>
-          <div class="education-item">
-            <h4>Senior Back End Developer </h4>
-            <p>October 2016 - March 2017 </p>
-            <p><img src="assets/img/futurebrand.webp" height="50" width="50" alt="futurebrand logo" /><em>
-                FutureBrand | Contract</em></p>
-            <p class="fst-normal">
-              Develop and integrate OAuth services for global clients and further develop functionality for
-              administration components. Build efficient, testable, and reusable modules and classes. Solve complex
-              performance problems and architectural challenges, SAML & OAuth integration. Integration of data storage
-              solutions. Conduct testing and deploy into production. Updating, repairing, modifying and developing
-              legacy code and generic applications. Contribute to concept/pitching digital experiences for brands &amp;
-              agencies. Build Craft CMS PHP plugins to extend functionality of administration system for asset
-              management services for global clients. JQuery, Ajax, PHP, add OAuth2 server and develop for group sites,
-              build frontend components to detailed specifications. MySQL.
-            </p>
-          </div>
-          <div class="education-item">
-            <h4>Senior Full Stack Developer | Team Lead</h4>
-            <p>January 2015 - September 2016 </p>
-            <p><img src="assets/img/purplebridgepublishing.webp" height="50" width="50"
-                alt="purplebridgepublishing logo" /><em> Purple Bridge Publishing | Permanent</em></p>
-            <p class="fst-normal">
-              Develop and lead dev team. Laravel/PHP/Javascript/MySQL. Typical LAMP stack. Server configurations and
-              pipeline setup, Docker containers. TDD Unit testing with PHPUnit. Design, develop, test, support and
-              deploy custom web applications. Design and develop testing and maintenance procedures and activities.
-              Assist and support junior team members on multiple projects. Implement best practices, standards and
-              procedures. Develop and document design, source base and architecture. Maintain and manage existing code
-              bases. Design, develop and implement solutions to user needs and requirements. Write, review and improvise
-              code. Run tests and fix bugs. Coordinate with directors and business analysts to determine
-              functionalities. Design and develop technical solutions to complex business problems. Design and develop
-              data analysis solutions. Design and develop logical and physical data modelshat meet application
-              requirements. Design, build and deploy web services including API, databases, websites and office
-              management software.
-            </p>
+          <div class="col-lg-6">
+            <div class="education-item">
+              <h4>Senior Full Stack Developer | Team Lead</h4>
+              <p>February 2019 - November 2019</p>
+              <p>
+                <img
+                  src="assets/img/kfc.webp"
+                  height="50"
+                  width="50"
+                  alt="kfc logo"
+                /><em> KFC | Permanent</em>
+              </p>
+              <p class="fst-normal">
+                Work collaboratively across multiple cross-functional teams,
+                including Mobile, Back End, Front End, and DevOps, to ensure all
+                projects meet and exceed defined business requirements and
+                objectives. Lead the design and development of complex
+                integrations between our digital ordering platforms, point of
+                sale (POS) systems, payment processing solutions, and other
+                interconnected tools, providing seamless and efficient
+                interaction across these systems.
+              </p>
+              <p class="fst-normal">
+                Spearhead the development of robust, scalable, and secure APIs
+                using Node.js and Serverless frameworks, ensuring high
+                performance and reliability. Implement OAuth and JWT token-based
+                authentication mechanisms to safeguard access to sensitive data
+                and services. Design and optimize database schemas for both SQL
+                and NoSQL databases, ensuring efficient data storage and
+                retrieval. Continuously enhance system functionality by
+                integrating new libraries and features, while adhering to best
+                practices in software development to maintain code quality,
+                security, and scalability.
+              </p>
+              <h5>Permanent</h5>
+              <h5>Backend</h5>
+              <h5>Frontend</h5>
+              <h5>Serverless</h5>
+              <h5>AWS Lambda</h5>
+              <h5>API</h5>
+              <h5>Node JS</h5>
+              <h5>Koa JS/Express JS</h5>
+              <h5>Postgres</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Front End Developer</h4>
+              <p>February 2019 - November 2019</p>
+              <p>
+                <img
+                  src="assets/img/preqin.webp"
+                  height="50"
+                  width="50"
+                  alt="preqin logo"
+                /><em> Preqin | Contract</em>
+              </p>
+              <p class="fst-normal">
+                Take ownership of the development and continuous enhancement of
+                the primary front-end platform, which includes the company
+                website, ensuring a seamless and engaging user experience. Lead
+                the design and implementation of innovative, user-facing
+                features that improve functionality and drive user engagement.
+                Create detailed technical specifications and architectural
+                designs for new complex applications, as well as for the
+                modification and maintenance of existing intricate systems,
+                ensuring alignment with business goals and technical
+                requirements.
+              </p>
+              <p class="fst-normal">
+                Conduct thorough code analysis and requirements gathering to
+                identify key code quality metrics, assess system risks, and
+                evaluate software reliability to deliver robust and maintainable
+                solutions. Perform comprehensive performance tuning,
+                optimization, load balancing, and usability improvements to
+                maximize application responsiveness and stability under diverse
+                operating conditions. Execute rigorous testing procedures to
+                ensure the highest quality standards and user satisfaction.
+                Proficient in modern JavaScript technologies including React,
+                Vanilla JS, and Elasticsearch for implementing efficient,
+                scalable, and feature-rich front-end solutions.
+              </p>
+              <h5>Contract</h5>
+              <h5>Backend</h5>
+              <h5>Frontend</h5>
+              <h5>ElasticSearch</h5>
+              <h5>React JS</h5>
+              <h5>API</h5>
+              <h5>Node JS</h5>
+              <h5>Koa JS/Express JS</h5>
+              <h5>Jest</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Front End Developer</h4>
+              <p>February 2019 - November 2019</p>
+              <p>
+                <img
+                  src="assets/img/melodyvr.webp"
+                  height="50"
+                  width="50"
+                  alt="melodyvr logo"
+                /><em> MelodyVR | Contract</em>
+              </p>
+              <p class="fst-normal">
+                Lead the full-stack development, design, and construction of an
+                integration solution for a Content Management System (CMS)
+                leveraging Node.js and React within an AWS Serverless
+                environment. Architect and implement seamless integration with
+                various data storage solutions to ensure efficient data
+                management and accessibility. Develop modular, reusable, and
+                highly testable code components and classes to promote
+                maintainability and scalability across the platform. Oversee
+                rigorous testing processes and ensure timely deployment of the
+                application into production environments. Actively contribute to
+                the planning, conceptualization, and design of the overall
+                information architecture, aligning technical solutions with
+                business objectives.
+              </p>
+              <p class="fst-normal">
+                Design and develop a sophisticated React.js front-end
+                application for the CMS, providing an intuitive and responsive
+                user experience. Offer ongoing technical guidance and support to
+                the development team throughout the application lifecycle to
+                foster collaboration and successful delivery. Analyze business
+                requirements meticulously and translate them into a coherent
+                component-based architecture within constrained timeframes.
+                Define and establish the front-end application architecture,
+                ensuring scalability, performance, and consistency across the
+                CMS platform.
+              </p>
+              <h5>Contract</h5>
+              <h5>Frontend</h5>
+              <h5>React JS</h5>
+              <h5>API</h5>
+              <h5>Node JS</h5>
+              <h5>Vanilla</h5>
+              <h5>Node JS</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Back End Developer</h4>
+              <p>April 2017 - November 2017</p>
+              <p>
+                <img
+                  src="assets/img/bigcleverlearning.webp"
+                  height="50"
+                  width="50"
+                  alt="bigcleverlearning logo"
+                /><em> Big Clever Learning | Contract</em>
+              </p>
+              <p class="fst-normal">
+                Architect, develop, and maintain a suite of microservice
+                applications focused on counselling services, utilizing Koa,
+                React, Swagger, and Node.js technologies. Address and resolve
+                complex performance bottlenecks and architectural challenges to
+                ensure scalable and efficient system operation. Integrate a
+                variety of data storage solutions, including MySQL, PostgreSQL,
+                and MongoDB, to support diverse data requirements and optimize
+                data flow. Build efficient, reusable, and testable modules and
+                classes that adhere to best practices and coding standards. Lead
+                comprehensive testing efforts, including unit testing with Jest
+                and Mocha (using mock and dontMock techniques), and manage
+                smooth deployments into production environments. Update, repair,
+                and enhance legacy codebases and generic applications to improve
+                reliability and extend functionality.
+              </p>
+              <p class="fst-normal">
+                Actively contribute to the planning, conceptualization, and
+                design of information architecture to align technical strategies
+                with business goals. Extend and enhance Node.js microservices
+                APIs by adding libraries and developing new features, ensuring
+                robust backend functionality. Manage and run development
+                environments through Docker containers and local services to
+                streamline workflows and ensure consistency. Develop React
+                components for counselling service applications using
+                Material-UI, delivering user-friendly and visually consistent
+                interfaces built to detailed specifications. Design and
+                implement database schemas tailored to application needs and
+                configure payment services integration with Stripe, including
+                webhook setup for secure transaction processing. Utilize Redux
+                and Redux Saga middleware to manage complex application state
+                and side effects, ensuring smooth frontend performance and
+                responsiveness.
+              </p>
+              <h5>Contract</h5>
+              <h5>Frontend</h5>
+              <h5>Backend</h5>
+              <h5>React JS</h5>
+              <h5>API</h5>
+              <h5>Node JS</h5>
+              <h5>MySQL</h5>
+              <h5>Postegres</h5>
+              <h5>Mongo DB</h5>
+            </div>
+            <div class="education-item">
+              <h4>Senior Back End Developer</h4>
+              <p>October 2016 - March 2017</p>
+              <p>
+                <img
+                  src="assets/img/futurebrand.webp"
+                  height="50"
+                  width="50"
+                  alt="futurebrand logo"
+                /><em> FutureBrand | Contract</em>
+              </p>
+              <p class="fst-normal">
+                Led OAuth and SAML integration initiatives for enterprise
+                clients, architecting secure authentication systems that scaled
+                across multiple markets. Designed and implemented reusable
+                backend modules with comprehensive test coverage, improving code
+                maintainability and reducing deployment cycles. Solved critical
+                performance bottlenecks in legacy systems while gradually
+                modernizing the codebase. Built custom Craft CMS plugins
+                extending asset management capabilities for global brand
+                clients. Contributed to early-stage concepting for digital
+                experience pitches, translating client requirements into
+                technical specifications. Developed full-stack features spanning
+                MySQL data layers, PHP/OAuth2 backends, and interactive frontend
+                components using jQuery and Ajax.
+                  <h5>Contract</h5>
+              <h5>Frontend</h5>
+              <h5>OAuth</h5>
+              <h5>SAML</h5>
+              <h5>Craft CMW</h5>
+              <h5>MySQL</h5>
+              <h5>JQuery</h5>
+              <h5>AJax</h5>
+               <h5>PHP</h5>
+              <h5>Laravel</h5>
+              </p>
+            </div>
+            <div class="education-item">
+              <h4>Senior Full Stack Developer | Team Lead</h4>
+              <p>January 2015 - September 2016</p>
+              <p>
+                <img
+                  src="assets/img/purplebridgepublishing.webp"
+                  height="50"
+                  width="50"
+                  alt="purplebridgepublishing logo"
+                /><em> Purple Bridge Publishing | Permanent</em>
+              </p>
+              <p class="fst-normal">
+                Led development team in architecting and delivering enterprise
+                web applications on LAMP stack infrastructure. Established
+                engineering standards including TDD practices with PHPUnit,
+                CI/CD pipelines, and Docker-based deployment workflows that
+                improved release velocity and code quality. Partnered with
+                directors and business analysts to translate complex business
+                requirements into scalable technical solutions. Designed data
+                models and API architectures supporting multi-project
+                initiatives across the organization. Mentored junior engineers
+                through code reviews and pair programming, elevating team
+                capabilities while maintaining multiple production codebases.
+                Built office management software and data analysis tools thatPHP
+                streamlined internal operations.
+                  <h5>Permanent</h5>
+              <h5>Frontend</h5>
+              <h5>Backend</h5>
+              <h5>PHP</h5>
+              <h5>API</h5>
+              <h5>Laravel</h5>
+              <h5>MySQL</h5>
+              <h5>Postegres</h5>
+              <h5>Wordpress</h5>
+              <h5>CI/CD</h5>
+              <h5>AWS</h5>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Resume Section -->
-  <section id="contact" class="contact">
-    <!-- ======= Contact Section ======= -->
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div class="section-title">
-            <h2>Contact</h2>
-            <p>Contact Me</p>
-          </div>
-          <div class="row mt-2">
-            <div class="col-md-6 d-flex align-items-stretch">
-              <div class="info-box">
-                <i class="bx bx-map"></i>
-                <h3>My Address</h3>
-                <p>London E1</p>
-              </div>
+    </section>
+    <!-- End Resume Section -->
+    <section id="contact" class="contact">
+      <!-- ======= Contact Section ======= -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="section-title">
+              <h2>Contact</h2>
+              <p>Contact Me</p>
             </div>
-            <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-              <div class="info-box">
-                <i class="bx bx-share-alt"></i>
-                <h3>Social </h3>
-                <div class="social-links">
-                  <a href="https://github.com/marclally" class="github"><i class="bi bi-github"></i></a>
-                  <a href="https://www.linkedin.com/in/marclally/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <div class="row mt-2">
+              <div class="col-md-6 d-flex align-items-stretch">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>My Address</h3>
+                  <p>London E1</p>
+                </div>
+              </div>
+              <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+                <div class="info-box">
+                  <i class="bx bx-share-alt"></i>
+                  <h3>Social</h3>
+                  <div class="social-links">
+                    <a href="https://github.com/marclally" class="github"
+                      ><i class="bi bi-github"></i
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/in/marclally/"
+                      class="linkedin"
+                      ><i class="bi bi-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                <div class="info-box">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Me</h3>
+                  <p>marc.lally@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                <div class="info-box">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Me</h3>
+                  <p>07516 029946</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-              <div class="info-box">
-                <i class="bx bx-envelope"></i>
-                <h3>Email Me</h3>
-                <p>marc.lally@gmail.com</p>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-              <div class="info-box">
-                <i class="bx bx-phone-call"></i>
-                <h3>Call Me</h3>
-                <p>07516 029946</p>
-              </div>
-            </div>
-          </div>
 
-          <form id="my-form" action="https://formspree.io/f/xyyqpplw" method="POST" class="mt-4">
-            <div class="row">
-              <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <form
+              id="my-form"
+              action="https://formspree.io/f/xyyqpplw"
+              method="POST"
+              class="mt-4"
+            >
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
               </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              <div class="form-group mt-3">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="5"
+                  placeholder="Message"
+                  required
+                ></textarea>
               </div>
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-            </div>
-            <br />
-            <div class="text-center"><button type="submit" class="btn btn-warning bi bi-upload"> Send Message</button>
-            </div>
-          </form>
+              <br />
+              <div class="text-center">
+                <button type="submit" class="btn btn-warning bi bi-upload">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Contact Section -->
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="https://unpkg.com/notie"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/vendor/highlight/textReveal.js"></script>
-  <script>
-    // Animate progress bars when they come into view
-    document.addEventListener('DOMContentLoaded', () => {
-      const progressBars = document.querySelectorAll('.progress-bar');
+    </section>
+    <!-- End Contact Section -->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="https://unpkg.com/notie"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/vendor/highlight/textReveal.js"></script>
+    <script>
+      // Animate progress bars when they come into view
+      document.addEventListener("DOMContentLoaded", () => {
+        const progressBars = document.querySelectorAll(".progress-bar");
 
-      const animateProgressBars = () => {
-        progressBars.forEach(bar => {
-          const value = bar.getAttribute('aria-valuenow');
-          bar.style.width = value + '%';
-        });
-      };
+        const animateProgressBars = () => {
+          progressBars.forEach((bar) => {
+            const value = bar.getAttribute("aria-valuenow");
+            bar.style.width = value + "%";
+          });
+        };
 
-      // Check if skills section is visible
-      const skillsSection = document.querySelector('.skills');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setTimeout(animateProgressBars, 300);
-            observer.unobserve(entry.target);
-          }
+        // Check if skills section is visible
+        const skillsSection = document.querySelector(".skills");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setTimeout(animateProgressBars, 300);
+              observer.unobserve(entry.target);
+            }
+          });
         });
+
+        if (skillsSection) {
+          observer.observe(skillsSection);
+        }
       });
-
-      if (skillsSection) {
-        observer.observe(skillsSection);
-      }
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

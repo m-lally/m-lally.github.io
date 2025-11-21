@@ -1,6 +1,4 @@
-(function () {
-  "use strict";
-
+(() => {
   /**
    * Easy selector helper function
    */
@@ -17,7 +15,7 @@
    * Easy event listener function
    */
   const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all);
+    const selectEl = select(el, all);
 
     if (selectEl) {
       if (all) {
@@ -54,14 +52,14 @@
     "click",
     "#navbar .nav-link",
     function (e) {
-      let section = select(this.hash);
+      const section = select(this.hash);
       if (section) {
         e.preventDefault();
-        let blockquote = select("#block");
-        let navbar = select("#navbar");
-        let header = select("#header");
-        let sections = select("section", true);
-        let navlinks = select("#navbar .nav-link", true);
+        const blockquote = select("#block");
+        const navbar = select("#navbar");
+        const header = select("#header");
+        const sections = select("section", true);
+        const navlinks = select("#navbar .nav-link", true);
 
         if (blockquote) {
           blockquote.remove();
@@ -75,7 +73,7 @@
 
         if (navbar.classList.contains("navbar-mobile")) {
           navbar.classList.remove("navbar-mobile");
-          let navbarToggle = select(".mobile-nav-toggle");
+          const navbarToggle = select(".mobile-nav-toggle");
           navbarToggle.classList.toggle("bi-list");
           navbarToggle.classList.toggle("bi-x");
         }
@@ -90,7 +88,7 @@
 
         if (!header.classList.contains("header-top")) {
           header.classList.add("header-top");
-          setTimeout(function () {
+          setTimeout(() => {
             sections.forEach((item) => {
               item.classList.remove("section-show");
             });
@@ -130,7 +128,7 @@
           }
         });
 
-        setTimeout(function () {
+        setTimeout(() => {
           initial_nav.classList.add("section-show");
         }, 350);
 
@@ -142,15 +140,16 @@
   /**
   * Skills animation
   */
-  let skilsContent = select('.skills-content');
+  const skilsContent = select('.skills-content');
   if (skilsContent) {
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function (direction) {
-        let progress = select('.progress .progress-bar', true);
+      handler: () => {
+        const progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
+          // biome-ignore lint/style/useTemplate:
+                    el.style.width = `${el.getAttribute('aria-valuenow')}%`
         });
       }
     })

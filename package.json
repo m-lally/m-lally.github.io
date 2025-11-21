@@ -1,27 +1,53 @@
 {
   "name": "profile",
-  "version": "1.0.0",
-  "description": "Github Pages Profile Site",
-  "main": "index.htmnl",
+  "version": "2.0.0",
+  "description": "Marc Lally - Senior Software Engineer Portfolio",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tobiasdeville/tobiasdeville.github.io.git"
+    "url": "git+https://github.com/m-lally/m-lally.github.io.git"
   },
   "keywords": [
-    "profile",
-    "cv"
+    "portfolio",
+    "senior-engineer",
+    "javascript",
+    "typescript",
+    "node",
+    "react",
+    "serverless",
+    "aws"
   ],
-  "author": "Tobias DeVille",
+  "author": "Marc Lally",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tobiasdeville/tobiasdeville.github.io/issues"
+    "url": "https://github.com/m-lally/m-lally.github.io/issues"
   },
-  "homepage": "https://github.com/tobiasdeville/tobiasdeville.github.io#readme",
-  "dependencies": {
-    "fontawesome": "^5.6.3",
-    "jquery-highlight": "^3.5.0"
+  "homepage": "https://github.com/m-lally/m-lally.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "assets/js/*.js",
+      "!assets/js/*.test.js",
+      "!assets/js/vendor/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/vendor/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
