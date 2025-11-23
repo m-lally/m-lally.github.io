@@ -112,11 +112,11 @@
    */
   window.addEventListener("load", () => {
     if (window.location.hash) {
-      let initial_nav = select(window.location.hash);
+      const initial_nav = select(window.location.hash);
 
       if (initial_nav) {
-        let header = select("#header");
-        let navlinks = select("#navbar .nav-link", true);
+        const header = select("#header");
+        const navlinks = select("#navbar .nav-link", true);
         header.classList.add("header-top");
 
         navlinks.forEach((item) => {
@@ -165,11 +165,9 @@
 
   async function handleSubmit(event) {
     event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
     fetch(event.target.action, {
       method: form.method,
-      body: data,
+      body: new FormData(event.target),
       headers: {
         Accept: "application/json",
       },
