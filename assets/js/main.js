@@ -33,8 +33,10 @@ const on = (type, selector, listener, all = false) => {
   if (!elements) return;
   
   if (all) {
-    // biome-ignore lint/suspicious/useIterableCallbackReturn: <explanation>
-    elements.forEach(el => el.addEventListener(type, listener));
+    // 
+    elements.forEach(el => {
+      el.addEventListener(type, listener);
+    });
   } else {
     elements.addEventListener(type, listener);
   }

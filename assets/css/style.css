@@ -6,7 +6,6 @@ body {
   background-color: #040404;
   color: #fff;
   position: relative;
-  background: transparent;
 }
 
 body::before {
@@ -76,7 +75,7 @@ h6,
   #header {
     z-index: 9997;
   }
-  
+
   #header.header-top {
     z-index: 9997;
   }
@@ -305,11 +304,13 @@ h6,
 
   .navbar ul {
     display: none;
+    z-index: 9999;
   }
-  
+
   /* Show ul when navbar-mobile class is active */
   .navbar-mobile ul {
     display: block !important;
+    z-index: 9999;
   }
 }
 
@@ -322,9 +323,10 @@ h6,
   bottom: 0;
   background: rgba(0, 0, 0, 0.95);
   transition: 0.3s;
-  z-index: 9998;
+  z-index: 9999;
   margin-top: 0;
   padding: 0;
+  
 }
 
 .navbar-mobile .mobile-nav-toggle {
@@ -349,19 +351,23 @@ h6,
   background: rgba(0, 0, 0, 0.5);
   visibility: visible;
   opacity: 1;
+  z-index: 9999;
 }
 
 .navbar-mobile li {
   padding: 12px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 9999;
 }
 
 .navbar-mobile li:last-child {
   border-bottom: none;
+  z-index: 9999;
 }
 
 .navbar-mobile li + li {
   margin: 0;
+  z-index: 9999;
 }
 
 .navbar-mobile a,
@@ -373,6 +379,7 @@ h6,
   padding: 10px 0;
   font-weight: 500;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
 }
 
 .navbar-mobile a:hover,
@@ -402,7 +409,7 @@ section {
 @media (max-width: 991px) {
   section,
   section.section-show {
-    z-index: 1;
+    z-index: 9999;
   }
 }
 
