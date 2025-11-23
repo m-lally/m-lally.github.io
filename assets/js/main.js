@@ -307,11 +307,12 @@ const ContactForm = {
       if (response.ok) {
         this.showSuccessMessage();
         this.form.reset();
+        console.log(response);
       } else {
         await this.handleError(response);
       }
     } catch (error) {
-      this.showErrorMessage();
+      this.showErrorMessage(error);
     }
   },
 
