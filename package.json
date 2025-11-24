@@ -24,10 +24,8 @@
   ],
   "author": "Marc Lally",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/m-lally/m-lally.github.io/issues"
-  },
-  "homepage": "https://github.com/m-lally/m-lally.github.io#readme",
+  "bugs": {},
+  "homepage": "https://m-lally.github.io",
   "dependencies": {},
   "devDependencies": {
     "jest": "^29.5.0"
