@@ -210,10 +210,10 @@ h6,
 * Desktop Navigation 
 */
 .navbar {
-  padding-right: 20px;
   margin-top: 15px;
+  padding-right: 20px;
   position: relative;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .navbar ul {
@@ -326,7 +326,6 @@ h6,
   z-index: 9999;
   margin-top: 0;
   padding: 0;
-  
 }
 
 .navbar-mobile .mobile-nav-toggle {
@@ -570,7 +569,7 @@ header .socxial-links img {
 # Education
 --------------------------------------------------------------*/
 
-education .education-title {
+.education .education-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
@@ -713,7 +712,6 @@ education .education-title {
 .contact .php-email-form .error-message {
   display: none;
   background: rgba(255, 255, 255, 0.08);
-  background: #ed3c0d;
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -726,7 +724,6 @@ education .education-title {
 .contact .php-email-form .sent-message {
   display: none;
   background: rgba(255, 255, 255, 0.08);
-  background: #ef6024;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -829,7 +826,6 @@ blockquote {
   max-width: 600px;
   margin-left: 30px;
   border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
   font-style: italic;
@@ -843,7 +839,7 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 
-blockquote p {
+blockquote .p {
   display: inline;
   font-weight: 400;
   position: relative;
