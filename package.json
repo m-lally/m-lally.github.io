@@ -1,0 +1,25 @@
+{
+  "name": "marc-lally-cv",
+  "version": "1.0.0",
+  "description": "A CV and skills profile",
+  "license": "MIT",
+  "author": "Marc Lally",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "senior-engineer",
+    "javascript",
+    "typescript",
+    "node",
+    "react",
+    "serverless",
+    "aws"
+  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0"
+  }
+}

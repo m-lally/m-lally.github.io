@@ -1,0 +1,235 @@
+@import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
+
+$profileBg: #fff;
+$skillsBg: #3d3e42;
+$profileColor: #9099a0;
+$skillsColor: #9099a0;
+$linkColor: #e8e8e3;
+$boldColor: #000;
+$time: 0.6s;
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (max-width: 1500px) {
+      @content;
+    }
+  }
+  @if $point == mama-bear {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $point == brother-bear {
+    @media (max-width: 850px) {
+      @content;
+    }
+  } @else if $point == baby-bear {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Actor", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.clearfix::after,
+.clearfix::before {
+  content: " ";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+.bold {
+  color: $boldColor;
+  font-weight: 400;
+}
+
+.resume-wrapper {
+  position: relative;
+  text-align: center;
+  height: 100%;
+}
+
+.container {
+  min-height: 600px;
+}
+
+.profile {
+  background: $profileBg;
+  width: 40%;
+  float: left;
+  color: $profileColor;
+  @include breakpoint(brother-bear) {
+    width: 100%;
+  }
+  .name-wrapper {
+    float: left;
+    width: 60%;
+  }
+  h1 {
+    font-size: 4em;
+    text-align: left;
+    font-family: Actor, sans-serif;
+    color: $boldColor;
+    line-height: 1em;
+    padding-top: 40px;
+    @include breakpoint(mama-bear) {
+      padding-top: 20px;
+    }
+    @include breakpoint(baby-bear) {
+      font-size: 1.8em;
+      padding-top: 20px;
+    }
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  .contact-info {
+    margin-top: 100px;
+    font-weight: 300;
+    @include breakpoint(mama-bear) {
+      margin-top: 70px;
+    }
+    @include breakpoint(baby-bear) {
+      margin-top: 50px;
+    }
+  }
+  .list-titles {
+    float: left;
+    text-align: left;
+    font-weight: 600;
+    width: 40%;
+    color: $boldColor;
+  }
+  .list-content {
+    float: left;
+    width: 60%;
+    text-align: left;
+    font-weight: 300;
+  }
+  .contact-presentation {
+    text-align: left;
+    font-weight: 300;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @include breakpoint(mama-bear) {
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+    @include breakpoint(brother-bear) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //display:none;
+  }
+
+  .st0,
+  .st1 {
+    fill: #66cc99;
+  }
+}
+.experience {
+  background: $skillsBg;
+  width: 60%;
+  float: left;
+  position: relative;
+  color: $skillsColor;
+  font-weight: 300;
+  min-height: 100%;
+  min-height: 100vh;
+  @include breakpoint(brother-bear) {
+    width: 100%;
+  }
+  h3.experience-title {
+    color: $linkColor;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .company-wrapper {
+    width: 30%;
+    float: left;
+    text-align: left;
+    padding-right: 5%;
+    margin-bottom: 60px;
+    @include breakpoint(baby-bear) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  .job-wrapper {
+    width: 70%;
+    float: left;
+    text-align: left;
+    padding-right: 5%;
+    margin-bottom: 60px;
+    @include breakpoint(baby-bear) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  .experience-title {
+    color: white;
+    margin-bottom: 15px;
+  }
+}
+
+.section-padding {
+  padding: 60px 60px 40px 40px;
+  @include breakpoint(brother-bear) {
+    padding: 80px 15% 40px 10%;
+  }
+  @include breakpoint(baby-bear) {
+    padding: 40px 10% 20px 5%;
+  }
+}
+
+.section-wrapper {
+  width: 50%;
+  float: left;
+  text-align: left;
+  color: $skillsColor;
+  font-weight: 300;
+  margin-bottom: 20px;
+  @include breakpoint(baby-bear) {
+    width: 100%;
+  }
+  &:nth-child(3) {
+    padding-right: 8%;
+  }
+  h3.section-title {
+    color: $linkColor;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+}
