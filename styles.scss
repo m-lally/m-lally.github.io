@@ -233,18 +233,3 @@ a {
   }
 }
 
-.pdf-button {
-  padding: 10px 20px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-/* Hide the button when printing/saving as PDF */
-@media print {
-  .pdf-button {
-    display: none;
-  }
-}
