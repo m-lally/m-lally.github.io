@@ -1,35 +1,55 @@
 @import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
 
-$profileBg: #fff;
-$skillsBg: #3d3e42;
-$profileColor: #9099a0;
-$skillsColor: #9099a0;
-$linkColor: #e8e8e3;
-$boldColor: #000;
-$time: 0.6s;
+// Color Variables
+$accentGrey: #555555;
+$lightGrey: #f8f8f8;
+$lightGreyAlt: #f2f2f2;
+$lightGreyBg: #f0f0f0;
+$darkGrey: #3d3e42;
+$darkestGrey: #444444;
+$darkerGrey: #333333;
+$mutedGrey: #9099a0;
+$lightText: #e8e8e3;
+$borderGrey: #555555;
+$textDark: #000;
+$textMuted: #666;
+$textDarkMuted: #777;
+$textGrey: #999;
+$badgeBg: #e8e8e8;
+$accentAlpha: rgba(85, 85, 85, 0.05);
+$accentAlpha2: rgba(85, 85, 85, 0.1);
+$shadowSmall: 0 2px 4px rgba(0, 0, 0, 0.2);
+$shadowMedium: 0 2px 8px rgba(0, 0, 0, 0.08);
+$shadowLarge: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadowDark: 0 4px 8px rgba(0, 0, 0, 0.3);
+$transitionSmooth: all 0.3s ease;
 
-@mixin breakpoint($point) {
-  @if $point == papa-bear {
-    @media (max-width: 1500px) {
-      @content;
-    }
-  }
-  @if $point == mama-bear {
-    @media (max-width: 1200px) {
-      @content;
-    }
-  }
-  @if $point == brother-bear {
-    @media (max-width: 850px) {
-      @content;
-    }
-  } @else if $point == baby-bear {
-    @media (max-width: 450px) {
-      @content;
-    }
+// Responsive Breakpoint Mixins
+@mixin papa-bear {
+  @media (max-width: 1500px) {
+    @content;
   }
 }
 
+@mixin mama-bear {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin brother-bear {
+  @media (max-width: 850px) {
+    @content;
+  }
+}
+
+@mixin baby-bear {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+// Global Styles
 *,
 *::after,
 *::before {
@@ -46,26 +66,30 @@ body {
   font-size: 16px;
   line-height: 1.5em;
 }
+
 a {
   text-decoration: none;
-  color: #000;
+  color: $textDark;
 }
+
 .clearfix::after,
 .clearfix::before {
   content: " ";
   display: table;
 }
+
 .clearfix::after {
   clear: both;
 }
+
 .bold {
-  color: $boldColor;
+  color: $textDark;
   font-weight: 600;
 }
 
 .resume-wrapper {
   position: relative;
-  text-align: center;
+  text-align: left;
   height: 100%;
 }
 
@@ -73,139 +97,338 @@ a {
   min-height: 600px;
 }
 
+// Profile Section
 .profile {
-  background: $profileBg;
+  background: #fff;
   width: 40%;
   float: left;
-  color: $profileColor;
-  @include breakpoint(brother-bear) {
+  color: $mutedGrey;
+
+  @include brother-bear {
     width: 100%;
   }
+
   .name-wrapper {
     float: left;
-    width: 60%;
+    width: 100%;
   }
+
   h1 {
-    font-size: 4em;
+    font-size: 4.5em;
     text-align: left;
     font-family: Actor, sans-serif;
-    color: $boldColor;
+    color: $textDark;
     line-height: 1em;
     padding-top: 40px;
-    @include breakpoint(mama-bear) {
+    font-weight: 700;
+
+    @include mama-bear {
       padding-top: 20px;
     }
-    @include breakpoint(baby-bear) {
+
+    @include baby-bear {
       font-size: 1.8em;
       padding-top: 20px;
     }
   }
+
   li {
     margin-bottom: 10px;
   }
+
   .contact-info {
-    margin-top: 100px;
+    margin-top: 60px;
     font-weight: 300;
-    @include breakpoint(mama-bear) {
-      margin-top: 70px;
-    }
-    @include breakpoint(baby-bear) {
+
+    @include mama-bear {
       margin-top: 50px;
     }
+
+    @include baby-bear {
+      margin-top: 40px;
+    }
   }
+
   .list-titles {
     float: left;
     text-align: left;
     font-weight: 600;
     width: 40%;
-    color: $boldColor;
+    color: $textDark;
   }
+
   .list-content {
     float: left;
     width: 60%;
     text-align: left;
     font-weight: 300;
   }
+
   .contact-presentation {
     text-align: left;
     font-weight: 300;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    @include breakpoint(mama-bear) {
-      margin-top: 70px;
-      margin-bottom: 70px;
-    }
-    @include breakpoint(brother-bear) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    @include mama-bear {
       margin-top: 50px;
       margin-bottom: 50px;
     }
+
+    @include brother-bear {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   }
+
   svg {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    //display:none;
   }
 
   .st0,
   .st1 {
-    fill: #66cc99;
+    fill: $accentGrey;
   }
 }
+
+// Role Cards
+.role-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 0 0 20px 0;
+  clear: both;
+}
+
+.role-card {
+  background: $lightGrey;
+  border-left: 5px solid $accentGrey;
+  border-radius: 6px;
+  padding: 14px 16px;
+  transition: $transitionSmooth;
+
+  &:hover {
+    background: $lightGreyAlt;
+    border-left-width: 7px;
+    box-shadow: $shadowLarge;
+  }
+
+  i {
+    font-size: 1.6em;
+    color: $accentGrey;
+    margin-right: 12px;
+  }
+
+  h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: $textDark;
+    display: inline-block;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.88em;
+    color: $textMuted;
+    margin-left: 0;
+    line-height: 1.5;
+  }
+}
+
+// Intro Card
+.intro-card {
+  background: $lightGrey;
+  border-left: 5px solid $accentGrey;
+  border-radius: 6px;
+  padding: 24px;
+  margin-bottom: 40px;
+  transition: $transitionSmooth;
+
+  &:hover {
+    background: $lightGreyAlt;
+    border-left-width: 7px;
+    box-shadow: $shadowLarge;
+  }
+
+  p {
+    margin: 0 0 16px 0;
+    line-height: 1.7;
+    color: $textDark;
+    font-weight: 300;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Highlights Grid
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.highlight-item {
+  padding: 20px;
+  border-left: 4px solid $accentGrey;
+  background: $accentAlpha;
+  border-radius: 4px;
+  transition: $transitionSmooth;
+
+  &:hover {
+    border-left-width: 6px;
+    background: $accentAlpha2;
+    transform: translateX(4px);
+  }
+
+  i {
+    font-size: 2em;
+    color: $accentGrey;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  p {
+    margin: 0;
+    color: $textDark;
+  }
+
+  strong {
+    color: $textDark;
+    font-weight: 600;
+  }
+}
+
+// Experience Section
 .experience {
-  background: $skillsBg;
+  background: $darkGrey;
   width: 60%;
   float: left;
   position: relative;
-  color: $skillsColor;
+  color: $mutedGrey;
   font-weight: 300;
   min-height: 100vh;
-  @include breakpoint(brother-bear) {
+
+  @include brother-bear {
     width: 100%;
   }
+
   h3.experience-title {
-    color: $linkColor;
+    color: $lightText;
     text-align: left;
     text-transform: uppercase;
     font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 400;
   }
+
   .company-wrapper {
-    width: 30%;
-    float: left;
+    width: 100%;
+    display: block;
     text-align: left;
-    padding-right: 5%;
-    margin-bottom: 60px;
-    @include breakpoint(baby-bear) {
+    padding-right: 0;
+    margin-bottom: 40px;
+
+    @include baby-bear {
       width: 100%;
       margin-bottom: 20px;
     }
   }
+
   .job-wrapper {
-    width: 70%;
-    float: left;
+    width: 100%;
+    display: block;
     text-align: left;
-    padding-right: 5%;
-    margin-bottom: 60px;
-    @include breakpoint(baby-bear) {
+    padding-right: 0;
+    margin-bottom: 40px;
+
+    @include baby-bear {
       width: 100%;
       margin-bottom: 40px;
     }
   }
+
   .experience-title {
     color: white;
     margin-bottom: 15px;
   }
 }
 
+.company-description {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-right: 0;
+  margin-bottom: 40px;
+
+  @include baby-bear {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+// Contract Badge
+.contract-badge {
+  display: inline-block;
+  background: $badgeBg;
+  color: $accentGrey;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+// Tech Stack
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, $accentGrey 0%, $darkestGrey 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: $shadowSmall;
+  transition: $transitionSmooth;
+
+  &:hover {
+    background: linear-gradient(135deg, $darkestGrey 0%, $darkerGrey 100%);
+    transform: translateY(-2px);
+    box-shadow: $shadowDark;
+  }
+
+  @include baby-bear {
+    font-size: 0.75em;
+    padding: 5px 10px;
+  }
+}
+
+// Section Padding
 .section-padding {
   padding: 60px 60px 40px 40px;
-  @include breakpoint(brother-bear) {
+
+  @include brother-bear {
     padding: 80px 15% 40px 10%;
   }
-  @include breakpoint(baby-bear) {
+
+  @include baby-bear {
     padding: 40px 10% 20px 5%;
   }
 }
@@ -214,22 +437,137 @@ a {
   width: 50%;
   float: left;
   text-align: left;
-  color: $skillsColor;
+  color: $mutedGrey;
   font-weight: 300;
   margin-bottom: 20px;
-  @include breakpoint(baby-bear) {
+
+  @include baby-bear {
     width: 100%;
   }
+
   &:nth-child(3) {
     padding-right: 8%;
   }
+
   h3.section-title {
-    color: $linkColor;
+    color: $lightText;
     text-align: left;
     text-transform: uppercase;
     font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 400;
+  }
+}
+
+// Education Section
+.education-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @include brother-bear {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  @include baby-bear {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.section-header {
+  color: $textDark;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  @include baby-bear {
+    font-size: 0.95em;
+  }
+}
+
+.education-card {
+  background: $lightGrey;
+  border-left: 4px solid $accentGrey;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: $transitionSmooth;
+
+  @include brother-bear {
+    padding: 14px 16px;
+  }
+
+  &:hover {
+    background: $lightGreyBg;
+    border-left-width: 6px;
+    box-shadow: $shadowMedium;
+  }
+}
+
+.education-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+
+  @include baby-bear {
+    gap: 10px;
+  }
+
+  i {
+    font-size: 1.3em;
+    color: $accentGrey;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+}
+
+.education-card-info {
+  h4 {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: $textDark;
+  }
+}
+
+.education-institution {
+  margin: 2px 0 0 0;
+  font-size: 0.8em;
+  color: $textGrey;
+  font-weight: 400;
+}
+
+.education-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+  color: $textDarkMuted;
+}
+
+.education-year {
+  font-weight: 500;
+}
+
+.education-grade {
+  background: $badgeBg;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: 600;
+  color: $accentGrey;
+}
+
+// Tech Stack Grid
+@include baby-bear {
+  .tech-stack {
+    gap: 6px;
   }
 }
 
