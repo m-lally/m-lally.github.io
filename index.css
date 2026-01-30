@@ -39,7 +39,8 @@ a {
 .resume-wrapper {
   position: relative;
   text-align: left;
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
 }
 
 .container {
@@ -49,8 +50,9 @@ a {
 .profile {
   background: #fff;
   width: 40%;
-  float: left;
   color: #9099a0;
+  min-height: 100vh;
+  flex: 0 0 40%;
 }
 @media (max-width: 850px) {
   .profile {
@@ -245,11 +247,11 @@ a {
 .experience {
   background: #3d3e42;
   width: 60%;
-  float: left;
   position: relative;
   color: #9099a0;
   font-weight: 300;
   min-height: 100vh;
+  flex: 0 0 60%;
 }
 @media (max-width: 850px) {
   .experience {
