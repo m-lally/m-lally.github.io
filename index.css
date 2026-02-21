@@ -90,6 +90,8 @@ a {
 .profile .contact-info {
   margin-top: 60px;
   font-weight: 300;
+  display: flex;
+  justify-content: flex-start;
 }
 @media (max-width: 1200px) {
   .profile .contact-info {
@@ -109,10 +111,237 @@ a {
   color: #000;
 }
 .profile .list-content {
-  float: left;
-  width: 60%;
+  float: none;
+  width: 100%;
   text-align: left;
   font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.profile .list-content .contact-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile .list-content .contact-links > a {
+  display: inline-flex;
+  margin: 0;
+}
+
+.profile .list-content .contact-links > a p {
+  margin: 0;
+  background: #f8f8f8;
+  border: 1px solid #dde3ef;
+  border-radius: 999px;
+  padding: 10px 16px;
+  white-space: nowrap;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile .list-content .contact-links > a:hover p {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(17, 36, 84, 0.12);
+}
+
+.profile .list-content .contact-links > a.meeting-link p {
+  background: linear-gradient(120deg, #20c7b8 0%, #2c90ff 100%);
+  color: #091321;
+  border: 0;
+  font-weight: 700;
+  box-shadow: 0 0 0 0 rgba(44, 144, 255, 0.25);
+  animation: meetingPulse 2.4s ease-in-out infinite;
+}
+
+.profile .list-content .social-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  margin: 12px 0 0;
+}
+
+.profile .list-content .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .profile .list-content .contact-links {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .profile .list-content .contact-links > a {
+    width: 100%;
+  }
+
+  .profile .list-content .contact-links > a p {
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile .list-content .contact-links {
+    gap: 8px;
+  }
+  .profile .list-content .contact-links > a p {
+    padding: 10px 12px;
+  }
+}
+
+.pdf-export,
+.pdf-export body {
+  background: #ffffff;
+}
+
+.pdf-export .resume-wrapper {
+  display: block;
+  width: 100%;
+  min-height: auto;
+  height: auto !important;
+}
+
+.pdf-export .profile,
+.pdf-export .experience {
+  width: 100%;
+  flex: 0 0 auto;
+  min-height: auto;
+  height: auto !important;
+}
+
+.pdf-export .container {
+  min-height: auto !important;
+}
+
+.pdf-export .section-padding {
+  padding: 36px 30px 26px 30px;
+}
+
+.pdf-export .experience.section-padding {
+  padding-top: 52px;
+}
+
+.pdf-export .experience h3.experience-title {
+  margin-top: 8px;
+}
+
+.pdf-export .profile .list-content,
+.pdf-export .profile .contact-info {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.pdf-export .profile .list-content .contact-links {
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 8px;
+}
+
+.pdf-export .profile .list-content .contact-links > a p {
+  white-space: normal;
+  line-height: 1.3;
+  padding: 8px 12px;
+}
+
+.pdf-export #downloadCvButton {
+  display: none !important;
+}
+
+.pdf-export #content > .clearfix {
+  display: none !important;
+}
+
+.pdf-export .role-card,
+.pdf-export .intro-card,
+.pdf-export .highlight-item,
+.pdf-export .education-card,
+.pdf-export .cv-entry,
+.pdf-export .company-wrapper,
+.pdf-export .job-wrapper,
+.pdf-export .company-description {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.pdf-export .experience-wrapper {
+  padding-top: 14px;
+}
+
+.pdf-export .company-wrapper,
+.pdf-export .job-wrapper,
+.pdf-export .company-description {
+  padding-top: 12px;
+}
+
+.pdf-export .job-wrapper .experience-title,
+.pdf-export .company-wrapper .experience-title {
+  margin-top: 2px;
+}
+
+.pdf-export * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.pdf-condensed .section-padding {
+  padding: 24px 20px 18px 20px;
+}
+
+.pdf-condensed .profile h1 {
+  font-size: 3.2em;
+  padding-top: 10px;
+}
+
+.pdf-condensed .profile .contact-presentation {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.pdf-condensed .profile .contact-presentation:nth-of-type(2) {
+  display: none;
+}
+
+.pdf-condensed .education-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pdf-condensed .experience-wrapper > :nth-child(n + 9) {
+  display: none;
+}
+
+.pdf-condensed .company-description {
+  margin-bottom: 20px;
+}
+
+.pdf-condensed .company-description p {
+  font-size: 0.92em;
+  line-height: 1.45;
+}
+
+@keyframes meetingPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(44, 144, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(44, 144, 255, 0.12);
+  }
 }
 .profile .contact-presentation {
   text-align: left;

@@ -1,4 +1,7 @@
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -15,6 +18,58 @@
   <div id="content" class="resume-wrapper">
     <section class="profile section-padding">
       <div class="container">
+        <div class="contact-info clearfix">
+          <div class="list-content">
+            <div class="contact-links">
+              <a href="tel:07516029946">
+                <p>
+                  <i class="fa fa-phone" aria-hidden="true"></i> +44 7516 029946
+                </p>
+              </a>
+              <a href="mailto:marc.lally@gmail.com">
+                <p>
+                  <i class="fa fa-reply" aria-hidden="true"></i>
+                  marc.lally@gmail.com
+                </p>
+              </a>
+              <a
+                href="https://calendly.com/marc-lally/30min"
+                target="_blank"
+                class="meeting-link"
+              >
+                <p>
+                  <i class="fa fa-handshake" aria-hidden="true"></i>
+                  Book a Meeting
+                </p> </a
+              ><a
+                href="cv/marc.lally.pdf"
+                download
+                class="download-btn"
+                id="downloadCvButton"
+              >
+                <p>
+                  <i class="fa fa-file-lines" aria-hidden="true"></i>
+                  Download CV
+                </p>
+              </a>
+            </div>
+            <p class="social-links">
+              <a href="https://github.com/m-lally" aria-hidden="true"
+                ><i
+                  class="fab fa-github"
+                  style="font-size: 2rem; margin-right: 10px"
+                ></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/marclally/"
+                aria-hidden="true"
+              >
+                <i class="fab fa-linkedin" style="font-size: 2rem"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+
         <div class="name-wrapper">
           <h1>Marc Lally</h1>
         </div>
@@ -31,47 +86,6 @@
             <p>Distributed Systems | Serverless | TypeScript/Node</p>
           </div>
         </div>
-
-        <div class="contact-info clearfix">
-          <div class="list-content">
-            <a href="tel:07516029946">
-              <p>
-                <i class="fa fa-phone" aria-hidden="true"></i> +44 7516 029946
-              </p>
-            </a>
-            <a href="mailto:marc.lally@gmail.com">
-              <p>
-                <i class="fa fa-reply" aria-hidden="true"></i>
-                marc.lally@gmail.com
-              </p>
-            </a>
-            <a href="https://calendly.com/marc-lally/30min" target="_blank">
-              <p>
-                <i class="fa fa-handshake" aria-hidden="true"></i>
-                Book a Meeting
-              </p> </a
-            ><a href="cv/marc.lally.pdf" download class="download-btn">
-              <p>
-                <i class="fa fa-cloud-arrow-down" aria-hidden="true"></i>
-                Download CV
-              </p>
-            </a>
-            <p>
-              <a href="https://github.com/m-lally" aria-hidden="true"
-                ><i
-                  class="fab fa-github"
-                  style="font-size: 2rem; margin-right: 10px"
-                ></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/marclally/"
-                aria-hidden="true"
-              >
-                <i class="fab fa-linkedin" style="font-size: 2rem"></i
-              ></a>
-            </p>
-          </div>
-        </div>
         <div class="contact-presentation">
           <div class="intro-card">
             <p>
@@ -85,9 +99,9 @@
               consistently elevated engineering maturity across organizations.
             </p>
             <p>
-              I'm hands-on across the full stack—TypeScript/Node for rapid
+              I'm hands-on across the full stack - TypeScript/Node for rapid
               iteration and scale, Python for data systems and automation, Rust
-              for performance-critical components—but my real strength is
+              for performance-critical components - but my real strength is
               knowing when and why to use each tool. I architect with intention:
               clear service boundaries, intentional data models, robust
               observability, and security as a first-class concern. I mentor the
@@ -164,7 +178,7 @@
               <i class="fas fa-wrench"></i>
               <p>
                 <strong>Multi-Stack</strong><br />TypeScript/Node, Python,
-                Rust—selecting the right tool for the job
+                Rust - selecting the right tool for the job
               </p>
             </div>
           </div>
@@ -201,7 +215,7 @@
             the next generation. Bridge engineering, product, and business
             stakeholders, translating requirements into coherent technical
             direction and credible delivery plans. Enable teams to move at
-            velocity without sacrificing system integrity—ensuring short-term
+            velocity without sacrificing system integrity - ensuring short-term
             decisions align with long-term platform health and organizational
             scalability.
           </p>
@@ -455,4 +469,139 @@
 
     <div class="clearfix"></div>
   </div>
+  <script>
+    (function () {
+      const downloadButton = document.getElementById("downloadCvButton");
+      if (!downloadButton) return;
+
+      async function loadHtml2Pdf() {
+        if (window.html2pdf) return window.html2pdf;
+
+        await new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src =
+            "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
+          script.async = true;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.body.appendChild(script);
+        });
+
+        return window.html2pdf;
+      }
+
+      function setButtonState(button, isBusy, originalText) {
+        if (!button) return;
+        const textNode = button.querySelector("p");
+        if (!textNode) return;
+
+        if (isBusy) {
+          button.setAttribute("aria-disabled", "true");
+          button.style.pointerEvents = "none";
+          textNode.innerHTML =
+            '<i class="fa fa-spinner fa-spin" aria-hidden="true"></i> Generating PDF...';
+          return;
+        }
+
+        button.removeAttribute("aria-disabled");
+        button.style.pointerEvents = "";
+        textNode.innerHTML = originalText;
+      }
+
+      function getPdfOptions() {
+        return {
+          margin: [0.45, 0.2, 0.28, 0.2],
+          filename: "marc-lally-cv.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: {
+            scale: 1.45,
+            useCORS: true,
+            backgroundColor: "#ffffff",
+            scrollY: 0
+          },
+          jsPDF: {
+            unit: "in",
+            format: "letter",
+            orientation: "portrait"
+          },
+          pagebreak: { mode: ["css"] },
+          enableLinks: true
+        };
+      }
+
+      function wrapExperienceEntriesForPdf() {
+        const wrapper = document.querySelector(".experience-wrapper");
+        if (!wrapper) return function () {};
+
+        const groups = [];
+        const children = Array.from(wrapper.children);
+
+        for (let i = 0; i < children.length; i += 2) {
+          const company = children[i];
+          const job = children[i + 1];
+          if (!company || !job) continue;
+
+          const entry = document.createElement("div");
+          entry.className = "cv-entry";
+          wrapper.insertBefore(entry, company);
+          entry.appendChild(company);
+          entry.appendChild(job);
+          groups.push(entry);
+        }
+
+        return function cleanup() {
+          groups.forEach((entry) => {
+            while (entry.firstChild) {
+              wrapper.insertBefore(entry.firstChild, entry);
+            }
+            entry.remove();
+          });
+        };
+      }
+
+      async function generatePdf() {
+        const textNode = downloadButton.querySelector("p");
+        const originalText = textNode ? textNode.innerHTML : "Download CV";
+        let cleanupWrappedEntries = function () {};
+
+        try {
+          setButtonState(downloadButton, true, originalText);
+          document.documentElement.classList.add("pdf-export");
+          document.documentElement.classList.add("pdf-condensed");
+
+          if (document.fonts && document.fonts.ready) {
+            await document.fonts.ready;
+          }
+
+          cleanupWrappedEntries = wrapExperienceEntriesForPdf();
+          await loadHtml2Pdf();
+
+          const source = document.getElementById("content");
+          const options = getPdfOptions();
+
+          const worker = window.html2pdf().set(options).from(source).toPdf();
+          await worker.get("pdf").then((pdf) => {
+            const pageCount = pdf.internal.getNumberOfPages();
+            if (pageCount > 1) {
+              pdf.deletePage(pageCount);
+            }
+          });
+          await worker.save();
+        } catch (error) {
+          window.location.href = downloadButton.getAttribute("href");
+        } finally {
+          cleanupWrappedEntries();
+          document.documentElement.classList.remove("pdf-export");
+          document.documentElement.classList.remove("pdf-condensed");
+          setButtonState(downloadButton, false, originalText);
+        }
+      }
+
+      downloadButton.addEventListener("click", async (event) => {
+        event.preventDefault();
+        await generatePdf();
+      });
+    })();
+  </script>
 </body>
+</html>

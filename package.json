@@ -7,9 +7,12 @@
   "type": "commonjs",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir -p dist dist/cv && cp index.html index.css styles.css favicon.ico avatar.jpg dist/ && cp -R cv/. dist/cv/",
+    "start": "npm run build && sh -c 'python3 -m http.server ${PORT:-4173} --directory dist'",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "portfolio",
