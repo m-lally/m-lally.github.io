@@ -23,7 +23,7 @@
         <div class="contact-info clearfix">
           <div class="list-content">
             <div class="contact-links">
-              <a href="tel:07516029946">
+              <a href="tel:+447516029946" id="phoneLink">
                 <p>
                   <i class="fa fa-phone" aria-hidden="true"></i> +44 7516 029946
                 </p>
@@ -558,10 +558,36 @@
         };
       }
 
+      function swapPhoneLinkForPdf() {
+        const phoneLink = document.getElementById("phoneLink");
+        if (!phoneLink) return function () {};
+
+        const originalHref = phoneLink.getAttribute("href");
+        const originalTarget = phoneLink.getAttribute("target");
+        const originalRel = phoneLink.getAttribute("rel");
+
+        // Many desktop PDF viewers ignore tel: links; use a web fallback in exported PDF.
+        phoneLink.setAttribute("href", "https://wa.me/447516029946");
+        phoneLink.setAttribute("target", "_blank");
+        phoneLink.setAttribute("rel", "noopener noreferrer");
+
+        return function cleanup() {
+          if (originalHref) phoneLink.setAttribute("href", originalHref);
+          else phoneLink.removeAttribute("href");
+
+          if (originalTarget) phoneLink.setAttribute("target", originalTarget);
+          else phoneLink.removeAttribute("target");
+
+          if (originalRel) phoneLink.setAttribute("rel", originalRel);
+          else phoneLink.removeAttribute("rel");
+        };
+      }
+
       async function generatePdf() {
         const textNode = downloadButton.querySelector("p");
         const originalText = textNode ? textNode.innerHTML : "Download CV";
         let cleanupWrappedEntries = function () {};
+        let cleanupPhoneLink = function () {};
 
         try {
           setButtonState(downloadButton, true, originalText);
@@ -572,6 +598,7 @@
             await document.fonts.ready;
           }
 
+          cleanupPhoneLink = swapPhoneLinkForPdf();
           cleanupWrappedEntries = wrapExperienceEntriesForPdf();
           await loadHtml2Pdf();
 
@@ -589,6 +616,7 @@
         } catch (error) {
           window.location.href = downloadButton.getAttribute("href");
         } finally {
+          cleanupPhoneLink();
           cleanupWrappedEntries();
           document.documentElement.classList.remove("pdf-export");
           document.documentElement.classList.remove("pdf-condensed");
