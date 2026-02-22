@@ -1,14 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#20c7b8" />
-      <stop offset="100%" stop-color="#2c90ff" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6a3d" />
+      <stop offset="100%" stop-color="#ff2a6d" />
+    </linearGradient>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f3f6ff" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#0f172a" />
-  <rect x="4" y="4" width="56" height="56" rx="12" fill="none" stroke="url(#g)" stroke-width="3" />
-  <path
-    d="M14 46V18h8l10 14 10-14h8v28h-8V31l-10 13-10-13v15h-8z"
-    fill="url(#g)"
-  />
+
+  <rect width="64" height="64" rx="14" fill="#101624" />
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="none" stroke="url(#bg)" stroke-width="3" />
+
+  <path d="M13 9h27l11 11v35H13z" fill="url(#paper)" />
+  <path d="M40 9v11h11z" fill="#ffd8e4" />
+  <rect x="13" y="42" width="38" height="7" rx="3.5" fill="url(#bg)" />
+
+  <text x="18.5" y="37.5" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="900" fill="#101624">CV</text>
 </svg>
