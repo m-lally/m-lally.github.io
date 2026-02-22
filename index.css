@@ -55,9 +55,25 @@ a {
   flex: 0 0 40%;
 }
 @media (max-width: 850px) {
+  .resume-wrapper {
+    display: block;
+    min-height: auto;
+  }
+
   .profile {
     width: 100%;
-    flex: 0 0 100%;
+    flex: 0 0 auto;
+    min-height: auto;
+  }
+
+  .experience {
+    width: 100%;
+    flex: 0 0 auto;
+    min-height: auto;
+  }
+
+  .profile .list-content .social-links {
+    justify-content: center;
   }
 }
 .profile .name-wrapper {
