@@ -109,6 +109,19 @@ a {
   display: flex;
   justify-content: flex-start;
 }
+
+.social-icon {
+  font-size: 2rem;
+}
+
+.social-icon--github {
+  margin-right: 10px;
+}
+
+.section-inline-icon {
+  margin-right: 8px;
+  color: #555555;
+}
 @media (max-width: 1200px) {
   .profile .contact-info {
     margin-top: 50px;
@@ -118,13 +131,6 @@ a {
   .profile .contact-info {
     margin-top: 40px;
   }
-}
-.profile .list-titles {
-  float: left;
-  text-align: left;
-  font-weight: 600;
-  width: 40%;
-  color: #000;
 }
 .profile .list-content {
   float: none;
@@ -612,31 +618,6 @@ a {
   }
 }
 
-.section-wrapper {
-  width: 50%;
-  float: left;
-  text-align: left;
-  color: #9099a0;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-@media (max-width: 450px) {
-  .section-wrapper {
-    width: 100%;
-  }
-}
-.section-wrapper:nth-child(3) {
-  padding-right: 8%;
-}
-.section-wrapper h3.section-title {
-  color: #e8e8e3;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
 .education-section {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -651,20 +632,6 @@ a {
   .education-section {
     margin-top: 30px;
     margin-bottom: 20px;
-  }
-}
-
-.section-header {
-  color: #000;
-  font-size: 1.25em;
-  font-weight: 700;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-@media (max-width: 450px) {
-  .section-header {
-    font-size: 0.95em;
   }
 }
 
@@ -745,6 +712,13 @@ a {
 @media (max-width: 450px) {
   .tech-stack {
     gap: 6px;
+  }
+}
+
+@media (max-width: 850px) {
+  .profile .list-content .social-links {
+    width: 100%;
+    justify-content: center !important;
   }
 }
 
