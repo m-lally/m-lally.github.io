@@ -38,6 +38,7 @@
                 href="https://calendly.com/marc-lally/30min"
                 target="_blank"
                 class="meeting-link"
+                id="meetingLink"
               >
                 <p>
                   <i class="fa fa-handshake" aria-hidden="true"></i>
@@ -628,6 +629,36 @@
         event.preventDefault();
         await generatePdf();
       });
+    })();
+
+    // ── Calendly overlay ──────────────────────────────────────────────────────
+    (function () {
+      const CALENDLY_EMBED_URL =
+        "https://calendly.com/marc-lally/30min?background_color=0a0a0b&text_color=fafafa&primary_color=e4a853";
+
+      function loadCalendlyAssets(cb) {
+        if (window.Calendly) { cb(); return; }
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "https://assets.calendly.com/assets/external/widget.css";
+        document.head.appendChild(link);
+        const script = document.createElement("script");
+        script.src = "https://assets.calendly.com/assets/external/widget.js";
+        script.async = true;
+        script.onload = cb;
+        document.body.appendChild(script);
+      }
+
+      const meetingLink = document.getElementById("meetingLink");
+      if (meetingLink) {
+        meetingLink.addEventListener("click", function (e) {
+          if (window.matchMedia("(max-width: 768px)").matches) return;
+          e.preventDefault();
+          loadCalendlyAssets(function () {
+            window.Calendly.initPopupWidget({ url: CALENDLY_EMBED_URL });
+          });
+        });
+      }
     })();
   </script>
 </body>
