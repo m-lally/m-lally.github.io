@@ -160,27 +160,44 @@ a {
 
 .profile .list-content .contact-links > a p {
   margin: 0;
-  background: #f8f8f8;
-  border: 1px solid #dde3ef;
-  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #c4ccda;
+  border-radius: 0;
+  color: #172034;
+  font-weight: 600;
   padding: 10px 16px;
   white-space: nowrap;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .profile .list-content .contact-links > a:hover p {
+  background: #f0f1f3;
+  border-color: #9099a8;
+  box-shadow: 0 4px 12px rgba(17, 36, 84, 0.12);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(17, 36, 84, 0.12);
 }
 
 .profile .list-content .contact-links > a.meeting-link p,
 .profile .list-content .contact-links > a.download-btn p {
-  background: linear-gradient(135deg, #0f0f10 0%, #1f1f22 45%, #000000 100%);
-  color: #ffffff;
-  border: 1px solid #000000;
+  background: #ffffff;
+  color: #101828;
+  border: 1px solid #8f99ad;
   font-weight: 700;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(17, 36, 84, 0.1);
   animation: none;
+}
+
+.profile .list-content .contact-links > a.meeting-link:hover p,
+.profile .list-content .contact-links > a.download-btn:hover p {
+  background: #f0f1f3;
+  border-color: #555e6e;
+  box-shadow: 0 6px 14px rgba(17, 36, 84, 0.16);
+  transform: translateY(-2px);
 }
 
 .profile .list-content .social-links {
@@ -197,6 +214,16 @@ a {
   align-items: center;
   justify-content: center;
   margin: 0;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.profile .list-content .social-links a:hover {
+  transform: translateY(-2px);
+  color: #555555;
+}
+
+.profile .list-content .social-links a:hover .social-icon {
+  color: #333333;
 }
 
 @media (max-width: 850px) {
