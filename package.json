@@ -8,11 +8,12 @@
   "main": "index.html",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && mkdir -p dist dist/cv && cp index.html index.css favicon.ico favicon.svg favicon-cv.svg avatar.jpg dist/ && cp -R cv/. dist/cv/",
+    "build": "npm run clean && mkdir -p dist dist/cv && cp index.html index.js index.css favicon.ico favicon.svg favicon-cv.svg avatar.jpg dist/ && cp -R cv/. dist/cv/",
     "build:prod": "npm run build && npx --yes html-minifier-terser --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --minify-css true --minify-js true -o dist/index.html dist/index.html && npx --yes clean-css-cli -o dist/index.css dist/index.css",
     "start": "npm run build && sh -c 'python3 -m http.server ${PORT:-4173} --directory dist'",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "docs:jsdoc": "jsdoc -c jsdoc.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "eslint": "^9.39.2",
-    "globals": "^17.2.0"
+    "globals": "^17.2.0",
+    "jsdoc": "^4.0.5"
   }
 }
