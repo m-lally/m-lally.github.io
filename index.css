@@ -454,6 +454,30 @@ a {
   color: #000;
   font-weight: 300;
 }
+.intro-card .tldr-summary {
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-left: 4px solid #333333;
+  border-radius: 6px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  color: #111;
+  line-height: 1.6;
+}
+.intro-card .tldr-label {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #333333 0%, #000 100%);
+  color: #fff;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
 .intro-card p:last-child {
   margin-bottom: 0;
 }

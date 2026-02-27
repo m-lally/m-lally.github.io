@@ -267,6 +267,32 @@ a {
       margin-bottom: 0;
     }
   }
+
+  .tldr-summary {
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    border-left: 4px solid $darkerGrey;
+    border-radius: 6px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    font-weight: 500;
+    color: #111;
+    line-height: 1.6;
+  }
+
+  .tldr-label {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, $darkerGrey 0%, $textDark 100%);
+    color: #fff;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
 }
 
 // Highlights Grid
@@ -574,4 +600,3 @@ a {
     gap: 6px;
   }
 }
-
