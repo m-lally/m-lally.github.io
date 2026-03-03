@@ -226,6 +226,25 @@ a {
   color: #333333;
 }
 
+@media (max-width: 1200px) {
+  .profile .list-content .contact-links {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .profile .list-content .contact-links > a {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 220px;
+  }
+
+  .profile .list-content .contact-links > a p {
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
 @media (max-width: 850px) {
   .profile .list-content .contact-links {
     flex-direction: column;
