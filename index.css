@@ -293,16 +293,24 @@ a {
   height: auto !important;
 }
 
+.pdf-export .profile {
+  background: #ffffff !important;
+}
+
+.pdf-export .experience {
+  background: #3d3e42 !important;
+}
+
 .pdf-export .container {
   min-height: auto !important;
 }
 
 .pdf-export .section-padding {
-  padding: 36px 30px 26px 30px;
+  padding: 24px 20px 18px 20px;
 }
 
 .pdf-export .experience.section-padding {
-  padding-top: 52px;
+  padding-top: 34px;
 }
 
 .pdf-export .experience h3.experience-title {
@@ -327,6 +335,21 @@ a {
   padding: 8px 12px;
 }
 
+.pdf-export .profile h1 {
+  font-size: 3.2em;
+  padding-top: 10px;
+}
+
+.pdf-export .profile .contact-presentation {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.pdf-export .education-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .pdf-export #downloadCvButton {
   display: none !important;
 }
@@ -339,22 +362,25 @@ a {
 .pdf-export .intro-card,
 .pdf-export .highlight-item,
 .pdf-export .education-card,
-.pdf-export .cv-entry,
-.pdf-export .company-wrapper,
-.pdf-export .job-wrapper,
-.pdf-export .company-description {
+.pdf-export .cv-entry {
   break-inside: avoid;
   page-break-inside: avoid;
 }
 
 .pdf-export .experience-wrapper {
-  padding-top: 14px;
+  padding-top: 8px;
+}
+
+.pdf-export .experience-standout {
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .pdf-export .company-wrapper,
 .pdf-export .job-wrapper,
 .pdf-export .company-description {
-  padding-top: 12px;
+  padding-top: 8px;
+  margin-bottom: 18px;
 }
 
 .pdf-export .job-wrapper .experience-title,
@@ -362,9 +388,16 @@ a {
   margin-top: 2px;
 }
 
+.pdf-export .company-description p {
+  font-size: 0.9em;
+  line-height: 1.45;
+}
+
 .pdf-export * {
   animation: none !important;
   transition: none !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
 .pdf-condensed .section-padding {

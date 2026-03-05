@@ -56,9 +56,9 @@
  * @property {number[]} margin
  * @property {string} filename
  * @property {{ type: string, quality: number }} image
- * @property {{ scale: number, useCORS: boolean, backgroundColor: string, scrollY: number }} html2canvas
+ * @property {{ scale: number, useCORS: boolean, backgroundColor: string, scrollY: number, logging: boolean, windowWidth: number }} html2canvas
  * @property {{ unit: string, format: string, orientation: string }} jsPDF
- * @property {{ mode: string[] }} pagebreak
+ * @property {{ mode: string[], avoid: string[] }} pagebreak
  * @property {boolean} enableLinks
  */
 
@@ -117,21 +117,32 @@
    */
   function getPdfOptions() {
     return {
-      margin: [0.45, 0.2, 0.28, 0.2],
+      margin: [0.35, 0.24, 0.35, 0.24],
       filename: "marc-lally-cv.pdf",
-      image: { type: "jpeg", quality: 0.98 },
+      image: { type: "jpeg", quality: 0.94 },
       html2canvas: {
-        scale: 1.45,
+        scale: 1.6,
         useCORS: true,
         backgroundColor: "#ffffff",
-        scrollY: 0
+        scrollY: 0,
+        logging: false,
+        windowWidth: document.documentElement.scrollWidth
       },
       jsPDF: {
         unit: "in",
-        format: "letter",
+        format: "a4",
         orientation: "portrait"
       },
-      pagebreak: { mode: ["css"] },
+      pagebreak: {
+        mode: ["css", "legacy"],
+        avoid: [
+          ".cv-entry",
+          ".role-card",
+          ".intro-card",
+          ".highlight-item",
+          ".education-card"
+        ]
+      },
       enableLinks: true
     };
   }
@@ -213,7 +224,6 @@
     try {
       setButtonState(downloadButton, true, originalText);
       document.documentElement.classList.add("pdf-export");
-      document.documentElement.classList.add("pdf-condensed");
 
       if (document.fonts && document.fonts.ready) {
         await document.fonts.ready;
@@ -227,13 +237,6 @@
       const source = document.getElementById("content");
       const options = getPdfOptions();
       const worker = html2pdf().set(options).from(source).toPdf();
-
-      await worker.get("pdf").then((pdf) => {
-        const pageCount = pdf.internal.getNumberOfPages();
-        if (pageCount > 1) {
-          pdf.deletePage(pageCount);
-        }
-      });
       await worker.save();
     } catch {
       window.location.href = downloadButton.getAttribute("href");
@@ -241,7 +244,6 @@
       cleanupPhoneLink();
       cleanupWrappedEntries();
       document.documentElement.classList.remove("pdf-export");
-      document.documentElement.classList.remove("pdf-condensed");
       setButtonState(downloadButton, false, originalText);
     }
   }
