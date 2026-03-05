@@ -585,6 +585,28 @@ a {
   margin-bottom: 20px;
   font-weight: 400;
 }
+.experience .experience-standout {
+  margin: 0 0 28px 0;
+  padding: 0 0 0 14px;
+  border: 0;
+  border-left: 3px solid rgba(232, 232, 227, 0.45);
+  background: transparent;
+  box-shadow: none;
+  font-weight: 700;
+  color: inherit;
+  line-height: 1.6;
+  font-style: normal;
+  quotes: none;
+}
+.experience .experience-standout::before,
+.experience .experience-standout::after {
+  content: none;
+}
+.experience .experience-standout a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: inherit;
+}
 .experience .company-wrapper {
   width: 100%;
   display: block;

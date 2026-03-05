@@ -12,4 +12,8 @@ export default defineConfig([
     extends: ["js/recommended"],
     languageOptions: { globals: globals.browser },
   },
+  {
+    files: ["playwright.config.js", "tests/**/*.js"],
+    languageOptions: { globals: globals.node },
+  },
 ]);
