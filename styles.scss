@@ -412,6 +412,45 @@ a {
     color: white;
     margin-bottom: 15px;
   }
+
+  .company-wrapper .experience-title,
+  .job-wrapper .experience-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .company-wrapper .experience-title::before {
+    content: "\f1ad";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: $lightText;
+    opacity: 0.85;
+  }
+
+  .job-wrapper .experience-title::before {
+    content: "\f0b1";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: $lightText;
+    opacity: 0.85;
+  }
+
+  .time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $textGrey;
+    font-size: 0.9em;
+  }
+
+  .time::before {
+    content: "\f073";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    color: $lightText;
+    opacity: 0.75;
+  }
 }
 
 .company-description {
@@ -454,6 +493,7 @@ a {
   display: inline-block;
   background: linear-gradient(135deg, $accentGrey 0%, $darkestGrey 100%);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 0.85em;

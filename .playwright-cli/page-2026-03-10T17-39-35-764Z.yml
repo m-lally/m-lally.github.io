@@ -1,0 +1,193 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - link "+44 7516 029946" [ref=e8] [cursor=pointer]:
+          - /url: tel:+447516029946
+          - paragraph [ref=e9]:
+            - generic [ref=e10]: 
+            - text: +44 7516 029946
+        - link "marc.lally@gmail.com" [ref=e11] [cursor=pointer]:
+          - /url: mailto:marc.lally@gmail.com
+          - paragraph [ref=e12]:
+            - generic [ref=e13]: 
+            - text: marc.lally@gmail.com
+        - link "Book a Meeting" [ref=e14] [cursor=pointer]:
+          - /url: https://calendly.com/marc-lally/30min
+          - paragraph [ref=e15]:
+            - generic [ref=e16]: 
+            - text: Book a Meeting
+        - link "Download CV" [ref=e17] [cursor=pointer]:
+          - /url: cv/marc.lally.pdf
+          - paragraph [ref=e18]:
+            - generic [ref=e19]: 
+            - text: Download CV
+      - paragraph [ref=e20]:
+        - link [ref=e21] [cursor=pointer]:
+          - /url: https://github.com/m-lally
+          - generic [ref=e22]: 
+        - link [ref=e23] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/marclally/
+          - generic [ref=e24]: 
+    - heading "Marc Lally" [level=1] [ref=e26]
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]: 
+        - heading "Senior Software Engineer" [level=3] [ref=e30]
+        - paragraph [ref=e31]: Platform & Architecture Lead
+      - generic [ref=e32]:
+        - generic [ref=e33]: 
+        - heading "Core Expertise" [level=3] [ref=e34]
+        - paragraph [ref=e35]: Distributed Systems | Serverless | TypeScript/Node
+    - generic [ref=e37]:
+      - paragraph [ref=e38]:
+        - generic [ref=e39]: TLDR;
+        - text: Senior Engineer | Distributed, State-Driven Systems | TypeScript · Node · React · Python · Rust | PostgreSQL · Redis · MongoDB · GraphQL | AI-Embedded Workflows & DevOps | Terraform · Cursor · Warp · Claude · Serverless | Docker | Likes Challenges
+      - paragraph [ref=e40]: As a Senior Software Engineer and Platform & Architecture Lead, I design and operate distributed systems that form the backbone of high-growth companies. My approach centers on translating complex business constraints into elegant, durable technical solutions that scale reliably while remaining operationally sustainable. I've led cross-functional teams through architectural transformations, established platform-wide standards, and consistently elevated engineering maturity across organizations.
+      - paragraph [ref=e41]: "I'm hands-on across the full stack - TypeScript/Node for rapid iteration and scale, Python for data systems and automation, Rust for performance-critical components - but my real strength is knowing when and why to use each tool. I architect with intention: clear service boundaries, intentional data models, robust observability, and security as a first-class concern. I mentor the next generation of technical leaders and drive decisions through data-driven strategy rather than dogma. When systems fail or decisions need making under ambiguity, I'm the person who thinks clearly, communicates effectively, and delivers results."
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: 
+          - generic [ref=e46]:
+            - heading "B.Sc. Computer Science (Hons)" [level=4] [ref=e47]
+            - paragraph [ref=e48]: UCL - University College London
+        - generic [ref=e49]:
+          - generic [ref=e50]: 1990 - 1993
+          - generic [ref=e51]: 2:1
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: 
+          - generic [ref=e55]:
+            - heading "AWS Solutions Architect Associate" [level=4] [ref=e56]
+            - paragraph [ref=e57]: Amazon Web Services
+        - generic [ref=e59]: "2023"
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]: 
+          - generic [ref=e63]:
+            - heading "AWS Developer Associate" [level=4] [ref=e64]
+            - paragraph [ref=e65]: Amazon Web Services
+        - generic [ref=e67]: "2023"
+    - generic [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: 
+          - paragraph [ref=e72]:
+            - strong [ref=e73]: Distributed Systems
+            - text: Scalable, high-throughput production environments handling millions of requests
+        - generic [ref=e74]:
+          - generic [ref=e75]: 
+          - paragraph [ref=e76]:
+            - strong [ref=e77]: Platform Strategy
+            - text: Service-oriented and serverless architecture design with operational excellence
+        - generic [ref=e78]:
+          - generic [ref=e79]: 
+          - paragraph [ref=e80]:
+            - strong [ref=e81]: Multi-Stack
+            - text: TypeScript/Node, Python, Rust - selecting the right tool for the job
+      - generic [ref=e82]:
+        - generic [ref=e83]: 
+        - paragraph [ref=e84]: Technical Scope & Impact
+      - paragraph [ref=e85]: "Design and evolve scalable distributed systems optimizing for reliability, cost efficiency, and velocity. Lead service-oriented and serverless architecture with clear boundaries, data ownership models, and operational visibility. Establish API standards (REST/GraphQL) with rigorous versioning and governance. Code at impact: TypeScript/Node for iteration, Python for data systems, Rust for performance-critical components. Own data architecture across SQL and NoSQL systems, design AWS-native platforms (Lambda, API Gateway, DynamoDB), and establish observability, CI/CD, and security standards at the platform level."
+      - generic [ref=e86]:
+        - generic [ref=e87]: 
+        - paragraph [ref=e88]: Leadership
+      - paragraph [ref=e89]: Drive architectural direction across teams through data-driven strategy and clear decision frameworks. Mentor senior engineers and emerging technical leads, elevating decision quality and developing the next generation. Bridge engineering, product, and business stakeholders, translating requirements into coherent technical direction and credible delivery plans. Enable teams to move at velocity without sacrificing system integrity - ensuring short-term decisions align with long-term platform health and organizational scalability.
+  - generic [ref=e91]:
+    - heading "Experience" [level=3] [ref=e92]
+    - blockquote [ref=e93]:
+      - text: "This section is a curated snippet of some of the work I have done in the last five years. A more comprehensive account is available on my personal profile page:"
+      - link "My Linkedin Page" [ref=e94] [cursor=pointer]:
+        - /url: https://linkedin.com/in/marclally
+      - text: .
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e97]: UK Ministry of Defence
+        - generic [ref=e98]: February 2025 - January 2026
+      - generic [ref=e99]:
+        - generic [ref=e100]: Senior Backend Engineer
+        - generic [ref=e101]: Contract
+        - generic [ref=e102]:
+          - generic [ref=e103]: Node.js
+          - generic [ref=e104]: TypeScript
+          - generic [ref=e105]: Serverless
+          - generic [ref=e106]: OAuth 2.0
+          - generic [ref=e107]: JWT
+        - paragraph [ref=e109]: (NDA-protected work) Delivered secure, high-availability backend services for mission-critical workloads under strict compliance constraints. Built low-latency Node.js/TypeScript services on serverless infrastructure and hardened identity flows with OAuth 2.0 and JWT. Led TDD adoption across squads and tightened reliability through targeted refactors, dependency governance, and clearer failure modes. Codified security patterns for authentication, data access control, and inter-service communication to raise platform consistency. Defined service health SLOs and incident runbooks to improve response predictability. Align delivery sequencing with operational risk.
+      - generic [ref=e110]:
+        - generic [ref=e111]: Codeium
+        - generic [ref=e112]: March 2023 - December 2024
+      - generic [ref=e113]:
+        - generic [ref=e114]: Senior Full Stack Developer | Tech Lead
+        - generic [ref=e115]: Contract
+        - generic [ref=e116]:
+          - generic [ref=e117]: React
+          - generic [ref=e118]: TypeScript
+          - generic [ref=e119]: Node.js
+          - generic [ref=e120]: Frontend
+          - generic [ref=e121]: Backend
+        - paragraph [ref=e123]: Orchestrated platform-level initiatives spanning frontend and backend teams, aligning technical priorities with delivery timelines. Crafted React experiences that balanced responsiveness, accessibility, and visual polish while instrumenting critical flows. Delivered backend services that sustained high-volume traffic and hardened key integrations. Rolled out shared engineering conventions and reusable patterns that reduced friction and improved dependability. Drove modern tooling and workflows to increase developer velocity without sacrificing stability. Coached engineers in systems thinking through reviews and technical decision facilitation.
+      - generic [ref=e124]:
+        - generic [ref=e125]: Shell Global Energy
+        - generic [ref=e126]: July 2022 - February 2023
+      - generic [ref=e127]:
+        - generic [ref=e128]: Senior Backend Developer
+        - generic [ref=e129]: Contract
+        - generic [ref=e130]:
+          - generic [ref=e131]: Node.js
+          - generic [ref=e132]: Serverless
+          - generic [ref=e133]: AWS Lambda
+          - generic [ref=e134]: API Gateway
+          - generic [ref=e135]: TypeScript
+        - paragraph [ref=e137]: Built scalable Node.js and serverless APIs powering high-throughput energy systems and data products with careful attention to throughput, latency, and cost. Steered technical design with stakeholders, translating goals into coherent architecture and delivery plans. Shaped data models and pipelines for real-time analytics and reporting accuracy with explicit data contracts. Introduced coding playbooks and review practices that elevated quality, testability, and long-term maintainability. Guided engineers through complex tradeoffs and operational constraints while keeping decisions aligned. Enforced strict reliability standards across releases with monitoring and escalation protocols.
+      - generic [ref=e138]:
+        - generic [ref=e139]: Studio Rotate
+        - generic [ref=e140]: June 2021 - July 2022
+      - generic [ref=e141]:
+        - generic [ref=e142]: Senior Backend Developer | Tech Lead
+        - generic [ref=e143]:
+          - generic [ref=e144]: Node.js
+          - generic [ref=e145]: Architecture
+          - generic [ref=e146]: MongoDB
+          - generic [ref=e147]: TypeScript
+          - generic [ref=e148]: Microservices
+        - paragraph [ref=e150]: Directed cross-functional engineering teams delivering high-impact digital products, coordinating sequencing, risk, and technical ownership. Advanced modern practices across the SDLC from discovery through production support to tighten feedback loops. Designed resilient service and data architectures to support scale and performance with clear ownership boundaries. Unblocked platform decisions and navigated architectural tradeoffs while documenting rationale for continuity. Partnered with product and design to turn requirements into dependable release plans that balanced scope with engineering health. Strengthened team capability through mentorship and hands-on architectural guidance during critical initiatives.
+      - generic [ref=e151]:
+        - generic [ref=e152]: Sainsburys Digital
+        - generic [ref=e153]: December 2020 - June 2021
+      - generic [ref=e154]:
+        - generic [ref=e155]: Senior Backend Developer
+        - generic [ref=e156]: Contract
+        - generic [ref=e157]:
+          - generic [ref=e158]: GraphQL
+          - generic [ref=e159]: Next.js
+          - generic [ref=e160]: Node.js
+          - generic [ref=e161]: TypeScript
+          - generic [ref=e162]: TDD
+        - paragraph [ref=e164]: Revamped critical codebases with disciplined refactoring and pragmatic architectural patterns that reduced complexity. Engineered GraphQL and Next.js middleware integrating Google DV360 to enable real-time data access at scale. Institutionalized TDD to boost quality and release confidence with coverage and regression expectations. Delivered modular systems that adapted to evolving requirements without destabilizing core flows. Improved developer ergonomics through clearer interfaces and reusable components that reduced duplication. Mentored engineers and raised technical standards through reviews and design sessions.
+      - generic [ref=e165]:
+        - generic [ref=e166]: KFC Europe
+        - generic [ref=e167]: December 2019- November 2020
+      - generic [ref=e168]:
+        - generic [ref=e169]: Senior Fullstack Developer | Tech Lead
+        - generic [ref=e170]:
+          - generic [ref=e171]: React
+          - generic [ref=e172]: Node.js
+          - generic [ref=e173]: Mobile
+          - generic [ref=e174]: Payment Systems
+          - generic [ref=e175]: Microservices
+        - paragraph [ref=e177]: Coordinated cross-functional teams across mobile, backend, frontend, and infrastructure to deliver mission-critical systems with clear ownership. Architected integrations between ordering platforms, POS, payment providers, and fulfillment networks to ensure transactional consistency. Engineered for reliability and performance across hundreds of locations under peak demand with targeted resilience testing and capacity planning. Established architectural guardrails and improved operational monitoring to surface issues early. Coached engineers across disciplines and accelerated delivery by removing blockers and clarifying interfaces. Aligned technical strategy with aggressive growth and operational constraints, keeping execution measurable.
+      - generic [ref=e178]:
+        - generic [ref=e179]: Preqin
+        - generic [ref=e180]: February 2019 - November 2019
+      - generic [ref=e181]:
+        - generic [ref=e182]: Senior Frontend Engineer
+        - generic [ref=e183]: Contract
+        - generic [ref=e184]:
+          - generic [ref=e185]: React
+          - generic [ref=e186]: Vanilla JS
+          - generic [ref=e187]: ElasticSearch
+          - generic [ref=e188]: TypeScript
+          - generic [ref=e189]: TDD
+        - paragraph [ref=e191]: Owned the architecture and evolution of the core front-end platform and primary website, setting a technical roadmap. Delivered complex customer-facing features that improved usability, navigation clarity, and engagement while preserving performance budgets. Produced technical specs, architecture, and implementation plans for new applications and major enhancements to maintain cross-team alignment. Drove engineering rigor through deep code analysis, requirements discovery, and clear quality metrics. Optimized performance for high-traffic environments with tuning and UX improvements that kept the experience responsive. Championed comprehensive testing to ensure stable, production-ready releases and maintainable modern JavaScript solutions.

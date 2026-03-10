@@ -290,7 +290,9 @@ a {
 
 .pdf-export .resume-wrapper {
   display: block;
-  width: 100%;
+  width: 1600px;
+  max-width: 100%;
+  margin: 0 auto;
   min-height: auto;
   height: auto !important;
 }
@@ -309,10 +311,14 @@ a {
 
 .pdf-export .experience {
   background: #3d3e42 !important;
+  page-break-before: always;
+  break-before: page;
 }
 
 .pdf-export .container {
   min-height: auto !important;
+  width: 100%;
+  max-width: 100%;
 }
 
 .pdf-export .section-padding {
@@ -325,6 +331,13 @@ a {
 
 .pdf-export .experience h3.experience-title {
   margin-top: 8px;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.pdf-export h3.experience-title + .experience-standout {
+  page-break-before: avoid;
+  break-before: avoid;
 }
 
 .pdf-export .profile .list-content,
@@ -391,6 +404,18 @@ a {
 .pdf-export .company-description {
   padding-top: 8px;
   margin-bottom: 18px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.pdf-export .company-wrapper {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.pdf-export .job-wrapper {
+  break-before: avoid;
+  page-break-before: avoid;
 }
 
 .pdf-export .job-wrapper .experience-title,
@@ -401,6 +426,18 @@ a {
 .pdf-export .company-description p {
   font-size: 0.9em;
   line-height: 1.45;
+}
+
+.pdf-export .tech-tag {
+  background: transparent !important;
+  color: #e8e8e3;
+  border: 1px solid rgba(232, 232, 227, 0.55);
+  box-shadow: none !important;
+}
+
+.pdf-export .tech-tag:hover {
+  box-shadow: none !important;
+  transform: none;
 }
 
 .pdf-export * {
@@ -641,13 +678,12 @@ a {
 .experience .experience-standout {
   margin: 0 0 28px 0;
   padding: 12px 16px;
-  border: 1px solid rgba(232, 232, 227, 0.25);
-  border-left: 4px solid rgba(232, 232, 227, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
-  background: transparent;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #555555 0%, #444444 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-weight: 700;
-  color: inherit;
+  color: #ffffff;
   line-height: 1.6;
   font-style: normal;
   quotes: none;
@@ -657,7 +693,7 @@ a {
   content: none;
 }
 .experience .experience-standout a {
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
   font-weight: inherit;
 }
@@ -690,6 +726,40 @@ a {
 .experience .experience-title {
   color: white;
   margin-bottom: 15px;
+}
+.experience .company-wrapper .experience-title,
+.experience .job-wrapper .experience-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.experience .company-wrapper .experience-title::before {
+  content: "\f1ad";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e8e8e3;
+  opacity: 0.85;
+}
+.experience .job-wrapper .experience-title::before {
+  content: "\f0b1";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e8e8e3;
+  opacity: 0.85;
+}
+.experience .time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #999;
+  font-size: 0.9em;
+}
+.experience .time::before {
+  content: "\f073";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  color: #e8e8e3;
+  opacity: 0.75;
 }
 
 .company-description {
@@ -731,6 +801,7 @@ a {
   display: inline-block;
   background: linear-gradient(135deg, #555555 0%, #444444 100%);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 0.85em;
