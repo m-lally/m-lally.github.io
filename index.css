@@ -640,11 +640,12 @@ a {
 }
 .experience .experience-standout {
   margin: 0 0 28px 0;
-  padding: 0 0 0 14px;
-  border: 0;
-  border-left: 3px solid rgba(232, 232, 227, 0.45);
+  padding: 12px 16px;
+  border: 1px solid rgba(232, 232, 227, 0.25);
+  border-left: 4px solid rgba(232, 232, 227, 0.55);
+  border-radius: 6px;
   background: transparent;
-  box-shadow: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   font-weight: 700;
   color: inherit;
   line-height: 1.6;
@@ -657,7 +658,7 @@ a {
 }
 .experience .experience-standout a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: inherit;
 }
 .experience .company-wrapper {
