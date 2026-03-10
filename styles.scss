@@ -101,14 +101,26 @@ a {
 // Profile Section
 .profile {
   background: #fff;
-  width: 40%;
+  width: 50%;
   color: $mutedGrey;
   min-height: 100vh;
-  flex: 0 0 40%;
+  flex: 0 0 50%;
+
+  .container {
+    width: 980px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+  }
 
   @include brother-bear {
     width: 100%;
     flex: 0 0 100%;
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   .name-wrapper {
@@ -337,16 +349,28 @@ a {
 // Experience Section
 .experience {
   background: $darkGrey;
-  width: 60%;
+  width: 50%;
   position: relative;
   color: $mutedGrey;
   font-weight: 300;
   min-height: 100vh;
-  flex: 0 0 60%;
+  flex: 0 0 50%;
+
+  .container {
+    width: 980px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+  }
 
   @include brother-bear {
     width: 100%;
     flex: 0 0 100%;
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   h3.experience-title {
