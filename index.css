@@ -1391,7 +1391,11 @@ a {
     box-shadow: none !important;
   }
 
-  .download-cta,
+  .download-btn,
+  .download-cta {
+    display: none !important;
+  }
+
   .profile .social-links a,
   .footer-links a {
     color: #1f2a33 !important;
