@@ -550,7 +550,7 @@ a {
 }
 .profile .st0,
 .profile .st1 {
-  fill: #8fb3c7;
+  fill: #a7b0ba;
 }
 
 .role-cards {
@@ -596,7 +596,7 @@ a {
 }
 .note-card {
   background: rgba(255, 255, 255, 0.03);
-  border-left: 4px solid #8fb3c7;
+  border-left: 4px solid #a7b0ba;
   border-radius: 6px;
   padding: 18px 20px;
 }
@@ -608,6 +608,37 @@ a {
 }
 .note-card .bold p {
   margin: 0;
+}
+
+.download-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f2f4f7;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin: 0 0 40px;
+}
+
+.download-cta--tight {
+  margin-bottom: 16px;
+}
+
+.download-cta i {
+  color: #a7b0ba;
+}
+
+.download-cta:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .site-footer {
@@ -705,7 +736,7 @@ a {
 
 .role-card {
   background: rgba(255, 255, 255, 0.03);
-  border-left: 5px solid #8fb3c7;
+  border-left: 5px solid #a7b0ba;
   border-radius: 6px;
   padding: 14px 16px;
   transition: all 0.3s ease;
@@ -717,7 +748,7 @@ a {
 }
 .role-card i {
   font-size: 1.6em;
-  color: #8fb3c7;
+  color: #a7b0ba;
   margin-right: 12px;
 }
 .role-card h3 {
@@ -737,7 +768,7 @@ a {
 
 .intro-card {
   background: rgba(255, 255, 255, 0.03);
-  border-left: 5px solid #8fb3c7;
+  border-left: 5px solid #a7b0ba;
   border-radius: 6px;
   padding: 24px;
   margin-bottom: 40px;
@@ -757,7 +788,7 @@ a {
 .intro-card .tldr-summary {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 4px solid #8fb3c7;
+  border-left: 4px solid #a7b0ba;
   border-radius: 6px;
   padding: 12px 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -770,7 +801,7 @@ a {
   margin-right: 8px;
   padding: 2px 8px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #8fb3c7 0%, #4c6a7d 100%);
+  background: linear-gradient(135deg, #a7b0ba 0%, #5b6772 100%);
   color: #fff;
   font-size: 0.78em;
   font-weight: 700;
@@ -831,7 +862,7 @@ a {
   padding: 12px 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
-  background: linear-gradient(135deg, #8fb3c7 0%, #4c6a7d 100%);
+  background: linear-gradient(135deg, #a7b0ba 0%, #5b6772 100%);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-weight: 700;
   color: #ffffff;
@@ -952,6 +983,32 @@ a {
   }
 }
 
+.job-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.job-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+}
+
+.job-bullets i {
+  color: #a7b0ba;
+  margin-top: 3px;
+  font-size: 0.95em;
+  flex-shrink: 0;
+}
+
+.job-bullets span {
+  display: block;
+}
+
 .contract-badge {
   display: inline-block;
   background: transparent;
@@ -976,7 +1033,7 @@ a {
 
 .tech-tag {
   display: inline-block;
-  background: linear-gradient(135deg, #8fb3c7 0%, #4c6a7d 100%);
+  background: linear-gradient(135deg, #a7b0ba 0%, #5b6772 100%);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 6px 12px;
@@ -988,7 +1045,7 @@ a {
   transition: all 0.3s ease;
 }
 .tech-tag:hover {
-  background: linear-gradient(135deg, #4c6a7d 0%, #3b5363 100%);
+  background: linear-gradient(135deg, #5b6772 0%, #47525c 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -1052,7 +1109,7 @@ a {
 
 .education-card {
   background: rgba(255, 255, 255, 0.03);
-  border-left: 4px solid #8fb3c7;
+  border-left: 4px solid #a7b0ba;
   border-radius: 6px;
   padding: 12px 14px;
   margin-bottom: 10px;
@@ -1085,7 +1142,7 @@ a {
 }
 .education-card-header i {
   font-size: 1.3em;
-  color: #8fb3c7;
+  color: #a7b0ba;
   margin-top: 2px;
   flex-shrink: 0;
 }

@@ -1,13 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
 
 // Color Variables
-$accentGrey: #8fb3c7;
+$accentGrey: #a7b0ba;
 $lightGrey: #3a4048;
 $lightGreyAlt: #404750;
 $lightGreyBg: #3c434c;
 $darkGrey: #2f343b;
-$darkestGrey: #4c6a7d;
-$darkerGrey: #3b5363;
+$darkestGrey: #5b6772;
+$darkerGrey: #47525c;
 $mutedGrey: #c0c7d1;
 $lightText: #f2f4f7;
 $borderGrey: #6f7c88;
@@ -15,9 +15,9 @@ $textDark: #eef1f4;
 $textMuted: #c6ced8;
 $textDarkMuted: #a4afbc;
 $textGrey: #9aa5b2;
-$badgeBg: rgba(143, 179, 199, 0.16);
-$accentAlpha: rgba(143, 179, 199, 0.12);
-$accentAlpha2: rgba(143, 179, 199, 0.2);
+$badgeBg: rgba(167, 176, 186, 0.16);
+$accentAlpha: rgba(167, 176, 186, 0.12);
+$accentAlpha2: rgba(167, 176, 186, 0.2);
 $shadowSmall: 0 2px 4px rgba(0, 0, 0, 0.2);
 $shadowMedium: 0 2px 8px rgba(0, 0, 0, 0.08);
 $shadowLarge: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -357,6 +357,37 @@ a {
 
 .note-card .bold p {
   margin: 0;
+}
+
+.download-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: $lightText;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: $shadowSmall;
+  transition: $transitionSmooth;
+  margin: 0 0 40px;
+}
+
+.download-cta--tight {
+  margin-bottom: 16px;
+}
+
+.download-cta i {
+  color: $accentGrey;
+}
+
+.download-cta:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: $shadowLarge;
 }
 
 .site-footer {
@@ -720,6 +751,32 @@ a {
     width: 100%;
     margin-bottom: 40px;
   }
+}
+
+.job-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.job-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+}
+
+.job-bullets i {
+  color: $accentGrey;
+  margin-top: 3px;
+  font-size: 0.95em;
+  flex-shrink: 0;
+}
+
+.job-bullets span {
+  display: block;
 }
 
 // Contract Badge
