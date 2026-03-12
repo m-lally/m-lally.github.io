@@ -49,6 +49,23 @@ $transitionSmooth: all 0.3s ease;
   }
 }
 
+$divider-width: 70%;
+$divider-height: 1px;
+$divider-margin: 70px auto;
+$divider-mobile-margin: 50px auto;
+$divider-background: rgba(255, 255, 255, 0.22);
+
+@mixin horizontal-divider($margin: $divider-margin) {
+  width: $divider-width;
+  height: $divider-height;
+  margin: $margin;
+  background: $divider-background;
+
+  @include baby-bear {
+    margin: $divider-mobile-margin;
+  }
+}
+
 // Global Styles
 *,
 *::after,
@@ -364,6 +381,10 @@ a {
 
 .note-card .bold p {
   margin: 0;
+}
+
+.section-divider {
+  @include horizontal-divider;
 }
 
 .download-cta {
@@ -693,17 +714,11 @@ a {
   .job-wrapper::after {
     content: "";
     display: block;
-    width: 70%;
-    height: 1px;
-    margin: 70px auto 70px;
-    background: rgba(255, 255, 255, 0.22);
+    @include horizontal-divider;
   }
 
-  @include baby-bear {
-    .job-wrapper::after {
-      width: 70%;
-      margin: 50px auto 50px;
-    }
+  .job-wrapper.divider-next::after {
+    display: none;
   }
 
   .job-wrapper:last-of-type::after {
@@ -1097,6 +1112,10 @@ a {
 }
 
 .pdf-export .job-wrapper::after {
+  background: #c5ccd3;
+}
+
+.pdf-export .section-divider {
   background: #c5ccd3;
 }
 
