@@ -23,15 +23,16 @@
         <div class="contact-info clearfix">
           <div class="list-content">
             <div class="contact-links">
-              <a href="tel:+447516029946" id="phoneLink">
+              <a href="tel:+447516029946" id="phoneLink" aria-label="Call +44 7516 029946" title="+44 7516 029946">
                 <p>
-                  <i class="fa fa-phone" aria-hidden="true"></i> +44 7516 029946
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span class="visually-hidden">+44 7516 029946</span>
                 </p>
               </a>
-              <a href="mailto:marc.lally@gmail.com">
+              <a href="mailto:marc.lally@gmail.com" aria-label="Email marc.lally@gmail.com" title="marc.lally@gmail.com">
                 <p>
                   <i class="fa fa-reply" aria-hidden="true"></i>
-                  marc.lally@gmail.com
+                  <span class="visually-hidden">marc.lally@gmail.com</span>
                 </p>
               </a>
               <a
@@ -39,36 +40,44 @@
                 target="_blank"
                 class="meeting-link"
                 id="meetingLink"
+                aria-label="Book a meeting"
+                title="Book a Meeting"
               >
                 <p>
                   <i class="fa fa-handshake" aria-hidden="true"></i>
-                  Book a Meeting
+                  <span class="visually-hidden">Book a Meeting</span>
                 </p> </a
               ><a
                 href="cv/marc.lally.pdf"
                 download
                 class="download-btn"
                 id="downloadCvButton"
+                aria-label="Download CV"
+                title="Download CV"
               >
                 <p>
                   <i class="fa fa-file-lines" aria-hidden="true"></i>
-                  Download CV
+                  <span class="visually-hidden">Download CV</span>
+                </p>
+              </a>
+              <a href="https://github.com/m-lally" aria-label="GitHub" title="GitHub">
+                <p>
+                  <i
+                    class="fab fa-github social-icon social-icon--github"
+                    aria-hidden="true"
+                  ></i>
+                </p>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/marclally/"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+              >
+                <p>
+                  <i class="fab fa-linkedin social-icon" aria-hidden="true"></i>
                 </p>
               </a>
             </div>
-            <p class="social-links">
-              <a href="https://github.com/m-lally" aria-hidden="true"
-                ><i
-                  class="fab fa-github social-icon social-icon--github"
-                ></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/marclally/"
-                aria-hidden="true"
-              >
-                <i class="fab fa-linkedin social-icon"></i
-              ></a>
-            </p>
           </div>
         </div>
 
@@ -173,42 +182,46 @@
           </div>
         </div>
 
-        <div class="contact-presentation">
-          <span class="bold">
-            <i
-              class="fas fa-cogs section-inline-icon"
-            ></i>
-            <p>Technical Scope & Impact</p>
-          </span>
-          <p>
-            Design and evolve scalable distributed systems optimizing for
-            reliability, cost efficiency, and velocity. Lead service-oriented
-            and serverless architecture with clear boundaries, data ownership
-            models, and operational visibility. Establish API standards
-            (REST/GraphQL) with rigorous versioning and governance. Code at
-            impact: TypeScript/Node for iteration, Python for data systems, Rust
-            for performance-critical components. Own data architecture across
-            SQL and NoSQL systems, design AWS-native platforms (Lambda, API
-            Gateway, DynamoDB), and establish observability, CI/CD, and security
-            standards at the platform level.
-          </p>
-          <span class="bold">
-            <i
-              class="fas fa-users section-inline-icon"
-            ></i>
-            <p>Leadership</p>
-          </span>
-          <p>
-            Drive architectural direction across teams through data-driven
-            strategy and clear decision frameworks. Mentor senior engineers and
-            emerging technical leads, elevating decision quality and developing
-            the next generation. Bridge engineering, product, and business
-            stakeholders, translating requirements into coherent technical
-            direction and credible delivery plans. Enable teams to move at
-            velocity without sacrificing system integrity - ensuring short-term
-            decisions align with long-term platform health and organizational
-            scalability.
-          </p>
+        <div class="contact-presentation two-column-notes">
+          <div class="note-card">
+            <span class="bold">
+              <i
+                class="fas fa-cogs section-inline-icon"
+              ></i>
+              <p>Technical Scope & Impact</p>
+            </span>
+            <p>
+              Design and evolve scalable distributed systems optimizing for
+              reliability, cost efficiency, and velocity. Lead service-oriented
+              and serverless architecture with clear boundaries, data ownership
+              models, and operational visibility. Establish API standards
+              (REST/GraphQL) with rigorous versioning and governance. Code at
+              impact: TypeScript/Node for iteration, Python for data systems, Rust
+              for performance-critical components. Own data architecture across
+              SQL and NoSQL systems, design AWS-native platforms (Lambda, API
+              Gateway, DynamoDB), and establish observability, CI/CD, and security
+              standards at the platform level.
+            </p>
+          </div>
+          <div class="note-card">
+            <span class="bold">
+              <i
+                class="fas fa-users section-inline-icon"
+              ></i>
+              <p>Leadership</p>
+            </span>
+            <p>
+              Drive architectural direction across teams through data-driven
+              strategy and clear decision frameworks. Mentor senior engineers and
+              emerging technical leads, elevating decision quality and developing
+              the next generation. Bridge engineering, product, and business
+              stakeholders, translating requirements into coherent technical
+              direction and credible delivery plans. Enable teams to move at
+              velocity without sacrificing system integrity - ensuring short-term
+              decisions align with long-term platform health and organizational
+              scalability.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -216,23 +229,33 @@
     <section class="experience section-padding">
       <div class="container">
         <h3 class="experience-title">Experience</h3>
-        <div class="experience-standouts">
-          <blockquote class="experience-standout">
-            This section is a curated snippet of some of the work I have done
-            in the last five years.
-          </blockquote>
-          <blockquote class="experience-standout">
-            A more comprehensive account is available on my personal profile
-            page:
-            <a
-              href="https://linkedin.com/in/marclally"
-              target="_blank"
-              rel="noopener noreferrer"
-            >My Linkedin Page</a>.
-          </blockquote>
-        </div>
-
         <div class="experience-wrapper">
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">UK Ministry of Defence</div>
+            <div class="time">February 2026 - Present</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Senior Software Engineer</div>
+            <div class="contract-badge">Contract</div>
+            <div class="tech-stack">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Serverless</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">AI/LLM</span>
+            </div>
+            <div class="company-description">
+              <p>
+                (NDA-protected work) Leading delivery of secure, scalable
+                services and interfaces for mission-critical workloads,
+                pairing serverless backends with React experiences and
+                AI-assisted workflows. Focused on reliability, performance,
+                and clear technical direction across teams.
+              </p>
+            </div>
+          </div>
+
           <div class="company-wrapper clearfix">
             <div class="experience-title">UK Ministry of Defence</div>
             <div class="time">February 2025 - January 2026</div>
@@ -280,22 +303,18 @@
               <span class="tech-tag">React</span>
               <span class="tech-tag">TypeScript</span>
               <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Frontend</span>
-              <span class="tech-tag">Backend</span>
+              <span class="tech-tag">Serverless</span>
+              <span class="tech-tag">OAuth/JWT</span>
+              <span class="tech-tag">TDD</span>
             </div>
             <div class="company-description">
               <p>
-                Orchestrated platform-level initiatives spanning frontend and
-                backend teams, aligning technical priorities with delivery
-                timelines. Crafted React experiences that balanced
-                responsiveness, accessibility, and visual polish while
-                instrumenting critical flows. Delivered backend services that
-                sustained high-volume traffic and hardened key integrations.
-                Rolled out shared engineering conventions and reusable patterns
-                that reduced friction and improved dependability. Drove modern
-                tooling and workflows to increase developer velocity without
-                sacrificing stability. Coached engineers in systems thinking
-                through reviews and technical decision facilitation.
+                Built and maintained high-performance, secure services with
+                Node.js/TypeScript and serverless frameworks, including secure
+                API design and OAuth/JWT authentication. Delivered responsive
+                React interfaces with a focus on usability and visual polish.
+                Championed TDD and reusable patterns to improve quality,
+                velocity, and cross-team consistency.
               </p>
             </div>
           </div>
@@ -306,30 +325,25 @@
           </div>
 
           <div class="job-wrapper clearfix">
-            <div class="experience-title">Senior Backend Developer</div>
+            <div class="experience-title">Senior Full Stack Developer</div>
             <div class="contract-badge">Contract</div>
 
             <div class="tech-stack">
               <span class="tech-tag">Node.js</span>
               <span class="tech-tag">Serverless</span>
               <span class="tech-tag">AWS Lambda</span>
-              <span class="tech-tag">API Gateway</span>
-              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">GraphQL</span>
+              <span class="tech-tag">OAuth/JWT</span>
+              <span class="tech-tag">Payments</span>
             </div>
             <div class="company-description">
               <p>
-                Built scalable Node.js and serverless APIs powering
-                high-throughput energy systems and data products with careful
-                attention to throughput, latency, and cost. Steered technical
-                design with stakeholders, translating goals into coherent
-                architecture and delivery plans. Shaped data models and
-                pipelines for real-time analytics and reporting accuracy with
-                explicit data contracts. Introduced coding playbooks and review
-                practices that elevated quality, testability, and long-term
-                maintainability. Guided engineers through complex tradeoffs and
-                operational constraints while keeping decisions aligned.
-                Enforced strict reliability standards across releases with
-                monitoring and escalation protocols.
+                Designed modular Node.js/serverless services with GraphQL data
+                models and secure OAuth/JWT access. Built payment integrations
+                including webhooks and gateways, and translated complex
+                requirements into maintainable architecture. Emphasized
+                reliability, security, and disciplined engineering practices
+                across the delivery lifecycle.
               </p>
             </div>
           </div>
@@ -341,29 +355,24 @@
 
           <div class="job-wrapper clearfix">
             <div class="experience-title">
-              Senior Backend Developer | Tech Lead
+              Senior Full Stack Developer | Tech Lead
             </div>
             <div class="tech-stack">
               <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Architecture</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">Nuxt.js</span>
+              <span class="tech-tag">Serverless</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">OAuth/JWT</span>
+              <span class="tech-tag">Payments</span>
             </div>
             <div class="company-description">
               <p>
-                Directed cross-functional engineering teams delivering
-                high-impact digital products, coordinating sequencing, risk, and
-                technical ownership. Advanced modern practices across the SDLC
-                from discovery through production support to tighten feedback
-                loops. Designed resilient service and data architectures to
-                support scale and performance with clear ownership boundaries.
-                Unblocked platform decisions and navigated architectural
-                tradeoffs while documenting rationale for continuity. Partnered
-                with product and design to turn requirements into dependable
-                release plans that balanced scope with engineering health.
-                Strengthened team capability through mentorship and hands-on
-                architectural guidance during critical initiatives.
+                Led cross-functional delivery of digital products, shaping
+                information architecture and scalable API design. Built
+                Node.js/serverless services on AWS alongside Nuxt.js
+                experiences, with secure OAuth/JWT integrations and payment
+                workflows. Drove best practices, code quality, and team
+                capability across the SDLC.
               </p>
             </div>
           </div>
@@ -383,20 +392,15 @@
               <span class="tech-tag">Node.js</span>
               <span class="tech-tag">TypeScript</span>
               <span class="tech-tag">TDD</span>
+              <span class="tech-tag">DV360</span>
             </div>
             <div class="company-description">
               <p>
-                Revamped critical codebases with disciplined refactoring and
-                pragmatic architectural patterns that reduced complexity.
-                Engineered GraphQL and Next.js middleware integrating Google
-                DV360 to enable real-time data access at scale.
-                Institutionalized TDD to boost quality and release confidence
-                with coverage and regression expectations. Delivered modular
-                systems that adapted to evolving requirements without
-                destabilizing core flows. Improved developer ergonomics through
-                clearer interfaces and reusable components that reduced
-                duplication. Mentored engineers and raised technical standards
-                through reviews and design sessions.
+                Refactored critical codebases and built GraphQL/Next.js
+                middleware integrating Google DV360. Delivered low-latency,
+                highly available services with disciplined TDD and security
+                practices, including data protection and access controls.
+                Improved maintainability with modular, testable components.
               </p>
             </div>
           </div>
@@ -411,26 +415,20 @@
               Senior Fullstack Developer | Tech Lead
             </div>
             <div class="tech-stack">
-              <span class="tech-tag">React</span>
               <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Mobile</span>
-              <span class="tech-tag">Payment Systems</span>
-              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">Serverless</span>
+              <span class="tech-tag">OAuth/JWT</span>
+              <span class="tech-tag">Payments</span>
+              <span class="tech-tag">POS</span>
+              <span class="tech-tag">SQL/NoSQL</span>
             </div>
             <div class="company-description">
               <p>
-                Coordinated cross-functional teams across mobile, backend,
-                frontend, and infrastructure to deliver mission-critical systems
-                with clear ownership. Architected integrations between ordering
-                platforms, POS, payment providers, and fulfillment networks to
-                ensure transactional consistency. Engineered for reliability and
-                performance across hundreds of locations under peak demand with
-                targeted resilience testing and capacity planning. Established
-                architectural guardrails and improved operational monitoring to
-                surface issues early. Coached engineers across disciplines and
-                accelerated delivery by removing blockers and clarifying
-                interfaces. Aligned technical strategy with aggressive growth
-                and operational constraints, keeping execution measurable.
+                Led integrations across ordering platforms, POS systems, and
+                payment providers. Built robust Node.js/serverless APIs with
+                OAuth/JWT security, and optimized SQL/NoSQL schemas for
+                reliability and performance. Coordinated delivery across
+                mobile, backend, frontend, and DevOps teams.
               </p>
             </div>
           </div>
@@ -452,25 +450,231 @@
             </div>
             <div class="company-description">
               <p>
-                Owned the architecture and evolution of the core front-end
-                platform and primary website, setting a technical roadmap.
-                Delivered complex customer-facing features that improved
-                usability, navigation clarity, and engagement while preserving
-                performance budgets. Produced technical specs, architecture, and
-                implementation plans for new applications and major enhancements
-                to maintain cross-team alignment. Drove engineering rigor
-                through deep code analysis, requirements discovery, and clear
-                quality metrics. Optimized performance for high-traffic
-                environments with tuning and UX improvements that kept the
-                experience responsive. Championed comprehensive testing to
-                ensure stable, production-ready releases and maintainable modern
-                JavaScript solutions.
+                Owned the core front-end platform and primary website,
+                delivering React and Vanilla JS features with Elasticsearch
+                integration. Produced technical specs and architectural designs
+                for new applications, tuned performance for high-traffic use,
+                and enforced rigorous testing and quality metrics.
+              </p>
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">MelodyVR</div>
+            <div class="time">January 2018 - December 2018</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Senior Front End Developer</div>
+            <div class="tech-stack">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Serverless</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">CMS</span>
+            </div>
+            <div class="company-description">
+              <p>
+                Delivered a CMS integration platform using React and Node.js
+                within AWS serverless environments. Defined front-end
+                architecture, built reusable components, and ensured scalable
+                data integrations aligned with product goals.
+              </p>
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">Big Clever Learning</div>
+            <div class="time">April 2017 - November 2017</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Senior Back End Developer</div>
+            <div class="tech-stack">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Koa</span>
+              <span class="tech-tag">Swagger</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Stripe</span>
+            </div>
+            <div class="company-description">
+              <p>
+                Architected microservices for counselling services with Koa,
+                Swagger, and Node.js. Managed MySQL/PostgreSQL/MongoDB data
+                layers, added payment integrations with Stripe, and drove
+                testing and deployment automation using Jest/Mocha and Docker.
+              </p>
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">FutureBrand</div>
+            <div class="time">October 2016 - March 2017</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Senior Back End Developer</div>
+            <div class="tech-stack">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">OAuth2</span>
+              <span class="tech-tag">SAML</span>
+              <span class="tech-tag">Craft CMS</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">jQuery</span>
+            </div>
+            <div class="company-description">
+              <p>
+                Led OAuth and SAML integrations for enterprise clients, built
+                reusable backend modules with test coverage, and modernized
+                legacy systems. Developed Craft CMS plugins and full-stack
+                features spanning PHP, MySQL, and jQuery/Ajax.
+              </p>
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">Purple Bridge Publishing</div>
+            <div class="time">January 2015 - September 2016</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">
+              Senior Full Stack Developer | Team Lead
+            </div>
+            <div class="tech-stack">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">LAMP</span>
+              <span class="tech-tag">PHPUnit</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">CI/CD</span>
+            </div>
+            <div class="company-description">
+              <p>
+                Led delivery of enterprise web applications on LAMP
+                infrastructure, establishing engineering standards, CI/CD, and
+                Docker workflows. Designed data models and API architectures
+                while mentoring engineers across multiple production systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">MediaCode London</div>
+            <div class="time">May 2006 - October 2014</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Senior Full Stack Developer</div>
+            <div class="tech-stack">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">jQuery</span>
+              <span class="tech-tag">Architecture</span>
+            </div>
+            <div class="company-description">
+              <p>
+                Built and maintained custom software and integrations using
+                PHP, Laravel, jQuery, and MySQL. Led requirements discovery,
+                architecture documentation, and performance improvements while
+                supporting production systems end to end.
+              </p>
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">Orange</div>
+            <div class="time">March 2001 - February 2006</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Business Support Analyst</div>
+            <div class="tech-stack">
+              <span class="tech-tag">Reporting</span>
+              <span class="tech-tag">Automation</span>
+              <span class="tech-tag">Data Strategy</span>
+              <span class="tech-tag">Operations</span>
+            </div>
+            <div class="company-description">
+              <p>
+                Delivered technical integration and automated reporting for
+                international digital services. Established development
+                standards, improved performance, and guided the transition from
+                manual to automated workflows.
+              </p>
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">HSBC</div>
+            <div class="time">1997 - 2001</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Software Developer</div>
+            <div class="tech-stack">
+              <span class="tech-tag">Online Banking</span>
+              <span class="tech-tag">Web Apps</span>
+              <span class="tech-tag">Security</span>
+              <span class="tech-tag">Compliance</span>
+            </div>
+            <div class="company-description">
+              <p>
+                Developed and maintained online banking software and web
+                applications, delivering secure, reliable customer-facing
+                services. Collaborated across product, engineering, and QA to
+                implement new features and maintain performance.
+              </p>
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">Next Ltd</div>
+            <div class="time">1994 - 1997</div>
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Software Developer</div>
+            <div class="tech-stack">
+              <span class="tech-tag">Web Apps</span>
+              <span class="tech-tag">Security</span>
+              <span class="tech-tag">Reliability</span>
+              <span class="tech-tag">SDLC</span>
+            </div>
+            <div class="company-description">
+              <p>
+                Built and supported customer account and transaction web
+                applications in a regulated environment, contributing across
+                design, development, testing, deployment, and production
+                support.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-label">Connect</span>
+          <div class="footer-links">
+            <a href="https://github.com/m-lally" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/marclally/" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:marc.lally@gmail.com" aria-label="Email">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <div class="clearfix"></div>
   </div>
