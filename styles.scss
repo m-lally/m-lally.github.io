@@ -149,6 +149,19 @@ a {
   .name-wrapper {
     float: none;
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+
+    @include mama-bear {
+      padding-top: 20px;
+    }
+
+    @include baby-bear {
+      padding-top: 20px;
+    }
   }
 
   h1 {
@@ -157,16 +170,10 @@ a {
     font-family: Actor, sans-serif;
     color: $lightText;
     line-height: 1em;
-    padding-top: 40px;
     font-weight: 700;
-
-    @include mama-bear {
-      padding-top: 20px;
-    }
 
     @include baby-bear {
       font-size: 1.8em;
-      padding-top: 20px;
     }
   }
 
@@ -360,19 +367,23 @@ a {
 }
 
 .download-cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 18px 28px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.08);
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background: transparent;
   color: $lightText;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  box-shadow: $shadowSmall;
+  font-weight: 700;
+  font-size: 1.05em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: none;
   transition: $transitionSmooth;
-  margin: 0 0 40px;
+  margin: 0;
+  width: auto;
 }
 
 .download-cta--tight {
@@ -381,13 +392,17 @@ a {
 
 .download-cta i {
   color: $accentGrey;
+  background: rgba(255, 255, 255, 0.14);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .download-cta:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-2px);
-  box-shadow: $shadowLarge;
 }
 
 .site-footer {
@@ -413,6 +428,10 @@ a {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.footer-links--full {
+  gap: 12px;
 }
 
 .footer-links a {
@@ -841,6 +860,14 @@ a {
   }
 }
 
+.profile.section-padding {
+  padding-bottom: 24px;
+}
+
+.experience.section-padding {
+  padding-top: 32px;
+}
+
 @media (min-width: 1600px) and (max-width: 2000px) {
   :root {
     --content-max: 1800px;
@@ -848,6 +875,14 @@ a {
 
   .section-padding {
     padding: 80px 5vw 60px 5vw;
+  }
+
+  .profile.section-padding {
+    padding-bottom: 32px;
+  }
+
+  .experience.section-padding {
+    padding-top: 40px;
   }
 }
 
@@ -858,6 +893,14 @@ a {
 
   .section-padding {
     padding: 90px 5vw 70px 5vw;
+  }
+
+  .profile.section-padding {
+    padding-bottom: 36px;
+  }
+
+  .experience.section-padding {
+    padding-top: 46px;
   }
 }
 
