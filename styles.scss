@@ -1042,3 +1042,195 @@ a {
     gap: 6px;
   }
 }
+
+// PDF + Print layout tuning
+.pdf-export,
+.pdf-export body {
+  background: #ffffff;
+  color: #1f2a33;
+}
+
+.pdf-export .profile,
+.pdf-export .experience {
+  background: #ffffff !important;
+  color: #1f2a33;
+}
+
+.pdf-export .experience {
+  break-before: auto;
+  page-break-before: auto;
+}
+
+.pdf-export .profile h1,
+.pdf-export h3.experience-title,
+.pdf-export .experience-title,
+.pdf-export .time {
+  color: #1f2a33;
+}
+
+.pdf-export .summary-grid,
+.pdf-export .two-column-notes,
+.pdf-export .experience-standouts {
+  grid-template-columns: 1fr;
+}
+
+.pdf-export .role-card,
+.pdf-export .intro-card,
+.pdf-export .highlight-item,
+.pdf-export .education-card,
+.pdf-export .note-card,
+.pdf-export .experience-standout,
+.pdf-export .cv-entry {
+  background: #f4f6f8 !important;
+  border-color: #c5ccd3;
+  color: #1f2a33;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.pdf-export .company-wrapper,
+.pdf-export .job-wrapper,
+.pdf-export .company-description {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.pdf-export .job-wrapper::after {
+  background: #c5ccd3;
+}
+
+.pdf-export .tech-tag,
+.pdf-export .education-grade {
+  background: transparent !important;
+  color: #1f2a33;
+  border: 1px solid #c5ccd3;
+  box-shadow: none !important;
+}
+
+.pdf-export .download-cta,
+.pdf-export .profile .social-links a,
+.pdf-export .footer-links a {
+  color: #1f2a33;
+  border-color: #c5ccd3;
+  background: #e3e7ea;
+  box-shadow: none;
+}
+
+.pdf-export .profile .list-content .contact-links > a p {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid #c5ccd3;
+  background: #e3e7ea;
+}
+
+.pdf-export .profile .list-content .contact-links i {
+  color: #1f2a33;
+}
+
+.pdf-export .download-cta i,
+.pdf-export .profile .social-links i,
+.pdf-export .footer-links i {
+  color: #1f2a33;
+}
+
+.pdf-export .download-cta {
+  display: none !important;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #1f2a33 !important;
+  }
+
+  .resume-wrapper,
+  .profile,
+  .experience {
+    background: #ffffff !important;
+    color: #1f2a33 !important;
+  }
+
+  .section-padding {
+    padding: 24px 20px 18px 20px !important;
+  }
+
+  .summary-grid,
+  .two-column-notes,
+  .experience-standouts {
+    grid-template-columns: 1fr !important;
+  }
+
+  .role-card,
+  .intro-card,
+  .highlight-item,
+  .education-card,
+  .note-card,
+  .experience-standout,
+  .cv-entry,
+  .company-wrapper,
+  .job-wrapper,
+  .company-description {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .job-wrapper::after {
+    background: #c5ccd3;
+  }
+
+  .tech-tag,
+  .education-grade {
+    background: transparent !important;
+    color: #1f2a33 !important;
+    border: 1px solid #c5ccd3 !important;
+    box-shadow: none !important;
+  }
+
+  .download-cta,
+  .profile .social-links a,
+  .footer-links a {
+    color: #1f2a33 !important;
+    border-color: #c5ccd3 !important;
+    background: #e3e7ea !important;
+    box-shadow: none !important;
+  }
+
+  .contact-links > a p {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border-radius: 999px !important;
+    border: 1px solid #c5ccd3 !important;
+    background: #e3e7ea !important;
+  }
+
+  .contact-links i {
+    color: #1f2a33 !important;
+  }
+
+  .download-cta i,
+  .profile .social-links i,
+  .footer-links i {
+    color: #1f2a33 !important;
+  }
+
+  .download-cta {
+    display: none !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
