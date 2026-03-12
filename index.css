@@ -869,6 +869,7 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin: 0 0 28px 0;
+  color: #9099a0;
 }
 @media (max-width: 850px) {
   .experience .experience-standouts {
@@ -878,12 +879,12 @@ a {
 .experience .experience-standout {
   margin: 0;
   padding: 12px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  background: linear-gradient(135deg, #a7b0ba 0%, #5b6772 100%);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-left: 3px solid rgba(232, 232, 227, 0.45);
+  background: transparent;
+  box-shadow: none;
   font-weight: 700;
-  color: #ffffff;
+  color: inherit;
   line-height: 1.6;
   font-style: normal;
   quotes: none;
@@ -893,8 +894,8 @@ a {
   content: none;
 }
 .experience .experience-standout a {
-  color: #ffffff;
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
   font-weight: inherit;
 }
 .experience .company-wrapper {
