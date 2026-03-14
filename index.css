@@ -1257,10 +1257,16 @@ a {
 }
 
 .pdf-export .profile h1,
-.pdf-export h3.experience-title,
+.pdf-export .experience h3.experience-title,
 .pdf-export .experience-title,
-.pdf-export .time {
-  color: #1f2a33;
+.pdf-export h3.experience-title,
+.pdf-export .time,
+.pdf-export .role-card h3,
+.pdf-export .note-card .bold,
+.pdf-export .education-card-info h4,
+.pdf-export .education-year,
+.pdf-export .education-grade {
+  color: #1f2a33 !important;
 }
 
 .pdf-export .summary-grid,
@@ -1306,38 +1312,10 @@ a {
   box-shadow: none !important;
 }
 
+.pdf-export .download-btn,
 .pdf-export .download-cta,
 .pdf-export .profile .social-links a,
 .pdf-export .footer-links a {
-  color: #1f2a33;
-  border-color: #c5ccd3;
-  background: #e3e7ea;
-  box-shadow: none;
-}
-
-.pdf-export .profile .list-content .contact-links > a p {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border-radius: 999px;
-  border: 1px solid #c5ccd3;
-  background: #e3e7ea;
-}
-
-.pdf-export .profile .list-content .contact-links i {
-  color: #1f2a33;
-}
-
-.pdf-export .download-cta i,
-.pdf-export .profile .social-links i,
-.pdf-export .footer-links i {
-  color: #1f2a33;
-}
-
-.pdf-export .download-cta {
   display: none !important;
 }
 
@@ -1363,6 +1341,13 @@ a {
   .two-column-notes,
   .experience-standouts {
     grid-template-columns: 1fr !important;
+  }
+
+  .profile h1,
+  .experience-title,
+  h3.experience-title,
+  .time {
+    color: #1f2a33 !important;
   }
 
   .role-card,
@@ -1392,41 +1377,9 @@ a {
   }
 
   .download-btn,
-  .download-cta {
-    display: none !important;
-  }
-
+  .download-cta,
   .profile .social-links a,
   .footer-links a {
-    color: #1f2a33 !important;
-    border-color: #c5ccd3 !important;
-    background: #e3e7ea !important;
-    box-shadow: none !important;
-  }
-
-  .contact-links > a p {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 40px !important;
-    height: 40px !important;
-    padding: 0 !important;
-    border-radius: 999px !important;
-    border: 1px solid #c5ccd3 !important;
-    background: #e3e7ea !important;
-  }
-
-  .contact-links i {
-    color: #1f2a33 !important;
-  }
-
-  .download-cta i,
-  .profile .social-links i,
-  .footer-links i {
-    color: #1f2a33 !important;
-  }
-
-  .download-cta {
     display: none !important;
   }
 

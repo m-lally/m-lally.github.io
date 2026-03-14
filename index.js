@@ -63,13 +63,25 @@
  */
 
 (function initPdfDownload() {
+  /**
+   * The application window object cast to AppWindow for type safety.
+   * @type {AppWindow}
+   */
   const appWindow = /** @type {AppWindow} */ (window);
+
+  /**
+   * The download button element for triggering PDF generation.
+   * @type {HTMLElement|null}
+   */
   const downloadButton = document.getElementById("downloadCvButton");
+
   if (!downloadButton) return;
 
   /**
-   * Loads html2pdf from CDN if not already present.
-   * @returns {Promise<Html2PdfFactory | undefined>}
+   * Asynchronously loads the html2pdf library from a CDN if it's not already available.
+   * @async
+   * @function loadHtml2Pdf
+   * @returns {Promise<Html2PdfFactory | undefined>} A promise that resolves to the html2pdf factory.
    */
   async function loadHtml2Pdf() {
     if (appWindow.html2pdf) return appWindow.html2pdf;
@@ -88,10 +100,12 @@
   }
 
   /**
-   * Updates the download button UI while PDF generation is running.
-   * @param {HTMLElement} button
-   * @param {boolean} isBusy
-   * @param {string} originalText
+   * Updates the UI state of the download button during the PDF generation process.
+   * Disables interaction and shows a loading spinner when busy.
+   * @function setButtonState
+   * @param {HTMLElement} button - The button element to update.
+   * @param {boolean} isBusy - Whether the PDF generation is currently in progress.
+   * @param {string} originalText - The original text to restore when not busy.
    * @returns {void}
    */
   function setButtonState(button, isBusy, originalText) {
@@ -112,8 +126,10 @@
   }
 
   /**
-   * Builds the PDF generation options.
-   * @returns {PdfOptions}
+   * Configures and returns the options for html2pdf generation.
+   * Defines margins, filename, image quality, and page break behavior.
+   * @function getPdfOptions
+   * @returns {PdfOptions} The configuration object for html2pdf.
    */
   function getPdfOptions() {
     return {
@@ -148,8 +164,10 @@
   }
 
   /**
-   * Wraps company and role nodes into grouped containers for page-break control.
-   * @returns {CleanupFn}
+   * Groups company and job description nodes into single 'cv-entry' containers.
+   * This is critical for preventing awkward page breaks between a company header and its text.
+   * @function wrapExperienceEntriesForPdf
+   * @returns {CleanupFn} A function to undo the wrapping and restore the original DOM structure.
    */
   function wrapExperienceEntriesForPdf() {
     const wrapper = document.querySelector(".experience-wrapper");
@@ -182,8 +200,10 @@
   }
 
   /**
-   * Replaces phone link with a web-compatible fallback for PDF viewers.
-   * @returns {CleanupFn}
+   * Swaps the default 'tel:' link with a WhatsApp link for the PDF version.
+   * This provides a better user experience for digital PDF readers.
+   * @function swapPhoneLinkForPdf
+   * @returns {CleanupFn} A function to restore the original phone link attributes.
    */
   function swapPhoneLinkForPdf() {
     const phoneLink = document.getElementById("phoneLink");
@@ -210,7 +230,10 @@
   }
 
   /**
-   * Generates the PDF export from the page content and triggers file download.
+   * Manages the end-to-end client-side PDF generation flow.
+   * Handles UI updates, DOM preparation (wrapping, CSS classes), and cleanup.
+   * @async
+   * @function generatePdf
    * @returns {Promise<void>}
    */
   async function generatePdf() {
@@ -238,8 +261,9 @@
       const options = getPdfOptions();
       const worker = html2pdf().set(options).from(source).toPdf();
       await worker.save();
-    } catch {
-      window.location.href = downloadButton.getAttribute("href");
+    } catch (error) {
+      console.error("PDF generation failed, falling back to direct download:", error);
+      window.location.href = downloadButton.getAttribute("href") || "";
     } finally {
       cleanupPhoneLink();
       cleanupWrappedEntries();
