@@ -943,15 +943,6 @@ a {
 }
 
 .experience .job-wrapper::after {
-  content: "";
-  display: block;
-}
-
-.experience .job-wrapper.divider-next::after {
-  display: none;
-}
-
-.experience .job-wrapper:last-of-type::after {
   display: none;
 }
 
@@ -1282,8 +1273,7 @@ a {
 .pdf-export .highlight-item,
 .pdf-export .education-card,
 .pdf-export .note-card,
-.pdf-export .experience-standout,
-.pdf-export .cv-entry {
+.pdf-export .experience-standout {
   background: #f4f6f8 !important;
   border-color: #c5ccd3;
   color: #1f2a33;
@@ -1296,6 +1286,11 @@ a {
 .pdf-export .company-description {
   break-inside: avoid;
   page-break-inside: avoid;
+}
+
+.pdf-export .company-wrapper {
+  break-after: avoid;
+  page-break-after: avoid;
 }
 
 .pdf-export .job-wrapper::after {
@@ -1358,12 +1353,16 @@ a {
   .education-card,
   .note-card,
   .experience-standout,
-  .cv-entry,
   .company-wrapper,
   .job-wrapper,
   .company-description {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  .company-wrapper {
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .job-wrapper::after {
