@@ -570,8 +570,8 @@ a {
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin: 20px 0 40px 0;
+  gap: 24px;
+  margin: 40px 0 60px 0;
   width: 100%;
   clear: both;
   justify-items: stretch;
@@ -770,8 +770,8 @@ a {
 .role-card {
   background: rgba(255, 255, 255, 0.03);
   border-left: 5px solid #a7b0ba;
-  border-radius: 6px;
-  padding: 14px 16px;
+  border-radius: 8px;
+  padding: 24px 28px;
   transition: all 0.3s ease;
 }
 .role-card:hover {
@@ -780,23 +780,25 @@ a {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .role-card i {
-  font-size: 1.6em;
+  font-size: 2em;
   color: #a7b0ba;
-  margin-right: 12px;
+  margin-right: 16px;
+  margin-bottom: 12px;
+  display: block;
 }
 .role-card h3 {
-  margin: 0 0 6px 0;
-  font-size: 1.1em;
+  margin: 0 0 10px 0;
+  font-size: 1.3em;
   font-weight: 700;
   color: inherit;
-  display: inline-block;
+  display: block;
 }
 .role-card p {
   margin: 0;
-  font-size: 0.88em;
+  font-size: 1em;
   color: inherit;
   margin-left: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .intro-card {
