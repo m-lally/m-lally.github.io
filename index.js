@@ -133,11 +133,11 @@
    */
   function getPdfOptions() {
     return {
-      margin: [0.35, 0.24, 0.35, 0.24],
+      margin: [0.4, 0.32, 0.4, 0.32],
       filename: "marc-lally-cv.pdf",
-      image: { type: "jpeg", quality: 0.94 },
+      image: { type: "jpeg", quality: 0.96 },
       html2canvas: {
-        scale: 1.6,
+        scale: 2,
         useCORS: true,
         backgroundColor: "#ffffff",
         scrollY: 0,
@@ -156,7 +156,11 @@
           ".role-card",
           ".intro-card",
           ".highlight-item",
-          ".education-card"
+          ".note-card",
+          ".experience-standout",
+          ".education-card",
+          ".contact-presentation",
+          ".job-bullets li"
         ]
       },
       enableLinks: true
@@ -175,18 +179,34 @@
 
     const groups = [];
     const children = Array.from(wrapper.children);
-
+    for (let i = 0; i < children.length;) {
     for (let i = 0; i < children.length; i += 2) {
       const company = children[i];
       const job = children[i + 1];
-      if (!company || !job) continue;
+      if (
+        !company ||
+        !job ||
+        !company.classList.contains("company-wrapper") ||
+        !job.classList.contains("job-wrapper")
+      ) {
+        i += 1;
+        continue;
+      }
+
+      const divider = children[i + 2];
+      const hasDivider =
+        !!divider && divider.classList.contains("section-divider");
 
       const entry = document.createElement("div");
       entry.className = "cv-entry";
       wrapper.insertBefore(entry, company);
       entry.appendChild(company);
       entry.appendChild(job);
+      if (hasDivider) {
+        entry.appendChild(divider);
+      }
       groups.push(entry);
+      i += hasDivider ? 3 : 2;
     }
 
     return function cleanup() {
