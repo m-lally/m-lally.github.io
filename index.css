@@ -222,7 +222,9 @@ a {
   margin-right: 0;
 }
 
-.profile .list-content .contact-links > a:hover p {
+.profile .list-content .contact-links > a:hover p,
+.profile .list-content .contact-links > a.meeting-link p,
+.profile .list-content .contact-links > a.download-btn p {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
@@ -235,13 +237,6 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: none;
   animation: none;
-}
-
-.profile .list-content .contact-links > a.meeting-link:hover p,
-.profile .list-content .contact-links > a.download-btn:hover p {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
 }
 
 .profile .list-content .social-links {
@@ -288,7 +283,6 @@ a {
     white-space: nowrap;
   }
 }
-
 @media (max-width: 850px) {
   .profile .list-content .contact-links {
     flex-direction: row;
@@ -307,7 +301,6 @@ a {
     white-space: nowrap;
   }
 }
-
 @media (max-width: 450px) {
   .profile .list-content .contact-links {
     gap: 8px;
@@ -317,7 +310,6 @@ a {
     height: 36px;
   }
 }
-
 .pdf-export,
 .pdf-export body {
   background: #ffffff;
@@ -364,13 +356,7 @@ a {
   padding-top: 34px;
 }
 
-.pdf-export .experience h3.experience-title {
-  margin-top: 8px;
-  page-break-after: avoid;
-  break-after: avoid;
-}
-
-.pdf-export h3.experience-title + .experience-standout {
+.pdf-export .experience h3.experience-title + .experience-standout {
   page-break-before: avoid;
   break-before: avoid;
 }
@@ -630,7 +616,6 @@ a {
     margin: 50px auto;
   }
 }
-
 .download-cta {
   display: flex;
   align-items: center;
@@ -755,7 +740,6 @@ a {
     gap: 14px;
   }
 }
-
 .highlight-card h3 {
   margin: 0 0 6px 0;
   font-size: 1.05em;
@@ -1273,17 +1257,13 @@ a {
 .pdf-export .highlight-item,
 .pdf-export .education-card,
 .pdf-export .note-card,
-.pdf-export .experience-standout {
-  background: #f4f6f8 !important;
-  border-color: #c5ccd3;
-  color: #1f2a33;
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
+.pdf-export .experience-standout,
 .pdf-export .company-wrapper,
 .pdf-export .job-wrapper,
 .pdf-export .company-description {
+  background: #f4f6f8 !important;
+  border-color: #c5ccd3;
+  color: #1f2a33;
   break-inside: avoid;
   page-break-inside: avoid;
 }
@@ -1391,12 +1371,21 @@ a {
     print-color-adjust: exact !important;
   }
 }
-
 @media (max-width: 850px) {
   .profile .list-content .social-links {
     width: 100%;
     justify-content: center !important;
   }
 }
+/* New styles for distinct border colors */
+.summary-grid > .role-card:nth-child(1) { border-left-color: #E53935; } /* Deep Red */
+.summary-grid > .role-card:nth-child(2) { border-left-color: #1E88E5; } /* Vibrant Blue */
+.summary-grid > .role-card:nth-child(3) { border-left-color: #7CB342; } /* Lime Green */
+.summary-grid > .role-card:nth-child(4) { border-left-color: #8E24AA; } /* Rich Purple */
+.summary-grid > .role-card:nth-child(5) { border-left-color: #FB8C00; } /* Bright Orange */
+.summary-grid > .role-card:nth-child(6) { border-left-color: #00ACC1; } /* Aqua */
+.summary-grid > .role-card:nth-child(7) { border-left-color: #D81B60; } /* Hot Pink */
+.summary-grid > .role-card:nth-child(8) { border-left-color: #FDD835; } /* Golden Yellow */
+.summary-grid > .role-card:nth-child(9) { border-left-color: #00838F; } /* Dark Cyan */
 
 /*# sourceMappingURL=index.css.map */
