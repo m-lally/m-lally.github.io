@@ -315,7 +315,7 @@ a {
 @media (max-width: 850px) {
   .profile .contact-links > a.download-btn,
   .profile .contact-links > a.download-btn p {
-    display: none;
+    display: none !important;
   }
 }
 .pdf-export,

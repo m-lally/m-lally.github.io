@@ -300,7 +300,7 @@ a {
   @include brother-bear {
     .contact-links > .download-btn,
     .contact-links > .download-btn p {
-      display: none;
+      display: none !important;
     }
   }
 
