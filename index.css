@@ -787,7 +787,7 @@ a {
 
 .intro-card {
   background: rgba(255, 255, 255, 0.03);
-  border-left: 5px solid #a7b0ba;
+  border-left: 5px solid #FB8C00;
   border-radius: 6px;
   padding: 24px;
   margin-bottom: 40px;
@@ -805,9 +805,9 @@ a {
   font-weight: 300;
 }
 .intro-card .tldr-summary {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 4px solid #a7b0ba;
+  background: rgba(251, 140, 0, 0.4);
+  border: 3px solid #000000;
+  border-left: 4px solid #000000;
   border-radius: 6px;
   padding: 12px 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -942,14 +942,14 @@ a {
 }
 .experience .company-wrapper .experience-title::before {
   content: "\f1ad";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   color: #f2f4f7;
   opacity: 0.85;
 }
 .experience .job-wrapper .experience-title::before {
   content: "\f0b1";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   color: #f2f4f7;
   opacity: 0.85;
@@ -963,7 +963,7 @@ a {
 }
 .experience .time::before {
   content: "\f073";
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 400;
   color: #f2f4f7;
   opacity: 0.75;
@@ -1387,5 +1387,10 @@ a {
 .summary-grid > .role-card:nth-child(7) { border-left-color: #D81B60; } /* Hot Pink */
 .summary-grid > .role-card:nth-child(8) { border-left-color: #FDD835; } /* Golden Yellow */
 .summary-grid > .role-card:nth-child(9) { border-left-color: #00838F; } /* Dark Cyan */
+
+/* Card border colors for TLDR, Technical Scope & Impact, Leadership */
+.intro-card .tldr-summary { border-left-color: #000000; } /* Black */
+.two-column-notes > .note-card:nth-child(1) { border-left-color: #1E88E5; } /* Vibrant Blue */
+.two-column-notes > .note-card:nth-child(2) { border-left-color: #7CB342; } /* Lime Green */
 
 /*# sourceMappingURL=index.css.map */

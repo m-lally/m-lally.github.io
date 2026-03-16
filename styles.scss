@@ -562,7 +562,7 @@ a {
 // Intro Card
 .intro-card {
   background: rgba(255, 255, 255, 0.03);
-  border-left: 5px solid $accentGrey;
+  border-left: 5px solid #FB8C00;
   border-radius: 6px;
   padding: 24px;
   margin-bottom: 40px;
@@ -586,9 +586,9 @@ a {
   }
 
   .tldr-summary {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 4px solid $accentGrey;
+    background: rgba(251, 140, 0, 0.4);
+    border: 3px solid #000000;
+    border-left: 4px solid #000000;
     border-radius: 6px;
     padding: 12px 14px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
