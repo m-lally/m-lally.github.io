@@ -240,12 +240,13 @@ a {
 }
 
 .profile .list-content .social-links {
-  width: 100%;
-  display: flex;
+  width: auto;
+  display: inline-flex;
   justify-content: flex-start;
   align-items: center;
   gap: 14px;
-  margin: 12px 0 0;
+  margin: 0;
+  margin-left: auto;
 }
 
 .profile .list-content .social-links a {
@@ -308,6 +309,13 @@ a {
   .profile .list-content .contact-links > a p {
     width: 36px;
     height: 36px;
+  }
+}
+
+@media (max-width: 850px) {
+  .profile .contact-links > a.download-btn,
+  .profile .contact-links > a.download-btn p {
+    display: none;
   }
 }
 .pdf-export,

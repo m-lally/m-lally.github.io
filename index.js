@@ -329,7 +329,7 @@
   const meetingLink = document.getElementById("meetingLink");
   if (!meetingLink) return;
 
-  meetingLink.addEventListener("click", (event) => {
+meetingLink.addEventListener("click", (event) => {
     if (window.matchMedia("(max-width: 768px)").matches) return;
     event.preventDefault();
     loadCalendlyAssets(() => {
@@ -337,4 +337,4 @@
       appWindow.Calendly.initPopupWidget({ url: calendlyEmbedUrl });
     });
   });
-})();
+

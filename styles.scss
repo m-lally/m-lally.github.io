@@ -44,7 +44,7 @@ $transitionSmooth: all 0.3s ease;
 }
 
 @mixin baby-bear {
-  @media (max-width: 450px) {
+  @media (max-width: 850px) {
     @content;
   }
 }
@@ -287,6 +287,20 @@ a {
     .contact-links > a p {
       width: 36px;
       height: 36px;
+    }
+  }
+
+  .social-links {
+    display: inline-flex;
+    gap: 14px;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  @include brother-bear {
+    .contact-links > .download-btn,
+    .contact-links > .download-btn p {
+      display: none;
     }
   }
 
