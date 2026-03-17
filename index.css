@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
 *,
 *::after,
 *::before {
@@ -119,12 +121,12 @@ a {
   padding-top: 40px;
 }
 .profile h1 {
-  font-size: 4.5em;
+  font-size: 4em;
   text-align: left;
-  font-family: Actor, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #f2f4f7;
   line-height: 1em;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media (max-width: 1200px) {
   .profile .name-wrapper {
@@ -390,6 +392,7 @@ a {
 .pdf-export .profile h1 {
   font-size: 3.2em;
   padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .pdf-export .profile .contact-presentation {
@@ -483,6 +486,7 @@ a {
 .pdf-condensed .profile h1 {
   font-size: 3.2em;
   padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .pdf-condensed .profile .contact-presentation {

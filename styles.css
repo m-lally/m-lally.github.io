@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap);
 *,
 *::after,
 *::before {
@@ -75,13 +75,13 @@ a {
   width: 100%;
 }
 .profile h1 {
-  font-size: 4.5em;
+  font-size: 4em;
   text-align: left;
-  font-family: Actor, sans-serif;
+  font-family: "Playfair Display", serif;
   color: #000;
   line-height: 1em;
   padding-top: 40px;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media (max-width: 1200px) {
   .profile h1 {
