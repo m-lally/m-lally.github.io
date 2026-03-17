@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
 @import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap);
 *,
 *::after,
 *::before {
@@ -123,7 +123,7 @@ a {
 .profile h1 {
   font-size: 4em;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
   color: #f2f4f7;
   line-height: 1em;
   font-weight: 600;
@@ -196,7 +196,15 @@ a {
 
 .profile .list-content .contact-links > a {
   display: inline-flex;
-  margin: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #f2f4f7;
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
 }
 
 .profile .list-content .contact-links > a p {
@@ -207,8 +215,8 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  border: none;
   color: inherit;
   font-weight: 500;
   padding: 0;
@@ -222,23 +230,6 @@ a {
 
 .profile .list-content .contact-links .social-icon--github {
   margin-right: 0;
-}
-
-.profile .list-content .contact-links > a:hover p,
-.profile .list-content .contact-links > a.meeting-link p,
-.profile .list-content .contact-links > a.download-btn p {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
-}
-
-.profile .list-content .contact-links > a.meeting-link p,
-.profile .list-content .contact-links > a.download-btn p {
-  background: rgba(255, 255, 255, 0.04);
-  color: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: none;
-  animation: none;
 }
 
 .profile .list-content .social-links {
@@ -392,7 +383,7 @@ a {
 .pdf-export .profile h1 {
   font-size: 3.2em;
   padding-top: 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .pdf-export .profile .contact-presentation {
@@ -486,7 +477,7 @@ a {
 .pdf-condensed .profile h1 {
   font-size: 3.2em;
   padding-top: 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .pdf-condensed .profile .contact-presentation {
@@ -603,6 +594,12 @@ a {
   border-left: 4px solid #a7b0ba;
   border-radius: 6px;
   padding: 18px 20px;
+  transition: all 0.3s ease;
+}
+.note-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-left-width: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .note-card .bold {
   display: inline-flex;
@@ -696,30 +693,13 @@ a {
   gap: 12px;
 }
 
-.footer-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #f2f4f7;
-  background: rgba(255, 255, 255, 0.04);
-  transition: all 0.3s ease;
-}
-
-.footer-links a:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
-}
-
 .footer-links i {
   font-size: 1.1em;
 }
 
-.profile .social-links a {
+.profile .social-links a,
+.footer-links a,
+.profile .list-content .contact-links > a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -732,7 +712,9 @@ a {
   transition: all 0.3s ease;
 }
 
-.profile .social-links a:hover {
+.profile .social-links a:hover,
+.footer-links a:hover,
+.profile .list-content .contact-links > a:hover {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
