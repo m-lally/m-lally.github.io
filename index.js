@@ -179,7 +179,6 @@
 
     const groups = [];
     const children = Array.from(wrapper.children);
-    for (let i = 0; i < children.length;) {
     for (let i = 0; i < children.length; i += 2) {
       const company = children[i];
       const job = children[i + 1];
@@ -337,4 +336,5 @@ meetingLink.addEventListener("click", (event) => {
       appWindow.Calendly.initPopupWidget({ url: calendlyEmbedUrl });
     });
   });
+})();
 
