@@ -224,18 +224,8 @@ a {
   transition: all 0.3s ease;
 }
 
-.profile .list-content .contact-links i,
-.footer-links a i {
-  font-size: 1.05em;
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.04);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+.profile .list-content .contact-links i {
+  font-size: 1.1em;
 }
 
 .profile .list-content .contact-links .social-icon--github {
@@ -703,8 +693,13 @@ a {
   gap: 12px;
 }
 
+.footer-links i {
+  font-size: 1.1em;
+}
+
 .profile .social-links a,
-.footer-links a {
+.footer-links a,
+.profile .list-content .contact-links > a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1393,3 +1388,5 @@ a {
 .intro-card .tldr-summary { border-left-color: #000000; } /* Black */
 .two-column-notes > .note-card:nth-child(1) { border-left-color: #1E88E5; } /* Vibrant Blue */
 .two-column-notes > .note-card:nth-child(2) { border-left-color: #7CB342; } /* Lime Green */
+
+
