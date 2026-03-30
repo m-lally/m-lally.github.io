@@ -134,7 +134,7 @@
   function getPdfOptions() {
     return {
       margin: [0.4, 0.32, 0.4, 0.32],
-      filename: "marc-lally-cv.pdf",
+      filename: "cv.pdf",
       image: { type: "jpeg", quality: 0.96 },
       html2canvas: {
         scale: 2,
@@ -292,6 +292,9 @@
   }
 
   downloadButton.addEventListener("click", async (event) => {
+    // Default behavior is direct file download from the anchor href.
+    // Opt into generated PDF mode only when explicitly requested.
+    if (downloadButton.dataset.downloadMode !== "generated") return;
     event.preventDefault();
     await generatePdf();
   });
@@ -337,4 +340,3 @@ meetingLink.addEventListener("click", (event) => {
     });
   });
 })();
-
