@@ -34,7 +34,7 @@ async function generatePDF() {
   await page.emulateMedia({ media: 'print' });
   
   // Generate PDF with optimal settings
-  const outputPath = path.join(__dirname, 'cv', 'marc.lally.pdf');
+  const outputPath = path.join(__dirname, 'cv', 'cv.pdf');
   await page.pdf({
     path: outputPath,
     format: 'A4',
