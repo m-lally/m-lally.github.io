@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
-@import url(https://fonts.googleapis.com/css?family=Actor:400,300,600,700);
 @import url(https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap);
 *,
 *::after,
@@ -857,9 +856,23 @@ a {
   color: #f2f4f7;
   text-align: left;
   text-transform: uppercase;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  font-weight: 400;
+  font-size: 1.3em;
+  margin-bottom: 32px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  position: relative;
+  display: inline-block;
+}
+
+.experience h3.experience-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #a7b0ba 0%, rgba(167, 176, 186, 0.2) 100%);
+  border-radius: 2px;
 }
 .experience .experience-standouts {
   display: grid;
@@ -951,60 +964,221 @@ a {
   opacity: 0.85;
 }
 .experience .time {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   color: #9aa5b2;
-  font-size: 0.9em;
+  font-size: 0.85em;
+  font-weight: 500;
+  background: rgba(167, 176, 186, 0.08);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(167, 176, 186, 0.15);
+  margin-top: 8px;
+  transition: all 0.3s ease;
 }
+
+.experience .company-wrapper:hover .time {
+  background: rgba(167, 176, 186, 0.12);
+  border-color: rgba(167, 176, 186, 0.25);
+  color: #b8c0c9;
+}
+
 .experience .time::before {
   content: "\f073";
   font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 400;
-  color: #f2f4f7;
-  opacity: 0.75;
+  color: #a7b0ba;
+  font-size: 0.9em;
 }
 
 .experience .experience-wrapper {
   position: relative;
+  padding-left: 24px;
 }
 
+/* Gradient timeline line with glow effect */
 .experience .experience-wrapper::before {
   content: "";
   position: absolute;
-  left: -25px;
-  top: 5px;
-  bottom: 20px;
-  width: 3px;
-  background: #4a5568;
-  border-radius: 2px;
+  left: -2px;
+  top: 8px;
+  bottom: 60px;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(167, 176, 186, 0.9) 0%,
+    rgba(91, 103, 114, 0.6) 50%,
+    rgba(167, 176, 186, 0.3) 100%
+  );
+  border-radius: 1px;
+  box-shadow:
+    0 0 8px rgba(167, 176, 186, 0.3),
+    0 0 20px rgba(167, 176, 186, 0.1);
+}
+
+/* Animated glowing timeline nodes */
+@keyframes nodePulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 0 rgba(167, 176, 186, 0.4),
+      0 0 0 4px rgba(167, 176, 186, 0.1),
+      inset 0 0 8px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 0 6px rgba(167, 176, 186, 0.2),
+      0 0 0 12px rgba(167, 176, 186, 0.05),
+      inset 0 0 12px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes nodeGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(167, 176, 186, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(167, 176, 186, 0.9));
+  }
 }
 
 .experience .company-wrapper {
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 16px;
+  margin-bottom: 8px;
 }
 
+/* Company node - larger with gradient fill */
 .experience .company-wrapper::before {
   content: "";
   position: absolute;
-  left: -37px;
-  top: -3px;
-  width: 28px;
-  height: 28px;
-  background: #f2f4f7;
-  border: 4px solid #2f343b;
+  left: -34px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #f2f4f7 0%, #a7b0ba 100%);
+  border: 3px solid #2f343b;
   border-radius: 50%;
   z-index: 2;
+  animation: nodePulse 3s ease-in-out infinite, nodeGlow 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
 }
 
+.experience .company-wrapper:hover::before {
+  transform: scale(1.15);
+}
+
+/* Company name styling enhancement */
+.experience .company-wrapper .experience-title {
+  font-size: 1.15em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #f2f4f7;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Job wrapper with card-like styling */
 .experience .job-wrapper {
   position: relative;
-  padding-bottom: 30px;
+  padding: 24px;
+  padding-left: 0;
+  margin-bottom: 32px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border-left: 3px solid transparent;
+  border-radius: 0 12px 12px 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Job entry connector line */
+.experience .job-wrapper::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 32px;
+  width: 16px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(167, 176, 186, 0.5) 0%,
+    rgba(167, 176, 186, 0.1) 100%
+  );
+  border-radius: 1px;
+  opacity: 0.6;
+}
+
+/* Job card hover state */
+.experience .job-wrapper:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border-left-color: rgba(167, 176, 186, 0.5);
+  transform: translateX(4px);
+  box-shadow:
+    -4px 0 20px rgba(0, 0, 0, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Section divider between jobs */
 .experience .section-divider {
-  display: none;
+  display: block;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(167, 176, 186, 0.3) 0%,
+    transparent 70%
+  );
+  margin: 24px 0 40px 0;
+  opacity: 0.5;
+}
+
+/* Scroll-triggered reveal animation */
+@keyframes slideInReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience .company-wrapper,
+.experience .job-wrapper {
+  animation: slideInReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+/* Staggered animation delays */
+.experience .experience-wrapper > .company-wrapper:nth-of-type(1),
+.experience .experience-wrapper > .job-wrapper:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+.experience .experience-wrapper > .company-wrapper:nth-of-type(2),
+.experience .experience-wrapper > .job-wrapper:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+.experience .experience-wrapper > .company-wrapper:nth-of-type(3),
+.experience .experience-wrapper > .job-wrapper:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+.experience .experience-wrapper > .company-wrapper:nth-of-type(4),
+.experience .experience-wrapper > .job-wrapper:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+.experience .experience-wrapper > .company-wrapper:nth-of-type(5),
+.experience .experience-wrapper > .job-wrapper:nth-of-type(5) {
+  animation-delay: 0.5s;
+}
+.experience .experience-wrapper > .company-wrapper:nth-of-type(6),
+.experience .experience-wrapper > .job-wrapper:nth-of-type(6) {
+  animation-delay: 0.6s;
 }
 
 .profile .bold,
@@ -1031,39 +1205,68 @@ a {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
 .job-bullets li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  line-height: 1.6;
+  gap: 14px;
+  line-height: 1.65;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.job-bullets li:hover {
+  transform: translateX(4px);
+}
+
+.job-bullets li:hover i {
+  color: #f2f4f7;
+  transform: scale(1.1);
 }
 
 .job-bullets i {
   color: #a7b0ba;
-  margin-top: 3px;
-  font-size: 0.95em;
+  margin-top: 4px;
+  font-size: 0.9em;
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(167, 176, 186, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .job-bullets span {
   display: block;
+  color: #c0c7d1;
 }
 
 .contract-badge {
   display: inline-block;
-  background: transparent;
-  color: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 4px 10px;
-  border-radius: 3px;
-  font-size: 0.75em;
+  background: rgba(251, 140, 0, 0.15);
+  color: #fb8c00;
+  border: 1px solid rgba(251, 140, 0, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7em;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   margin-bottom: 12px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.contract-badge:hover {
+  background: rgba(251, 140, 0, 0.25);
+  border-color: rgba(251, 140, 0, 0.5);
+  box-shadow: 0 0 8px rgba(251, 140, 0, 0.2);
 }
 
 .tech-stack {
@@ -1096,6 +1299,76 @@ a {
   .tech-tag {
     font-size: 0.75em;
     padding: 5px 10px;
+  }
+}
+
+/* Mobile responsive timeline styles */
+@media (max-width: 850px) {
+  .experience .experience-wrapper {
+    padding-left: 20px;
+  }
+
+  .experience .experience-wrapper::before {
+    left: -1px;
+    width: 2px;
+  }
+
+  .experience .company-wrapper::before {
+    left: -30px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .experience .job-wrapper {
+    padding: 16px;
+    padding-left: 0;
+    margin-bottom: 24px;
+  }
+
+  .experience .job-wrapper::before {
+    left: -20px;
+    width: 12px;
+  }
+
+  .experience .section-divider {
+    margin: 16px 0 32px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .experience .experience-wrapper {
+    padding-left: 16px;
+  }
+
+  .experience .experience-wrapper::before {
+    left: 0;
+  }
+
+  .experience .company-wrapper::before {
+    left: -26px;
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+  }
+
+  .experience .company-wrapper .experience-title {
+    font-size: 1.05em;
+  }
+
+  .experience .job-wrapper {
+    padding: 12px;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .experience .job-wrapper::before {
+    left: -16px;
+    width: 10px;
+    top: 24px;
+  }
+
+  .experience .section-divider {
+    margin: 12px 0 24px 0;
   }
 }
 
