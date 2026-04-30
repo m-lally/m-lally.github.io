@@ -1205,15 +1205,15 @@ a {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 14px;
+  gap: 6px;
 }
 
 .job-bullets li {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  line-height: 1.65;
-  padding: 8px 0;
+  gap: 12px;
+  line-height: 1.5;
+  padding: 4px 0;
   transition: all 0.3s ease;
 }
 
