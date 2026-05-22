@@ -1081,7 +1081,7 @@ a {
 .experience .job-wrapper {
   position: relative;
   padding: 24px;
-  padding-left: 0;
+  padding-left: 15px;
   margin-bottom: 32px;
   background: linear-gradient(
     135deg,
@@ -1236,8 +1236,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(167, 176, 186, 0.1);
-  border-radius: 6px;
   transition: all 0.3s ease;
 }
 
@@ -1703,5 +1701,56 @@ a {
 .intro-card .tldr-summary { border-left-color: #000000; } /* Black */
 .two-column-notes > .note-card:nth-child(1) { border-left-color: #1E88E5; } /* Vibrant Blue */
 .two-column-notes > .note-card:nth-child(2) { border-left-color: #7CB342; } /* Lime Green */
+
+.btn-label {
+  display: none;
+}
+
+@media (min-width: 851px) {
+  .profile .list-content .contact-links > a,
+  .footer-links a {
+    width: auto;
+    padding: 0 18px 0 4px;
+    gap: 8px;
+  }
+
+  .btn-label {
+    display: inline;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.75em;
+    font-weight: 500;
+    color: #c0c7d1;
+    line-height: 1;
+  }
+
+  .profile .list-content .contact-links .btn-label {
+    padding-right: 2px;
+  }
+
+  .footer-links .btn-label {
+    padding-right: 2px;
+  }
+
+  .profile .list-content .contact-links > a:hover .btn-label,
+  .footer-links a:hover .btn-label {
+    color: #f2f4f7;
+  }
+}
+
+@media (max-width: 850px) {
+  .btn-label {
+    display: none;
+  }
+
+  .profile .list-content .contact-links > a,
+  .footer-links a {
+    gap: 0;
+    padding: 0;
+  }
+}
+
+
+
+
 
 
