@@ -446,8 +446,8 @@ a {
 
 .footer-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   padding-top: 20px;
 }
@@ -457,6 +457,7 @@ a {
   letter-spacing: 0.2em;
   font-size: 0.75em;
   color: $textGrey;
+  margin-bottom: 16px;
 }
 
 .footer-links {
@@ -469,23 +470,21 @@ a {
   gap: 12px;
 }
 
-.footer-links a {
+.footer-links a p {
+  margin: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: $lightText;
-  background: rgba(255, 255, 255, 0.04);
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-weight: 500;
+  padding: 0;
+  white-space: nowrap;
   transition: $transitionSmooth;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-  }
 }
 
 .footer-links i {
@@ -521,7 +520,6 @@ a {
 
 @include brother-bear {
   .footer-inner {
-    flex-direction: column;
     gap: 14px;
   }
 }

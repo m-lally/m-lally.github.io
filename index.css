@@ -669,8 +669,8 @@ a {
 
 .footer-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   padding-top: 20px;
 }
@@ -680,6 +680,7 @@ a {
   letter-spacing: 0.2em;
   font-size: 0.75em;
   color: #9aa5b2;
+  margin-bottom: 16px;
 }
 
 .footer-links {
@@ -694,6 +695,23 @@ a {
 
 .footer-links i {
   font-size: 1.1em;
+}
+
+.footer-links a p {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-weight: 500;
+  padding: 0;
+  white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 .profile .social-links a,
@@ -729,7 +747,6 @@ a {
 
 @media (max-width: 850px) {
   .footer-inner {
-    flex-direction: column;
     gap: 14px;
   }
 }
