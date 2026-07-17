@@ -481,6 +481,9 @@ img {
 .note-card p {
   margin-top: 0;
 }
+.note-card .bold p {
+  margin-bottom: 0;
+}
 .note-card > p:last-child {
   margin-bottom: 0;
 }
