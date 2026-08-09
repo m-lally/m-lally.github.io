@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 $ink: #11161d;
 $panel: #171e27;
@@ -247,7 +247,7 @@ img {
 
 .profile h1 {
   margin: 10px 0 16px;
-  font-family: "Manrope", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   color: $paper;
   font-size: clamp(3.8rem, 8vw, 7.4rem);
   font-weight: 800;
