@@ -39,6 +39,6 @@ test("experience entries are paired", () => {
 });
 
 test("download call-to-action appears in profile", () => {
-  assert.match(html, /class="download-cta"/i);
+  assert.match(html, /class="[^"]*\bdownload-cta\b[^"]*"/i);
   assert.match(html, /Download CV/i);
 });

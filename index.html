@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="./favicon-cv.svg?v=20260222" />
     <link rel="shortcut icon" href="./favicon-cv.svg?v=20260222" />
     <link
@@ -16,38 +13,40 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/vertical-timeline@2.10.3/dist/vertical-timeline.min.css"
     />
-    <title>
-      Marc Lally CV - Senior Software Engineer | Node | React | Serverless | AWS
-    </title>
+    <title>Marc Lally — Senior Full Stack / Platform Engineer</title>
     <meta
       name="description"
-      content="Marc Lally - Senior Software Engineer | Node | React | Serverless | AWS"
+      content="Senior Software Engineer specialising in TypeScript, Node.js, React, AWS, distributed systems and applied AI. Design, architecture and production delivery across the full stack."
     />
+    <meta name="author" content="Marc Lally" />
+    <link rel="canonical" href="https://m-lally.github.io/" />
 
     <meta
       property="og:title"
-      content="Marc Lally - Senior Software Engineer | Node | React | Serverless | AWS"
+      content="Marc Lally — Senior Full Stack / Platform Engineer"
     />
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://m-lally.github.io/" />
     <meta
       property="og:description"
-      content="Marc Lally - Senior Software Engineer | Node | React | Serverless | AWS"
+      content="Senior Software Engineer specialising in TypeScript, Node.js, React, AWS, distributed systems and applied AI."
     />
     <meta
       property="og:image"
       content="https://m-lally.github.io/favicon-cv.svg"
     />
     <meta property="og:locale" content="en_GB" />
+    <meta property="profile:first_name" content="Marc" />
+    <meta property="profile:last_name" content="Lally" />
 
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
-      content="Marc Lally - Senior Software Engineer | Node | React | Serverless | AWS"
+      content="Marc Lally — Senior Full Stack / Platform Engineer"
     />
     <meta
       name="twitter:description"
-      content="Marc Lally - Senior Software Engineer | Node | React | Serverless | AWS"
+      content="Senior Software Engineer specialising in TypeScript, Node.js, React, AWS, distributed systems and applied AI."
     />
     <meta
       name="twitter:image"
@@ -67,22 +66,22 @@
                   href="tel:+447516029946"
                   id="phoneLink"
                   aria-label="Call +44 7516 029946"
-                  data-label="Call +44 7516 029946"
+                  data-label="+44 7516 029946"
                 >
                   <p>
                     <i class="fa fa-phone" aria-hidden="true"></i>
                   </p>
-                  <span class="btn-label">Call +44 7516 029946</span>
+                  <span class="btn-label">+44 7516 029946</span>
                 </a>
                 <a
                   href="mailto:marc.lally@gmail.com"
                   aria-label="Email marc.lally@gmail.com"
-                  data-label="Email marc.lally@gmail.com"
+                  data-label="marc.lally@gmail.com"
                 >
                   <p>
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                   </p>
-                  <span class="btn-label">Email marc.lally@gmail.com</span>
+                  <span class="btn-label">marc.lally@gmail.com</span>
                 </a>
                 <a
                   href="https://github.com/m-lally"
@@ -116,17 +115,32 @@
 
           <div class="name-wrapper">
             <div class="hero-copy">
-              <span class="eyebrow">Software engineering profile</span>
+              <span class="eyebrow">Senior Full Stack / Platform Engineer</span>
               <h1>Marc Lally</h1>
+              <p class="hero-roleline">
+                TypeScript · Node.js · React · AWS · Distributed Systems · AI
+              </p>
               <p class="hero-subtitle">
-                Senior engineer building resilient cloud platforms, AI
-                workflows, and high-performance product interfaces.
+                I design and build reliable production systems across the full
+                stack — from React interfaces and Node.js services to
+                distributed AWS infrastructure, payment systems and AI-powered
+                workflows.
               </p>
               <div class="hero-actions">
                 <a
+                  href="#experience"
+                  class="hero-cta hero-cta--primary"
+                  data-label="View my experience"
+                >
+                  <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                  <span>View my experience</span>
+                </a>
+                <a
                   href="cv/cv.pdf?v=20260330-5"
                   download="cv.pdf"
-                  class="download-cta"
+                  class="hero-cta download-cta hero-cta--primary"
+                  aria-label="Download CV"
+                  data-label="Download CV"
                 >
                   <i class="fa fa-download" aria-hidden="true"></i>
                   <span>Download CV</span>
@@ -134,20 +148,24 @@
                 <a
                   href="https://calendly.com/marc-lally/30min"
                   target="_blank"
-                  class="meeting-cta"
+                  class="hero-cta meeting-cta hero-cta--ghost"
                   id="meetingLink"
+                  aria-label="Book a meeting"
+                  data-label="Book Meeting"
                 >
                   <i class="fa fa-calendar-check" aria-hidden="true"></i>
                   <span>Book Meeting</span>
                 </a>
               </div>
             </div>
+
             <div class="hero-focus-panel" aria-label="Current focus">
               <span>Current focus</span>
-              <strong>Distributed systems + AI agents</strong>
+              <strong>Distributed systems + <span class="nowrap">AI Engineering</span></strong>
               <p>
-                Cloud-native platforms, serverless architecture, secure APIs,
-                and agentic workflows that reduce operational drag.
+                Cloud-native platforms, serverless architecture, secure payment
+                and identity systems, and production AI workflows — built with
+                the same discipline as any other subsystem.
               </p>
               <div class="focus-points" aria-label="Focus areas">
                 <span>TypeScript</span>
@@ -156,117 +174,97 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="summary-grid">
-            <!-- Column 1 -->
-            <div class="role-card">
-              <i class="fas fa-code"></i>
-              <h3>Senior Software Engineer</h3>
+      <section
+        class="site-section build section-padding"
+        aria-labelledby="build-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Capability</span>
+            <h2 id="build-title">What I build</h2>
+          </div>
+          <div class="build-grid">
+            <article class="build-card build-card--wide">
+              <i class="fas fa-layer-group" aria-hidden="true"></i>
+              <h3>Full Stack Systems</h3>
               <p>
-                Node/React | Javascript | AWS | Serverless | AI Workflows/Agents
+                React, TypeScript, Node.js, REST/GraphQL APIs and modern web
+                architecture — from component systems to service boundaries.
               </p>
-            </div>
-            <div class="role-card">
-              <i class="fas fa-network-wired"></i>
-              <h3>Core Expertise</h3>
-              <p>Distributed Systems | Serverless | TypeScript/Node</p>
-            </div>
-            <div class="role-card">
-              <i class="fas fa-university"></i>
-              <h3>Academic Background</h3>
-              <p>
-                B.Sc. Computer Science (Hons) - University College London (2:1)
-              </p>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="role-card highlight-card">
-              <i class="fas fa-layer-group"></i>
+            </article>
+            <article class="build-card">
+              <i class="fas fa-network-wired" aria-hidden="true"></i>
               <h3>Distributed Systems</h3>
-              <p>Scalable, high-throughput production environments</p>
-            </div>
-            <div class="role-card highlight-card">
-              <i class="fas fa-rocket"></i>
-              <h3>Platform Strategy</h3>
               <p>
-                Service-oriented and serverless architecture design with
-                operational excellence
+                Event-driven architecture, queues, asynchronous processing,
+                microservices, reliability and observability at scale.
               </p>
-            </div>
-            <div class="role-card highlight-card">
-              <i class="fas fa-wrench"></i>
-              <h3>Multi-Stack</h3>
+            </article>
+            <article class="build-card">
+              <i class="fas fa-cloud" aria-hidden="true"></i>
+              <h3>Cloud &amp; Infrastructure</h3>
               <p>
-                TypeScript/Node, React, Python, Rust, Agentic API, OpenAI API,
-                LangChain/Smith, Gradio, Agents SDK
+                AWS, Lambda, API Gateway, SQS, SNS, DynamoDB, infrastructure
+                automation and serverless architecture.
               </p>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="role-card">
-              <i class="fas fa-certificate"></i>
-              <h3>AWS Certified Solutions Architect</h3>
+            </article>
+            <article class="build-card">
+              <i class="fas fa-robot" aria-hidden="true"></i>
+              <h3>AI Engineering</h3>
               <p>
-                Associate Level - Validation of cloud architecture expertise
+                AI agents, LLM workflows, tool orchestration, structured
+                outputs, evaluation and production AI integrations.
               </p>
-            </div>
-            <div class="role-card">
-              <i class="fas fa-certificate"></i>
-              <h3>AWS Certified Engineer</h3>
-              <p>Associate Level - Validation of cloud development expertise</p>
-            </div>
-            <div class="role-card highlight-card">
-              <i class="fas fa-shield-alt"></i>
-              <h3>Security & Compliance</h3>
+            </article>
+            <article class="build-card">
+              <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              <h3>Payments &amp; Security</h3>
               <p>
-                Secure communication protocols, OAuth, SSO, JWT and
-                high-availability infrastructure.
+                Payment infrastructure, Stripe, Adyen, PCI considerations,
+                authentication, IAM, OAuth2, JWT and secure system design.
               </p>
-            </div>
+            </article>
           </div>
+        </div>
+      </section>
 
-          <div class="contact-presentation">
-            <div class="intro-card">
-              <p class="tldr-summary">
-                <span class="tldr-label">TLDR;</span> Senior Software Engineer |
-                TypeScript · Node · React · Python · Rust | PostgreSQL · MongoDB
-                · GraphQL | AI Workflows & Agents | PyDantic AI · LangSmith AI ·
-                Agents SDK · Gradio AI | DevOps | Terraform | Serverless |
-                Docker | Likes Challenges
-              </p>
-              <p>
-                Senior Software Engineer, skilled in translating complex
-                business models into robust, scalable, technical solutions. Good
-                experience leading cross-functional teams through architectural
-                transformations. I have established platform-wide standards, and
-                consistently elevated engineering maturity.
-              </p>
-            </div>
+      <section
+        class="site-section profile-summary section-padding"
+        aria-labelledby="profile-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Profile</span>
+            <h2 id="profile-title">Engineering profile</h2>
           </div>
-
-          <div class="contact-presentation two-column-notes">
+          <div class="two-column-notes">
             <div class="note-card">
               <span class="bold">
-                <i class="fas fa-cogs section-inline-icon"></i>
-                <p>Technical Scope & Impact</p>
+                <i class="fas fa-code section-inline-icon"></i>
+                <p>Engineering profile</p>
               </span>
               <p>
-                Design and evolve scalable distributed systems optimizing for
-                reliability, cost efficiency, and velocity. Lead
-                service-oriented and serverless architecture with clear
-                boundaries, data ownership models, and operational visibility.
-                Establish API standards (REST/GraphQL) with rigorous versioning
-                and governance.
-                <br />Code at impact: TypeScript/Node, Python, Rust. Own data
-                architecture across SQL and NoSQL systems, design AWS-native
-                platforms (Lambda, API Gateway, DynamoDB), and establish
-                observability, CI/CD, and security standards at the platform
-                level. Build API's and Frontend functionality and UI to high
-                aesthetic standards (React, Vue). <br />AI Workflows and Agents:
-                Python, Javascript and its libraries. Javascript. Build AI
-                Workflows and Agents to automate tasks and processes using
-                Agentic API, OpenAI API, LangChain/LangSmith, Gradio, Agents
-                SDK. et al and tooling such as Warp, Cursor and AntiGravity.
+                JavaScript and TypeScript have been central to my career.
+                Node.js and React are my core technologies, and I have
+                significant depth in Python and Rust for services, tooling and
+                AI systems.
+              </p>
+              <p>
+                I design distributed systems that handle payments and
+                high-throughput traffic — with transaction reliability,
+                idempotency and security designed in from the start. I build
+                serverless platforms on AWS (Lambda, API Gateway, SQS,
+                DynamoDB) and care about failure modes, observability and
+                operational simplicity as much as feature delivery.
+              </p>
+              <p>
+                Increasingly I apply that discipline to AI. I build agents and
+                LLM workflows the way I build any production system — with
+                evaluation, observability and security designed in, not bolted
+                on.
               </p>
             </div>
             <div class="note-card">
@@ -275,22 +273,133 @@
                 <p>Leadership</p>
               </span>
               <p>
-                Drive architectural direction across teams through data-driven
-                strategy and clear decision frameworks. Mentor senior engineers
-                and emerging technical leads, elevating decision quality and
-                developing the next generation. Bridge engineering, product, and
-                business stakeholders, translating requirements into coherent
-                technical direction and credible delivery plans. Enable teams to
-                move at velocity without sacrificing system integrity - ensuring
-                short-term decisions align with long-term platform health and
-                organizational scalability.
+                I have led technical delivery across enterprise and startup
+                teams — owning architecture, API contracts, CI/CD,
+                observability and engineering standards, and mentoring
+                engineers through system design and operational maturity.
+              </p>
+              <p>
+                I translate business requirements into coherent technical
+                direction: clear service boundaries, data ownership and
+                delivery plans that keep teams moving at velocity without
+                compromising platform integrity.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="experience section-padding">
+      <section
+        class="site-section technology section-padding"
+        aria-labelledby="tech-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Stack</span>
+            <h2 id="tech-title">Technology</h2>
+          </div>
+
+          <div class="core-stack" aria-label="Core stack">
+            <span class="core-stack__item">TypeScript</span>
+            <span class="core-stack__item">Node.js</span>
+            <span class="core-stack__item">React</span>
+            <span class="core-stack__item">AWS</span>
+            <span class="core-stack__item">Distributed Systems</span>
+            <span class="core-stack__item">AI</span>
+          </div>
+
+          <div class="tech-grid">
+            <div class="tech-category">
+              <h3>Languages</h3>
+              <ul class="tech-list">
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Rust</li>
+                <li>Go</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+            <div class="tech-category">
+              <h3>Frontend</h3>
+              <ul class="tech-list">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>JSX</li>
+                <li>Modern browser APIs</li>
+                <li>Component architecture</li>
+              </ul>
+            </div>
+            <div class="tech-category">
+              <h3>Backend</h3>
+              <ul class="tech-list">
+                <li>Node.js</li>
+                <li>REST</li>
+                <li>GraphQL</li>
+                <li>FastAPI</li>
+                <li>Microservices</li>
+                <li>Event-driven systems</li>
+              </ul>
+            </div>
+            <div class="tech-category">
+              <h3>Cloud / Infrastructure</h3>
+              <ul class="tech-list">
+                <li>AWS</li>
+                <li>Lambda</li>
+                <li>API Gateway</li>
+                <li>SQS</li>
+                <li>SNS</li>
+                <li>DynamoDB</li>
+                <li>Docker</li>
+                <li>Linux</li>
+                <li>CI/CD</li>
+              </ul>
+            </div>
+            <div class="tech-category">
+              <h3>AI</h3>
+              <ul class="tech-list">
+                <li>LLM applications</li>
+                <li>AI agents</li>
+                <li>Agent SDK</li>
+                <li>LangChain</li>
+                <li>LangSmith</li>
+                <li>Pydantic AI</li>
+                <li>Structured outputs</li>
+                <li>Tool orchestration</li>
+                <li>Evaluation</li>
+                <li>AI workflows</li>
+              </ul>
+            </div>
+            <div class="tech-category">
+              <h3>Data</h3>
+              <ul class="tech-list">
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>Elasticsearch</li>
+                <li>DynamoDB</li>
+                <li>GraphQL</li>
+              </ul>
+            </div>
+            <div class="tech-category tech-category--wide">
+              <h3>Security / Payments</h3>
+              <ul class="tech-list">
+                <li>OAuth2</li>
+                <li>JWT</li>
+                <li>IAM</li>
+                <li>SSO</li>
+                <li>PCI DSS</li>
+                <li>Stripe</li>
+                <li>Adyen</li>
+                <li>Encryption</li>
+                <li>Threat modelling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience section-padding" id="experience">
         <div class="container">
           <h3 class="experience-title">Experience</h3>
           <div class="experience-wrapper">
@@ -322,55 +431,48 @@
                   <li>
                     <i class="fas fa-rocket"></i>
                     <span>
-                      Full-stack development of enterprise-grade AI, highly
-                      secure, Payment Services Gateway API in Rust, Website and
-                      frontend in Next.js, React and various frontend javascript
-                      frameworks and libraries to support extension of functions
-                      or new features.
+                      Founder and technical lead for an enterprise-grade payment
+                      services gateway: a high-security REST API in Rust with
+                      SDKs across every major language, runtime and mobile
+                      platform, plus a full sandbox for unlimited integration
+                      testing.
                     </span>
                   </li>
                   <li>
                     <i class="fas fa-layer-group"></i>
                     <span>
-                      Architect of a payment processing service API in Rust,
-                      using HECE encryption/decryption Built a clean RESTful API
-                      with SDKs across every major language, runtime, and mobile
-                      platform. Native iOS and Android SDKs with pre-built UI
-                      components, plug-and-play CMS integrations, and a full
-                      sandbox for testing without limits.
+                      Designed the platform around transaction integrity —
+                      Hydra Ephemeral Channel Encryption derives a per-request
+                      AES-256-GCM key via HKDF-SHA256, bound with HMAC-SHA256,
+                      tying every API call to its exact request path and
+                      timestamp.
                     </span>
                   </li>
                   <li>
                     <i class="fas fa-shield-alt"></i>
                     <span>
-                      Designed and built a Hybrid AI ML model which scores every
-                      transaction in real time. Review queue, threshold
-                      controls, and online feedback learning to considerably
-                      reduce fraud with a comprehensive scoring system that
-                      evaluates risk across multiple dimensions.
+                      Built a hybrid AI/ML model that scores every transaction
+                      in real time, with a review queue, threshold controls and
+                      online feedback learning to reduce fraud across multiple
+                      risk dimensions.
                     </span>
                   </li>
                   <li>
                     <i class="fas fa-tachometer-alt"></i>
                     <span>
-                      Hydra Ephemeral Channel Encryption derives a per-request
-                      AES-256-GCM key via HKDF-SHA256, bound with HMAC-SHA256.
-                      Every API call gets a unique key tied to the exact request
-                      path and timestamp. Highly secure transaction and data
-                      encryption protocols,
+                      Own the full-stack product: Next.js/React frontend with
+                      animated dashboards, a workbench and extensive audit and
+                      security logs — covered by comprehensive testing with
+                      viTest and Jest, and Playwright for E2E.
                     </span>
                   </li>
                   <li>
                     <i class="fas fa-vial"></i>
                     <span>
-                      Built and deployed many Agents which handle social
-                      integrations, posts, customer support, sales Agents,
-                      security Agents and Agents which mock the transactional
-                      process to improve and develop user integrations.
-                      Integrated modern features, libraries and workflows into
-                      the frontend with extensive Testing using viTest and Jest
-                      with PLaywright for E2E testing to ensure the quality of
-                      the product and the user experience.
+                      Built and deployed production agents for social
+                      integrations, customer support, sales and security,
+                      including agents that mock the transactional process to
+                      improve and develop user integrations.
                     </span>
                   </li>
                   <li>
@@ -378,19 +480,8 @@
                     <span>
                       Developed agentic workflows for automated technical design
                       reviews, leveraging LLMs for context-aware code reasoning
-                      and architectural consistency checks. Built AI Agents with
-                      Pedantic AI, Agents SDK, LangChain, LangSmith, Gradio,
-                      FastAPI and other tools.
-                    </span>
-                  </li>
-                  <li>
-                    <i class="fas fa-tachometer-alt"></i>
-                    <span>
-                      Designed and built modern UI interface with animated
-                      dashboards, workbench and other toolsu using Next.js,
-                      React and various frontend javascript frameworks featuring
-                      extensive audit and security logs, with considerable
-                      encryption.
+                      and architectural consistency checks, with Pydantic AI,
+                      Agents SDK, LangChain, LangSmith, Gradio and FastAPI.
                     </span>
                   </li>
                 </ul>
@@ -435,8 +526,8 @@
                     <span>
                       Delivered high-throughput Node.js microservices on AWS
                       Lambda and DynamoDB, implementing fine-grained IAM
-                      policies for secure deployment. Optimized AWS Concurrency
-                      and execution context reuse to maintain good latency for
+                      policies for secure deployment. Optimized AWS concurrency
+                      and execution-context reuse to sustain latency under
                       JWT-authenticated traffic volumes.
                     </span>
                   </li>
@@ -452,10 +543,10 @@
                   <li>
                     <i class="fas fa-lock"></i>
                     <span>
-                      Hardened security posture by integrating threat modeling
-                      and automated dependency scanning into CI/CD pipelines.
-                      Built "secure-by-default" patterns for OAuth 2.0 and JWT
-                      identity flows.
+                      Hardened the security posture by integrating threat
+                      modeling and automated dependency scanning into CI/CD
+                      pipelines, building secure-by-default patterns for OAuth
+                      2.0 and JWT identity flows.
                     </span>
                   </li>
                   <li>
@@ -471,20 +562,18 @@
                     <i class="fas fa-sliders-h"></i>
                     <span>
                       Implemented comprehensive observability with structured
-                      logging, distributed tracing, and custom metrics enabling
-                      rapid incident resolution (New Relic). Built backend
-                      functionaliy in Node/AWS and integrated internal tooling
-                      into the workflows.
+                      logging, distributed tracing and custom metrics (New
+                      Relic) for rapid incident resolution, and built internal
+                      tooling integrations in Node/AWS.
                     </span>
                   </li>
                   <li>
                     <i class="fas fa-vial"></i>
                     <span>
-                      Built AI Agents using Pedantic AI, Agents SDK, LangChain,
-                      LangSmith, Gradio, and other tools to optimize and control
-                      the workflows and run DevOps tasks. Built Lambda functions
-                      and state machine language workflows using SML as logic
-                      multipliers.
+                      Built AI agents using Pydantic AI, Agents SDK, LangChain,
+                      LangSmith, Gradio and other tools to optimize and control
+                      workflows and run DevOps tasks, alongside Lambda functions
+                      and state machine workflows.
                     </span>
                   </li>
                 </ul>
@@ -530,7 +619,7 @@
                     <i class="fas fa-layer-group"></i>
                     <span>
                       Architected scalable React/TypeScript interfaces for
-                      complex Engineer workflows, including VS Code and
+                      complex developer workflows, including VS Code and
                       JetBrains IDE integrations.
                     </span>
                   </li>
@@ -554,7 +643,7 @@
                     <i class="fas fa-vial"></i>
                     <span>
                       Established rigorous E2E testing patterns
-                      (Playwright/Cypres/Jest) and CI/CD automation, ensuring
+                      (Playwright/Cypress/Jest) and CI/CD automation, ensuring
                       stability across diverse deployment environments.
                     </span>
                   </li>
@@ -563,15 +652,14 @@
                     <span>
                       Developed agentic workflows for automated technical design
                       reviews, leveraging LLMs for context-aware code reasoning
-                      and architectural consistency checks. Built AI Agents with
-                      Pedantic AI, Agents SDK, LangChain, LangSmith, Gradio,
-                      FastAPI and other tools.
+                      and architectural consistency checks, with Pydantic AI,
+                      Agents SDK, LangChain, LangSmith, Gradio and FastAPI.
                     </span>
                   </li>
                   <li>
                     <i class="fas fa-tachometer-alt"></i>
                     <span>
-                      Design and build scalable frontend interfaces using
+                      Designed and built scalable frontend interfaces using
                       Next.js, React and various frontend javascript frameworks
                       and libraries to support extension of functions or new
                       features.
@@ -1564,6 +1652,165 @@
         </div>
       </section>
 
+      <section
+        class="site-section systems section-padding"
+        aria-labelledby="systems-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Architecture</span>
+            <h2 id="systems-title">How I think about systems</h2>
+          </div>
+          <p class="section-lead">
+            Distributed systems fail in predictable ways. I design for failure
+            modes, observability, idempotency and operational simplicity before
+            feature code — and treat cost and developer experience as first-class
+            constraints.
+          </p>
+
+          <div class="systems-grid">
+            <div class="system-diagram">
+              <h3 class="diagram-title">Full stack flow</h3>
+              <div class="diagram-stack">
+                <div class="diagram-node">React</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">API Gateway</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">Node.js / TypeScript services</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">Event / Queue layer</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">Workers</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node diagram-node--storage">
+                  PostgreSQL / DynamoDB / Redis
+                </div>
+              </div>
+            </div>
+
+            <div class="system-diagram">
+              <h3 class="diagram-title">AI as a production subsystem</h3>
+              <div class="diagram-stack">
+                <div class="diagram-node">Application</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">AI Orchestrator</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">LLM</div>
+                <div class="diagram-arrow diagram-arrow--fan" aria-hidden="true"></div>
+                <div class="diagram-fan">
+                  <div class="diagram-node">Tools</div>
+                  <div class="diagram-node">APIs</div>
+                  <div class="diagram-node">Data</div>
+                </div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node diagram-node--storage">
+                  Evaluation / Observability
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="principle-list" aria-label="Engineering principles">
+            <li>Failure modes</li>
+            <li>Scalability</li>
+            <li>Observability</li>
+            <li>Idempotency</li>
+            <li>Asynchronous processing</li>
+            <li>Event-driven architecture</li>
+            <li>Security</li>
+            <li>Operational simplicity</li>
+            <li>Data access patterns</li>
+            <li>Cost</li>
+            <li>Developer experience</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="site-section ai-engineering section-padding"
+        aria-labelledby="ai-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Applied AI</span>
+            <h2 id="ai-title">AI Engineering</h2>
+          </div>
+          <div class="ai-split">
+            <div class="ai-copy">
+              <p class="ai-lede">I build AI systems as software systems.</p>
+              <p>
+                AI agents, LLM orchestration and tool calling are production
+                subsystems like any other. I design agent workflows with the same
+                discipline I apply to payment and identity systems — structured
+                outputs, evaluation, observability, security and reliable
+                integration with the systems around them.
+              </p>
+              <p>
+                My advantage is combining AI with software architecture,
+                distributed systems and production engineering. The model is a
+                component; the system is what I build.
+              </p>
+            </div>
+            <ul class="ai-capabilities">
+              <li>
+                <i class="fas fa-brain" aria-hidden="true"></i>
+                AI agents &amp; multi-step workflows
+              </li>
+              <li>
+                <i class="fas fa-robot" aria-hidden="true"></i>
+                LLM orchestration &amp; tool calling
+              </li>
+              <li>
+                <i class="fas fa-braces" aria-hidden="true"></i>
+                Structured outputs &amp; validation
+              </li>
+              <li>
+                <i class="fas fa-flask" aria-hidden="true"></i>
+                Evaluation &amp; regression testing
+              </li>
+              <li>
+                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                Observability &amp; cost control
+              </li>
+              <li>
+                <i class="fas fa-lock" aria-hidden="true"></i>
+                Security, auth &amp; guardrails
+              </li>
+              <li>
+                <i class="fas fa-rocket" aria-hidden="true"></i>
+                Production integration &amp; deployment
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="site-section interests section-padding"
+        aria-labelledby="interests-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Opportunities</span>
+            <h2 id="interests-title">Currently interested in</h2>
+          </div>
+          <p class="section-lead">
+            I'm drawn to problems where reliability and scale come from
+            decentralised design — peer-to-peer networking and distributed
+            systems that stay resilient without single points of failure.
+          </p>
+          <div class="interest-roles">
+            <span class="interest-tag">Senior / Staff Full Stack Engineering</span>
+            <span class="interest-tag">Platform Engineering</span>
+            <span class="interest-tag">Node.js / TypeScript Engineering</span>
+            <span class="interest-tag">Distributed Systems</span>
+            <span class="interest-tag">Peer-to-peer Networking</span>
+            <span class="interest-tag">Applied AI / AI Platform Engineering</span>
+          </div>
+          <p class="interest-locations">Remote / UK / European opportunities</p>
+        </div>
+      </section>
+
       <footer class="site-footer">
         <div class="container">
           <div class="footer-inner">
@@ -1572,22 +1819,22 @@
               <a
                 href="tel:+447516029946"
                 aria-label="Call +44 7516 029946"
-                data-label="Call +44 7516 029946"
+                data-label="+44 7516 029946"
               >
                 <p>
                   <i class="fa fa-phone" aria-hidden="true"></i>
                 </p>
-                <span class="btn-label">Call +44 7516 029946</span>
+                <span class="btn-label">+44 7516 029946</span>
               </a>
               <a
                 href="mailto:marc.lally@gmail.com"
                 aria-label="Email marc.lally@gmail.com"
-                data-label="Email marc.lally@gmail.com"
+                data-label="marc.lally@gmail.com"
               >
                 <p>
                   <i class="fa fa-envelope" aria-hidden="true"></i>
                 </p>
-                <span class="btn-label">Email marc.lally@gmail.com</span>
+                <span class="btn-label">marc.lally@gmail.com</span>
               </a>
               <a
                 href="https://calendly.com/marc-lally/30min"

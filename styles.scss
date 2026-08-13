@@ -165,30 +165,39 @@ img {
 .footer-links a {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  min-height: 42px;
-  padding: 9px 13px;
-  border: 1px solid $line;
+  gap: 8px;
+  min-height: 36px;
+  padding: 5px 12px;
+  border: 1px solid rgba(244, 239, 230, 0.12);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.045);
-  color: $paperMuted;
-  font-size: 0.88rem;
+  background: transparent;
+  color: $muted;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0;
-  backdrop-filter: blur(14px);
   transition:
-    transform $transition,
     border-color $transition,
     background $transition,
     color $transition;
 
   &:hover,
   &:focus-visible {
-    transform: translateY(-2px);
-    border-color: rgba(81, 214, 196, 0.55);
-    background: rgba(81, 214, 196, 0.12);
+    border-color: rgba(81, 214, 196, 0.4);
+    background: rgba(81, 214, 196, 0.07);
     color: $paper;
   }
+}
+
+.contact-links i,
+.footer-links i {
+  color: $muted;
+}
+
+.contact-links > a:hover i,
+.contact-links > a:focus-visible i,
+.footer-links a:hover i,
+.footer-links a:focus-visible i {
+  color: $teal;
 }
 
 .contact-links > a p,
@@ -208,7 +217,7 @@ img {
 
 .name-wrapper {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 440px);
   align-items: end;
   gap: clamp(28px, 5vw, 72px);
   min-width: 0;
@@ -357,12 +366,16 @@ img {
 
   strong {
     display: block;
-    max-width: 10ch;
+    max-width: 14ch;
     margin-top: 14px;
     color: $paper;
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 800;
     line-height: 1;
+
+    .nowrap {
+      white-space: nowrap;
+    }
   }
 
   p {
@@ -802,6 +815,503 @@ h3.section-title {
   }
 }
 
+/* ---------- Section scaffolding ---------- */
+
+.site-section {
+  position: relative;
+  border-top: 1px solid $line;
+}
+
+.section-heading {
+  margin: 0 0 30px;
+
+  h2 {
+    margin: 14px 0 0;
+    color: $paper;
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+}
+
+.section-lead {
+  max-width: 720px;
+  margin: 0 0 26px;
+  color: $muted;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+/* ---------- Hero ---------- */
+
+.hero-roleline {
+  margin: 0;
+  color: $teal;
+  font-size: clamp(0.95rem, 1.8vw, 1.18rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.hero-roleline + .hero-subtitle {
+  margin-top: 16px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 22px;
+  border: 1px solid $lineStrong;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: $paper;
+  font-size: 0.95rem;
+  font-weight: 800;
+  transition:
+    transform $transition,
+    border-color $transition,
+    background $transition,
+    color $transition;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(81, 214, 196, 0.65);
+    background: rgba(81, 214, 196, 0.14);
+    color: $paper;
+  }
+}
+
+.hero-cta--primary {
+  border-color: rgba(217, 119, 50, 0.64);
+  background: $copper;
+  color: $paper;
+  box-shadow: 0 16px 32px rgba(217, 119, 50, 0.18);
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(217, 119, 50, 0.85);
+    background: #e9873c;
+  }
+
+  i {
+    color: $ink;
+  }
+}
+
+.hero-cta--ghost {
+  border-color: rgba(81, 214, 196, 0.42);
+  background: rgba(81, 214, 196, 0.1);
+  box-shadow: none;
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(81, 214, 196, 0.7);
+    background: rgba(81, 214, 196, 0.18);
+  }
+
+  i {
+    color: $teal;
+  }
+}
+
+/* ---------- What I build ---------- */
+
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+
+  @include mama-bear {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include brother-bear {
+    grid-template-columns: 1fr;
+  }
+}
+
+.build-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+  padding: 22px;
+  border: 1px solid $line;
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
+    rgba(23, 30, 39, 0.82);
+  box-shadow: $shadowSmall;
+  transition:
+    transform $transition,
+    border-color $transition,
+    background $transition;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    border-radius: 8px 0 0 8px;
+    background: linear-gradient($teal, $copper);
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(244, 239, 230, 0.32);
+    background: rgba(32, 42, 54, 0.9);
+  }
+
+  i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    background: rgba(81, 214, 196, 0.1);
+    color: $teal;
+    font-size: 1.05rem;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    color: $paper;
+    font-size: 1.04rem;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  p {
+    margin: 0;
+    color: $muted;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+}
+
+.build-card--wide {
+  grid-column: span 2;
+
+  @include brother-bear {
+    grid-column: auto;
+  }
+}
+
+/* ---------- Technology ---------- */
+
+.core-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 30px;
+
+  .core-stack__item {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 6px 18px;
+    border: 1px solid rgba(81, 214, 196, 0.4);
+    border-radius: 999px;
+    background: rgba(81, 214, 196, 0.1);
+    color: $paper;
+    font-size: 0.98rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+  }
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+
+  @include mama-bear {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include brother-bear {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tech-category {
+  padding: 18px;
+  border: 1px solid $line;
+  border-radius: 8px;
+  background: rgba(23, 30, 39, 0.66);
+
+  h3 {
+    margin: 0 0 12px;
+    color: $copper;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+}
+
+.tech-category--wide {
+  grid-column: span 3;
+
+  @include mama-bear {
+    grid-column: span 2;
+  }
+
+  @include brother-bear {
+    grid-column: auto;
+  }
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 4px 11px;
+    border: 1px solid rgba(244, 239, 230, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.035);
+    color: $paperMuted;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+}
+
+/* ---------- How I think about systems ---------- */
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 0 30px;
+
+  @include brother-bear {
+    grid-template-columns: 1fr;
+  }
+}
+
+.system-diagram {
+  padding: 20px;
+  border: 1px solid $line;
+  border-radius: 8px;
+  background: rgba(17, 22, 29, 0.56);
+
+  .diagram-title {
+    margin: 0 0 18px;
+    color: $paper;
+    font-size: 0.95rem;
+    font-weight: 900;
+  }
+}
+
+.diagram-stack {
+  display: grid;
+  gap: 0;
+}
+
+.diagram-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid rgba(81, 214, 196, 0.3);
+  border-radius: 8px;
+  background: rgba(81, 214, 196, 0.06);
+  color: $paper;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.diagram-node--storage {
+  border-color: rgba(217, 119, 50, 0.42);
+  background: rgba(217, 119, 50, 0.08);
+}
+
+.diagram-arrow {
+  position: relative;
+  width: 100%;
+  height: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(244, 239, 230, 0.35);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 4px);
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid rgba(244, 239, 230, 0.35);
+  }
+}
+
+.diagram-fan {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+
+  @include baby-bear {
+    grid-template-columns: 1fr;
+  }
+}
+
+.principle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 5px 12px;
+    border: 1px solid rgba(217, 119, 50, 0.34);
+    border-radius: 999px;
+    background: rgba(217, 119, 50, 0.08);
+    color: $paperMuted;
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    &::before {
+      content: "\f058";
+      margin-right: 8px;
+      color: $copper;
+      font-family: "Font Awesome 6 Free";
+      font-weight: 400;
+      font-size: 0.72rem;
+    }
+  }
+}
+
+/* ---------- AI Engineering ---------- */
+
+.ai-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+
+  @include brother-bear {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ai-copy {
+  p {
+    color: $muted;
+    line-height: 1.7;
+  }
+}
+
+.ai-lede {
+  margin: 0 0 14px;
+  color: $paper;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.ai-capabilities {
+  margin: 0;
+  padding: 22px;
+  border: 1px solid $line;
+  border-radius: 8px;
+  background: rgba(23, 30, 39, 0.66);
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(244, 239, 230, 0.08);
+    color: $paperMuted;
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  i {
+    width: 20px;
+    color: $teal;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}
+
+/* ---------- Interests ---------- */
+
+.interest-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 7px 16px;
+  border: 1px solid rgba(81, 214, 196, 0.3);
+  border-radius: 999px;
+  background: rgba(81, 214, 196, 0.08);
+  color: $paper;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.interest-locations {
+  margin: 0;
+  color: $muted;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
 @media (min-width: 1600px) {
   :root {
     --content-max: 1760px;
@@ -902,11 +1412,29 @@ h3.section-title {
   display: block !important;
 }
 
+.pdf-export .build-grid,
+.pdf-export .tech-grid,
+.pdf-export .systems-grid,
+.pdf-export .ai-split,
+.pdf-export .hero-actions,
+.pdf-export .core-stack,
+.pdf-export .interest-roles {
+  display: block !important;
+}
+
+.pdf-export .site-section {
+  border-top: 1px solid #c5ccd3 !important;
+}
+
 .pdf-export .role-card,
 .pdf-export .intro-card,
 .pdf-export .note-card,
 .pdf-export .education-card,
-.pdf-export .job-wrapper {
+.pdf-export .job-wrapper,
+.pdf-export .build-card,
+.pdf-export .tech-category,
+.pdf-export .system-diagram,
+.pdf-export .ai-capabilities {
   background: #f4f6f8 !important;
   border-color: #c5ccd3 !important;
   box-shadow: none !important;
@@ -926,11 +1454,41 @@ h3.section-title {
 }
 
 .pdf-export .hero-subtitle,
+.pdf-export .hero-roleline,
 .pdf-export .role-card p,
 .pdf-export .job-bullets li,
 .pdf-export .intro-card p,
-.pdf-export .note-card p {
+.pdf-export .note-card p,
+.pdf-export .section-lead,
+.pdf-export .build-card p,
+.pdf-export .tech-list li,
+.pdf-export .diagram-node,
+.pdf-export .ai-copy p,
+.pdf-export .ai-capabilities li,
+.pdf-export .interest-locations,
+.pdf-export .principle-list li {
   color: #334150 !important;
+}
+
+.pdf-export .section-heading h2,
+.pdf-export .build-card h3,
+.pdf-export .tech-category h3,
+.pdf-export .diagram-title,
+.pdf-export .ai-lede,
+.pdf-export .interest-tag {
+  color: #1f2a33 !important;
+}
+
+.pdf-export .diagram-node {
+  border-color: #c5ccd3 !important;
+  background: transparent !important;
+}
+
+.pdf-export .tech-list li,
+.pdf-export .interest-tag,
+.pdf-export .principle-list li {
+  background: transparent !important;
+  border: 1px solid #c5ccd3 !important;
 }
 
 .pdf-export .tech-tag,

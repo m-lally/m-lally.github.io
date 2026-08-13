@@ -54,7 +54,7 @@ test("desktop layout keeps multi-column grids", async ({ page }) => {
 
   await expect(page.getByRole("heading", { name: "Marc Lally" })).toBeVisible();
 
-  const summaryColumns = await getGridColumnCount(page, ".summary-grid");
+  const summaryColumns = await getGridColumnCount(page, ".build-grid");
   const notesColumns = await getGridColumnCount(page, ".two-column-notes");
   const footerDirection = await getFlexDirection(page, ".footer-inner");
 
@@ -67,7 +67,7 @@ test("tablet layout reduces summary grid columns", async ({ page }) => {
   await page.setViewportSize({ width: 1024, height: 768 });
   await page.goto("/");
 
-  const summaryColumns = await getGridColumnCount(page, ".summary-grid");
+  const summaryColumns = await getGridColumnCount(page, ".build-grid");
   const notesColumns = await getGridColumnCount(page, ".two-column-notes");
   const footerDirection = await getFlexDirection(page, ".footer-inner");
 
@@ -80,7 +80,7 @@ test("mobile layout stacks content and avoids horizontal scroll", async ({ page 
   await page.setViewportSize({ width: 375, height: 800 });
   await page.goto("/");
 
-  const summaryColumns = await getGridColumnCount(page, ".summary-grid");
+  const summaryColumns = await getGridColumnCount(page, ".build-grid");
   const notesColumns = await getGridColumnCount(page, ".two-column-notes");
   const footerDirection = await getFlexDirection(page, ".footer-inner");
 
