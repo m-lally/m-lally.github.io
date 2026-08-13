@@ -379,6 +379,7 @@
                 <li>Elasticsearch</li>
                 <li>DynamoDB</li>
                 <li>GraphQL</li>
+                <li>MySQL</li>
               </ul>
             </div>
             <div class="tech-category tech-category--wide">
@@ -396,6 +397,80 @@
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section
+        class="site-section systems section-padding"
+        aria-labelledby="systems-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Architecture</span>
+            <h2 id="systems-title">How I think about systems</h2>
+          </div>
+          <p class="section-lead">
+            Distributed systems fail in predictable ways. I design for failure
+            modes, observability, idempotency and operational simplicity before
+            feature code — and treat cost and developer experience as first-class
+            constraints.
+          </p>
+
+          <div class="systems-grid">
+            <div class="system-diagram">
+              <h3 class="diagram-title">Full stack flow</h3>
+              <div class="diagram-stack">
+                <div class="diagram-node">React</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">API Gateway</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">Node.js / TypeScript services</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">Event / Queue layer</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">Workers</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node diagram-node--storage">
+                  PostgreSQL / DynamoDB / Redis
+                </div>
+              </div>
+            </div>
+
+            <div class="system-diagram">
+              <h3 class="diagram-title">AI as a production subsystem</h3>
+              <div class="diagram-stack">
+                <div class="diagram-node">Application</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">AI Orchestrator</div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node">LLM</div>
+                <div class="diagram-arrow diagram-arrow--fan" aria-hidden="true"></div>
+                <div class="diagram-fan">
+                  <div class="diagram-node">Tools</div>
+                  <div class="diagram-node">APIs</div>
+                  <div class="diagram-node">Data</div>
+                </div>
+                <div class="diagram-arrow" aria-hidden="true"></div>
+                <div class="diagram-node diagram-node--storage">
+                  Evaluation / Observability
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="principle-list" aria-label="Engineering principles">
+            <li>Failure modes</li>
+            <li>Scalability</li>
+            <li>Observability</li>
+            <li>Idempotency</li>
+            <li>Asynchronous processing</li>
+            <li>Event-driven architecture</li>
+            <li>Security</li>
+            <li>Operational simplicity</li>
+            <li>Data access patterns</li>
+            <li>Cost</li>
+            <li>Developer experience</li>
+          </ul>
         </div>
       </section>
 
@@ -1653,80 +1728,6 @@
       </section>
 
       <section
-        class="site-section systems section-padding"
-        aria-labelledby="systems-title"
-      >
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Architecture</span>
-            <h2 id="systems-title">How I think about systems</h2>
-          </div>
-          <p class="section-lead">
-            Distributed systems fail in predictable ways. I design for failure
-            modes, observability, idempotency and operational simplicity before
-            feature code — and treat cost and developer experience as first-class
-            constraints.
-          </p>
-
-          <div class="systems-grid">
-            <div class="system-diagram">
-              <h3 class="diagram-title">Full stack flow</h3>
-              <div class="diagram-stack">
-                <div class="diagram-node">React</div>
-                <div class="diagram-arrow" aria-hidden="true"></div>
-                <div class="diagram-node">API Gateway</div>
-                <div class="diagram-arrow" aria-hidden="true"></div>
-                <div class="diagram-node">Node.js / TypeScript services</div>
-                <div class="diagram-arrow" aria-hidden="true"></div>
-                <div class="diagram-node">Event / Queue layer</div>
-                <div class="diagram-arrow" aria-hidden="true"></div>
-                <div class="diagram-node">Workers</div>
-                <div class="diagram-arrow" aria-hidden="true"></div>
-                <div class="diagram-node diagram-node--storage">
-                  PostgreSQL / DynamoDB / Redis
-                </div>
-              </div>
-            </div>
-
-            <div class="system-diagram">
-              <h3 class="diagram-title">AI as a production subsystem</h3>
-              <div class="diagram-stack">
-                <div class="diagram-node">Application</div>
-                <div class="diagram-arrow" aria-hidden="true"></div>
-                <div class="diagram-node">AI Orchestrator</div>
-                <div class="diagram-arrow" aria-hidden="true"></div>
-                <div class="diagram-node">LLM</div>
-                <div class="diagram-arrow diagram-arrow--fan" aria-hidden="true"></div>
-                <div class="diagram-fan">
-                  <div class="diagram-node">Tools</div>
-                  <div class="diagram-node">APIs</div>
-                  <div class="diagram-node">Data</div>
-                </div>
-                <div class="diagram-arrow" aria-hidden="true"></div>
-                <div class="diagram-node diagram-node--storage">
-                  Evaluation / Observability
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <ul class="principle-list" aria-label="Engineering principles">
-            <li>Failure modes</li>
-            <li>Scalability</li>
-            <li>Observability</li>
-            <li>Idempotency</li>
-            <li>Asynchronous processing</li>
-            <li>Event-driven architecture</li>
-            <li>Security</li>
-            <li>Operational simplicity</li>
-            <li>Data access patterns</li>
-            <li>Cost</li>
-            <li>Developer experience</li>
-          </ul>
-        </div>
-      </section>
-
-      <section
         class="site-section ai-engineering section-padding"
         aria-labelledby="ai-title"
       >
@@ -1760,9 +1761,9 @@
                 <i class="fas fa-robot" aria-hidden="true"></i>
                 LLM orchestration &amp; tool calling
               </li>
-              <li>
-                <i class="fas fa-braces" aria-hidden="true"></i>
-                Structured outputs &amp; validation
+<li>
+                <i class="fas fa-check" aria-hidden="true"></i>
+                Structured outputs & validation
               </li>
               <li>
                 <i class="fas fa-flask" aria-hidden="true"></i>
