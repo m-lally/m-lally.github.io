@@ -1204,10 +1204,17 @@ h3.section-title {
 }
 
 .interest-locations {
-  margin: 0;
+  margin: 18px 0 0;
   color: #aeb8c4;
   font-size: 0.95rem;
   font-weight: 700;
+}
+.interest-locations .interest-tag {
+  gap: 8px;
+}
+.interest-locations .interest-tag i {
+  color: #51d6c4;
+  font-size: 0.85rem;
 }
 
 @media (min-width: 1600px) {
