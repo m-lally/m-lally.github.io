@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Saira+Condensed:wght@500&display=swap");
-
 $ink: #11161d;
 $panel: #171e27;
 $panelSoft: #202a36;
@@ -572,6 +570,7 @@ img {
 .experience {
   color: $paperMuted;
 
+  h2.experience-title,
   h3.experience-title {
     display: flex;
     align-items: center;

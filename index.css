@@ -504,6 +504,7 @@ img {
 .experience {
   color: #d7d0c3;
 }
+.experience h2.experience-title,
 .experience h3.experience-title {
   display: flex;
   align-items: center;
@@ -515,6 +516,7 @@ img {
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
+.experience h2.experience-title::after,
 .experience h3.experience-title::after {
   content: "";
   flex: 1;
